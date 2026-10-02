@@ -20,13 +20,16 @@ All math lives in `src/lib/commission/engine.ts` — pure functions, tested agai
 | Store volume | Highest tier reached by store units (incl. house deals), paid to every salesperson on the team |
 | Splits | 50/50 — half a unit and half of every per-deal amount each |
 | One-off / team spiffs | Admin-entered adjustments per month |
+| Pace | Units ÷ selling days elapsed × selling days in the month. Selling days = Mon–Sat minus holidays (Settings → Holidays & Pacing) |
 
 Settings are versioned by month (`commission_settings.effective_month`), so changing rates never rewrites a closed month. Jan–Sep 2026 are stored in `paid_months` exactly as Airtable paid them.
 
 ## Access
 
 - **Salespeople** see and log their own deals; they can edit or delete them only in the current month (Central time). They can't touch gross.
-- **Admins** see everything, enter back gross, edit any month, add house deals and spiffs, and manage staff, products and settings.
+- **Admins** see everything, enter back gross, edit any month, add house deals and spiffs, and manage staff, products, settings and holidays.
+- **View as:** admins can see the app exactly as a salesperson does (read only) from the Store leaderboard or Staff page.
+- **Passwords:** admins set a temporary password on the Staff page; the person must choose their own at next sign-in.
 
 These rules are enforced in Postgres (RLS + `save_deal` / `delete_deal` / `set_deal_gross`), not just the UI.
 
@@ -41,8 +44,14 @@ npm run dev
 | Script | What it does |
 |---|---|
 | `npm test` | Commission engine tests (includes Airtable parity) |
+| `npm run typecheck` | TypeScript check (`tsc --noEmit`) |
+| `scripts/verify.sh` | Typecheck → lint → test; required before every commit |
+| `npm run audit:mobile` | Playwright mobile audit (see `audit/MOBILE_AUDIT.md`) |
+| `npm run qa:accounts -- create <file>` / `-- delete` | Temporary QA logins for testing (production DB) |
 | `npm run db:migrate` | Applies `supabase/migrations/*.sql` not yet applied |
 | `npm run db:import -- <csv dir> [--reset]` | One-time Airtable backfill from the CSV exports |
 | `npm run user:password -- <email>` | Create or reset a login (prompts for the password) |
 
 Logins are email + password, created by an admin on the Staff page.
+
+Working on this repo with Claude Code: see `CLAUDE.md` and `docs/claude-maintenance.md`.

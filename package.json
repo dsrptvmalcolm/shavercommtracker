@@ -11,7 +11,9 @@
     "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts",
     "db:import": "tsx --env-file=.env.local scripts/import-airtable.ts",
     "user:password": "tsx --env-file=.env.local scripts/set-password.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "audit:mobile": "tsx scripts/mobile-audit.ts",
+    "qa:accounts": "tsx --env-file=.env.local scripts/qa-accounts.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
@@ -32,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "pg": "^8.23.1",
+    "playwright": "^1.63.0",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5",

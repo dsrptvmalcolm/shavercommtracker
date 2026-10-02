@@ -45,3 +45,8 @@ dev/active/
 CLAUDE.local.md
 .claude/settings.local.json
 .claude/allow-test-edits
+
+# mobile audit output (screenshots show customer names)
+audit/screenshots/
+audit/results/
+audit/lighthouse/

@@ -20,6 +20,8 @@ Deal log and commission tracker for Shaver Preferred Motors (independent used-ca
 | All checks | `scripts/verify.sh` (typecheck → lint → test, stops on first failure) |
 | DB migrate | `npm run db:migrate` — applies new `supabase/migrations/*.sql` **to production**; ask first |
 | Set a login password | `npm run user:password -- <email>` (prompts, hidden input) |
+| QA test logins | `npm run qa:accounts -- create <env-file>` / `-- delete` (production DB — ask first, always delete) |
+| Mobile audit | `npm run audit:mobile` against a running build — see `audit/MOBILE_AUDIT.md` → Handoff |
 
 There is no CI and no PR flow: work is committed to `main` and Vercel deploys it. Local checks are the only gate.
 
@@ -82,4 +84,5 @@ When compacting, always preserve the full list of modified files, the current ta
 | Topic rules (testing, data, security, domain) | `.claude/rules/` |
 | Architecture decisions | `docs/decisions/` |
 | Maintaining this config | `docs/claude-maintenance.md` |
+| Mobile audit report, fix status, how to re-run | `audit/MOBILE_AUDIT.md` |
 | Design reference (Stitch export) | `stitch_auto_commission_tracker/` |
