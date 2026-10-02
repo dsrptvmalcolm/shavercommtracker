@@ -1,6 +1,6 @@
 // Shared helpers for Claude Code hooks. Hooks receive the tool call as JSON on stdin.
 import { existsSync } from "node:fs";
-import { relative, resolve } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 
 export const projectDir = process.env.CLAUDE_PROJECT_DIR ?? process.cwd();
 
@@ -10,14 +10,31 @@ export const readInput = async () => {
   return raw ? JSON.parse(raw) : {};
 };
 
-/** Path of the file a file-editing tool is about to touch, relative to the project. */
-export const targetPath = (input) => {
-  const t = input.tool_input ?? {};
-  const p = t.file_path ?? t.path ?? t.notebook_path;
-  return p ? relative(projectDir, resolve(projectDir, p)) : null;
+/**
+ * Root of the checkout that contains `path` — the main repo or a git worktree under
+ * .claude/worktrees/ (a worktree has a `.git` file instead of a folder). Falls back to projectDir.
+ */
+export const repoRoot = (path) => {
+  let dir = resolve(path);
+  while (!existsSync(join(dir, ".git"))) {
+    const up = dirname(dir);
+    if (up === dir) return projectDir;
+    dir = up;
+  }
+  return dir;
 };
 
-export const exists = (rel) => existsSync(resolve(projectDir, rel));
+/** The file a file-editing tool is about to touch: its checkout root and its path relative to that root. */
+export const target = (input) => {
+  const t = input.tool_input ?? {};
+  const p = t.file_path ?? t.path ?? t.notebook_path;
+  if (!p) return null;
+  const abs = resolve(input.cwd ?? projectDir, p);
+  const root = repoRoot(dirname(abs));
+  return { root, file: relative(root, abs) };
+};
+
+export const exists = (root, rel) => existsSync(resolve(root, rel));
 
 /** Block a PreToolUse call and tell Claude why. */
 export const deny = (reason) => {

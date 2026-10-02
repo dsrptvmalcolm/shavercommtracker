@@ -22,3 +22,6 @@ Work is committed straight to `main`, and every push deploys to production (team
 - `npm run build` and UI flows aren't in the gate (build is slow; there are no UI tests). They must be checked manually for config, routing, dependency and UI changes.
 - Removing or loosening any of these hooks removes the only pre-deploy check. Treat that as reversing this decision: ask first and record a superseding entry.
 - If a PR flow or CI is adopted later, CI should run `scripts/verify.sh` so local and remote checks stay identical.
+
+## Update — 2026-10-02: git worktrees
+Claude sessions often run in worktrees under `.claude/worktrees/`, but hooks always load from the main checkout. Before this update, the commit gate ran `verify.sh` in the main checkout (checking the wrong code, and failing on the worktree's `.next/` build output), and the protect hooks matched worktree paths like `.claude/worktrees/x/supabase/migrations/…`, so the migration, lockfile and `.vercel/` rules never fired there. Now every hook resolves the checkout that owns the file or commit (`repoRoot` in `.claude/hooks/lib.mjs`) and applies its rules and checks there; ESLint ignores `.claude/worktrees/**` and `npm test` excludes `.claude/**` so the main checkout never lints or tests worktree copies. This tightens the gate; it doesn't loosen it.

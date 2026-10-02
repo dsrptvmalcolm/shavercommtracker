@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run",
+    "test": "vitest run --exclude '.claude/**'",
     "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts",
     "db:import": "tsx --env-file=.env.local scripts/import-airtable.ts",
     "user:password": "tsx --env-file=.env.local scripts/set-password.ts",

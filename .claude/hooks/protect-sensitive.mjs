@@ -1,6 +1,7 @@
 // PreToolUse (Edit/Write/MultiEdit/NotebookEdit): block writes to secrets, deployment config,
 // the lockfile, and already-existing migrations (applied migrations must never change).
-import { deny, exists, readInput, targetPath } from "./lib.mjs";
+// Paths are matched relative to the checkout that owns the file, so the rules also hold in worktrees.
+import { deny, exists, readInput, target } from "./lib.mjs";
 
 const RULES = [
   [/(^|\/)\.env(\..*)?$/, "Environment files hold production secrets. Change them with `vercel env` and `vercel env pull`."],
@@ -11,13 +12,14 @@ const RULES = [
 ];
 
 const input = await readInput();
-const file = targetPath(input);
-if (!file) process.exit(0);
+const t = target(input);
+if (!t) process.exit(0);
+const { root, file } = t;
 
 for (const [pattern, why] of RULES) {
   if (pattern.test(file)) deny(`Blocked write to "${file}": ${why}`);
 }
-if (/^supabase\/migrations\/.+\.sql$/.test(file) && exists(file)) {
+if (/^supabase\/migrations\/.+\.sql$/.test(file) && exists(root, file)) {
   deny(
     `"${file}" is an existing migration and may already be applied to production. ` +
       "Never edit applied migrations — create the next numbered file in supabase/migrations/ instead.",
