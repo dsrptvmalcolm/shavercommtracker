@@ -46,6 +46,29 @@ All commission math is pure functions in `src/lib/commission/engine.ts`, tested 
 <!-- added 2026-10-02: initial setup -->
 - Next.js 16 differs from training data (`proxy.ts` not middleware, async `params`/`searchParams`/`cookies`). Check `node_modules/next/dist/docs/` before using an API you're unsure of.
 
+## Mobile Standards (non-negotiable)
+
+Salespeople use this on their phones. Details and evidence: `audit/MOBILE_AUDIT.md`.
+
+<!-- added 2026-10-02: mobile audit -->
+- Mobile-first classes: unprefixed = phone, `sm:`/`md:`/`lg:` layer on larger screens. Check every UI change at 360px wide.
+<!-- added 2026-10-02: mobile audit -->
+- Never disable zoom (`user-scalable=no`, `maximum-scale`). Don't add `viewport-fit=cover` or `interactive-widget` (audit §3).
+<!-- added 2026-10-02: mobile audit -->
+- Form fields use the `input` utility (16px on phones — anything smaller makes iPhone zoom in). Never override it with a smaller text size below `sm`.
+<!-- added 2026-10-02: mobile audit -->
+- Every tap target is at least 44×44px (`min-h-11`; `btn-*` already are). For small text links, pad the link, not the text.
+<!-- added 2026-10-02: mobile audit -->
+- No text under 12px (`text-xs`). Only exception: bar-chart month labels on phones. Muted text uses `on-surface-muted`/`on-surface-subtle` — never a darker grey (4.5:1 contrast).
+<!-- added 2026-10-02: mobile audit -->
+- Nothing may only work on hover: anything shown on hover must also show on tap/focus (charts use pointer events + focusable elements).
+<!-- added 2026-10-02: mobile audit -->
+- No horizontal page scroll at 360px. Wide tables go in an `overflow-x-auto` wrapper or hide low-priority columns below `sm`.
+<!-- added 2026-10-02: mobile audit -->
+- Give fields the right keyboard: `type`/`inputMode` (no `inputMode="decimal"` where negatives are allowed), `autoCapitalize`, `enterKeyHint`.
+<!-- added 2026-10-02: mobile audit -->
+- Layout changes to shared UI get re-checked with `npm run audit:mobile`. Things headless browsers can't prove (keyboard, zoom, safe areas) go on `audit/DEVICE_TEST_CHECKLIST.md`.
+
 ## Definition of done
 
 <!-- added 2026-10-02: initial setup -->
@@ -85,4 +108,5 @@ When compacting, always preserve the full list of modified files, the current ta
 | Architecture decisions | `docs/decisions/` |
 | Maintaining this config | `docs/claude-maintenance.md` |
 | Mobile audit report, fix status, how to re-run | `audit/MOBILE_AUDIT.md` |
+| Real-phone test steps (iPhone / Android) | `audit/DEVICE_TEST_CHECKLIST.md` |
 | Design reference (Stitch export) | `stitch_auto_commission_tracker/` |

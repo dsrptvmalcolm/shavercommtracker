@@ -1,6 +1,6 @@
 # Mobile Audit — Shaver Team Commission Tracker
 
-**Date:** 2026-10-02 · **Status:** Phase 1 complete · Fix plan **approved by Malcolm 2026-10-02** (including C-01) · Phase 2 complete (batches 1–3) · Phase 3 next
+**Date:** 2026-10-02 · **Status:** Phase 1 complete · Fix plan **approved by Malcolm 2026-10-02** (including C-01) · Phases 2–4 complete · Real-phone checks pending (`audit/DEVICE_TEST_CHECKLIST.md`)
 **Scope:** whole app. Consumer-facing = salesperson screens (full depth). Internal = admin screens (baseline tier: no horizontal overflow, usable forms, readable tables).
 
 ## Phase 0 — Discovery
@@ -117,7 +117,7 @@ Status column is updated in Phase 2. Evidence screenshots are at `audit/screensh
 | T-12 | 5 Touch | Low (internal) | `/admin` names + "Review deals →", `/admin/deals` filter chips, `/admin/settings` section chips (found in batch 3) | 15–28px tall links/chips | Making them 44px would visibly enlarge chips and leaderboard cards — **recommendation only** (do with a design pass) | local | Low | No | Recommend later |
 | P-01 | 7 Performance | Low | dashboards | LCP 2.8–2.9s locally (server data); CLS 0; images sized + `priority`; fonts via `next/font` (swap); skeleton + empty states exist | No change now; re-measure on production | — | — | No | Recommend no change |
 
-**Not tested automatically (needs a real phone):** 200% / large OS text sizes, real iOS keyboard behavior, Safari toolbar collapse, gestures, notch/home-indicator safe areas.
+**Not tested automatically (needs a real phone):** 200% / large OS text sizes, real iOS keyboard behavior, Safari toolbar collapse, gestures, notch/home-indicator safe areas — all covered step by step in `audit/DEVICE_TEST_CHECKLIST.md`.
 
 **Audit-script caveats:** tap-target counts include every table row action, so counts are large on admin tables; "crowded" uses the gap between boxes (<8px) rather than center distance, which better reflects mis-taps.
 
@@ -141,9 +141,55 @@ Status column is updated in Phase 2. Evidence screenshots are at `audit/screensh
 
 After each batch: re-run `npm run audit:mobile` on affected routes, confirm targeted findings resolved and nothing regressed, run `scripts/verify.sh`, commit.
 
+## Phase 3 — Results after fixes (2026-10-02)
+
+Full re-run on the batch 3 build (commits `b35329a`, `efdcf85`, `9d8460b`): 12 routes × 5 viewports × Chromium + WebKit = 120 page loads, same QA-account method as the baseline. Results `audit/results/after/`, screenshots `audit/screenshots/after/` (gitignored — customer names). `npm run build` passes.
+
+### Phones (360–430px, 96 page loads)
+
+| Metric | Before | After |
+|---|---|---|
+| Pages with horizontal overflow | 0 | **0** |
+| Console errors | 0 | **0** |
+| Tap targets under 44×44 | 3,056 | **96** |
+| Inputs under 16px | 1,256 | **0** |
+| Text under 12px | 648 | **24** |
+| Tap-target pairs closer than 8px | 29 | **28** |
+
+Salesperson screens alone: 376 → **4** small targets (the split-deal `<select>` in desktop WebKit, M-07), 80 → **0** small inputs, 312 → **16** small text (bar-chart month labels, C-06). Admin screens: 2,680 → **92** small targets.
+
+**What's left, and why:** 24 small text = bar-chart month labels kept at 10px on phones so all 12 fit (C-06). 96 small targets = native `<select>`s drawn 25px tall by desktop WebKit only (M-07, Chromium is 44px — needs an iPhone check) + admin-only name links / filter chips (T-12, recommend with a design pass). 28 crowded pairs = the floating Add Deal button resting over the last field on admin forms at one scroll position (it hides as soon as a field is focused — T-08 — and `pb-28` lets every field scroll clear of it) plus admin checkbox rows.
+
+### Tablet (768px, 24 loads)
+
+Small targets 780 → 24, small text 162 → 0, overflow 0. Inputs stay 14px from 640px up by design (`text-base sm:text-sm`). iPad Safari normally doesn't zoom form fields the way iPhone does — worth a check on an iPad if the team uses them.
+
+### Lighthouse 12 (mobile)
+
+| Route | Perf before → after | A11y before → after | Best practices | LCP after | CLS | Failing a11y audits before |
+|---|---|---|---|---|---|---|
+| `/login` | 97 → 97 | 100 → **100** | 100 → 100 | 2.5 s | 0 | — |
+| `/dashboard` (empty) | 95 → 95 | 91 → **100** | 100 → 100 | 2.9 s | 0 | contrast, aria-prohibited-attr |
+| `/deals/new` | 97 → 97 | 96 → **100** | 100 → 100 | 2.7 s | 0 | contrast |
+| `/dashboard` (with data) | 96 → 96 | 92 → **100** | 96 → 100 | 2.8 s | 0 | contrast, aria-prohibited-attr |
+| `/history` | 98 → 97 | 96 → **100** | 100 → 100 | 2.6 s | 0 | contrast |
+
+Performance is unchanged within run-to-run noise (laptop → remote database; LCP is server data time, not layout).
+
+### Evidence for each High finding (`audit/screenshots/after/`)
+
+| Finding | Screenshot(s) | Verified how |
+|---|---|---|
+| M-01 inputs 16px | `deal-new-375-webkit.png`, `login-375-webkit.png` | Computed 16px / 46px tall on phones, 14px from 640px (Chromium + WebKit) |
+| M-02 spiff amount minus key | `admin-spiffs-375-webkit.png` | `inputMode` absent → full keyboard; **iPhone check needed** |
+| T-01 nav 44px | `T-01-C-05-header-375-webkit.png`, `dashboard-data-375-webkit.png` | Tabs 44px tall in audit data |
+| T-02 month arrows | `dashboard-data-375-webkit.png`, `admin-store-375-webkit.png` | 44×44 at 360–768 |
+| T-09 touch charts | `T-09-bar-tap-375-webkit.png`, `T-09-pace-tap-375-webkit.png` | Tap on all 12 bars shows the value with no overflow; pace chart tap + sideways drag scrub (WebKit touch + Chromium mobile emulation); **iPhone tap-to-focus check needed** |
+| A-01 contrast | any `*-375-*.png` | Lighthouse `color-contrast` passes on all 5 routes |
+
 ## Handoff — how to continue (Phases 2–4)
 
-**Where things stand (2026-10-02):** audit and report done; plan approved; no app code changed yet. Baseline evidence: `audit/results/before/` and `audit/screenshots/before/` (local only, gitignored). Lighthouse before: `audit/lighthouse/*.json` (local only).
+**Where things stand (2026-10-02):** fixes done in 3 commits on branch `claude/youthful-feynman-0119ef` (not yet on `main`); Phase 3 results above; Phase 4 done (`audit/DEVICE_TEST_CHECKLIST.md`, "Mobile Standards" in root `CLAUDE.md`). Remaining: Malcolm runs the device checklist, then mark the "needs real device" statuses. Evidence (local only, gitignored): `audit/results/{before,after}/`, `audit/screenshots/{before,after}/`, `audit/lighthouse/{before,after}/`.
 
 **Run the audit**
 1. `npm run build && npm start` (or `preview_start` → `prod` in `.claude/launch.json`).
