@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code — personal and per-task files
+dev/active/
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/allow-test-edits
