@@ -6,7 +6,7 @@ export function UnitsGauge({ value, target, caption }: { value: number; target: 
   const pct = target > 0 ? Math.min(value / target, 1) : 1;
   return (
     <div className="relative flex items-center justify-center">
-      <svg className="h-48 w-48 -rotate-90 lg:h-56 lg:w-56" viewBox="0 0 120 120" aria-hidden>
+      <svg className="h-56 w-56 -rotate-90 lg:h-64 lg:w-64" viewBox="0 0 120 120" aria-hidden>
         <circle cx="60" cy="60" r="48" fill="none" stroke="#23232c" strokeWidth="9" strokeLinecap="round" />
         <circle
           cx="60"
@@ -22,7 +22,7 @@ export function UnitsGauge({ value, target, caption }: { value: number; target: 
       </svg>
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
         <span className="display text-5xl text-white">{fmtUnits(value)}</span>
-        <span className="mt-0.5 text-xs font-semibold uppercase tracking-widest text-on-surface-subtle">{caption}</span>
+        <span className="mt-1 max-w-[60%] text-center text-balance text-xs font-semibold uppercase leading-snug tracking-widest text-on-surface-subtle">{caption}</span>
       </div>
     </div>
   );

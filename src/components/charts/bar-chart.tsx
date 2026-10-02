@@ -20,6 +20,9 @@ type Props = {
   height?: number;
 };
 
+/** Minimum vertical distance between axis labels, in px (12px text + breathing room) */
+const LABEL_GAP = 14;
+
 const niceMax = (n: number): number => {
   if (n <= 0) return 1;
   const mag = 10 ** Math.floor(Math.log10(n));
@@ -33,8 +36,17 @@ const niceMax = (n: number): number => {
 export function BarChart({ title, subtitle, bars, refLines = [], formatValue = String, height = 180 }: Props) {
   const max = niceMax(Math.max(...bars.map((b) => b.value), ...refLines.map((r) => r.value), 1));
   const peak = Math.max(...bars.map((b) => b.value));
-  const ticks = [0, max / 2, max];
+  const px = (v: number) => (v / max) * height;
   const pct = (v: number) => `${(v / max) * 100}%`;
+  // Reference lines are labeled on the axis at their own value, nudged apart so close lines never collide;
+  // default ticks that would crowd a reference label are dropped.
+  const refLabels = [...refLines]
+    .sort((a, b) => b.value - a.value)
+    .reduce<{ line: RefLine; y: number }[]>((acc, line) => {
+      const prev = acc.at(-1);
+      return [...acc, { line, y: prev ? Math.min(px(line.value), prev.y - LABEL_GAP) : px(line.value) }];
+    }, []);
+  const ticks = [0, max / 2, max].filter((t) => refLabels.every((r) => Math.abs(px(t) - r.y) >= LABEL_GAP));
 
   return (
     <figure className="card p-6">
@@ -45,13 +57,18 @@ export function BarChart({ title, subtitle, bars, refLines = [], formatValue = S
       <div className="flex gap-3">
         <div className="relative w-8 shrink-0 text-right font-mono text-xs text-on-surface-subtle" style={{ height }}>
           {ticks.map((t) => (
-            <span key={t} className="absolute right-0 -translate-y-1/2" style={{ bottom: pct(t) }}>
+            <span key={t} className="absolute right-0 translate-y-1/2" style={{ bottom: px(t) }}>
               {formatValue(t)}
+            </span>
+          ))}
+          {refLabels.map(({ line, y }) => (
+            <span key={line.label} className="absolute right-0 translate-y-1/2 font-bold text-on-surface-muted" style={{ bottom: y }}>
+              {formatValue(line.value)}
             </span>
           ))}
         </div>
         <div className="relative min-w-0 flex-1" style={{ height }}>
-          {ticks.slice(1).map((t) => (
+          {ticks.filter((t) => t > 0).map((t) => (
             <div key={t} className="absolute inset-x-0 border-t border-surface-border/50" style={{ bottom: pct(t) }} />
           ))}
           {refLines.map((r) => (
@@ -94,12 +111,14 @@ export function BarChart({ title, subtitle, bars, refLines = [], formatValue = S
         ))}
       </div>
       {refLines.length > 0 && (
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-surface-border/60 pt-3 text-xs text-on-surface-muted">
-          <span className="w-4 border-t border-dashed border-on-surface-subtle" aria-hidden />
+        <ul className="mt-4 grid gap-x-4 gap-y-1.5 border-t border-surface-border/60 pt-3 text-xs text-on-surface-muted sm:grid-cols-2">
           {refLines.map((r) => (
-            <span key={r.label} className="font-mono">{r.label}</span>
+            <li key={r.label} className="flex items-center gap-2 font-mono">
+              <span className="w-4 shrink-0 border-t border-dashed border-on-surface-subtle" aria-hidden />
+              {r.label}
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </figure>
   );

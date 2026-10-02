@@ -153,6 +153,7 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
           title="Store Units by Month"
           subtitle="Last 12 months"
           bars={storeBars}
+          height={220}
           refLines={tiers.map((t) => ({ value: t.units, label: `${t.units} units → ${money0(t.amount)}` }))}
         />
       </section>
