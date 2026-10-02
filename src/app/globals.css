@@ -12,7 +12,7 @@
   --color-primary-soft: rgb(250 204 21 / 0.12);
   --color-on-surface: #f4f4f6;
   --color-on-surface-muted: #9696a4;
-  --color-on-surface-subtle: #686877;
+  --color-on-surface-subtle: #868695; /* 4.5:1 on surface-card-hover (A-01) */
   --color-success: #4ade80;
   --color-danger: #f87171;
 
@@ -29,6 +29,20 @@
   }
   ::selection {
     @apply bg-primary text-black;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -54,14 +68,14 @@
   @apply btn border border-danger/40 bg-danger/10 text-danger hover:bg-danger/20;
 }
 @utility field-label {
-  @apply mb-1.5 block text-[11px] font-bold uppercase tracking-wider text-on-surface-muted;
+  @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-on-surface-muted;
 }
 @utility input {
-  @apply w-full rounded-md border border-[#3f3f46] bg-[#1e1e20] px-3 py-2.5 text-sm text-on-surface placeholder:text-on-surface-subtle focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+  @apply w-full rounded-md border border-[#3f3f46] bg-[#1e1e20] px-3 py-2.5 text-base text-on-surface placeholder:text-on-surface-subtle focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm;
 }
 @utility table-head {
-  @apply bg-primary text-left text-[11px] font-extrabold uppercase tracking-wider text-black;
+  @apply bg-primary text-left text-xs font-extrabold uppercase tracking-wider text-black;
 }
 @utility chip {
-  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-bold;
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-bold;
 }

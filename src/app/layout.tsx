@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Anton, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description: "Deal log and commission tracking for Shaver Preferred Motors",
   robots: { index: false, follow: false },
 };
+
+// Tints the mobile browser toolbar to match the app background; default width/scale kept.
+export const viewport: Viewport = { themeColor: "#0e0e11" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
