@@ -1,11 +1,16 @@
 import { notFound } from "next/navigation";
-import { getAllStaff, getDeal, getProducts, requireMe } from "@/lib/data";
+import { getAllStaff, getDeal, getProducts, getViewer } from "@/lib/data";
+import { redirect } from "next/navigation";
 import { currentMonth, todayIso } from "@/lib/months";
 import { DealForm } from "../deal-form";
 
 export default async function EditDealPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const me = await requireMe();
+  const viewer = await getViewer();
+  if (!viewer) redirect("/login");
+  // Viewing as someone is read only
+  if (viewer.impersonating) redirect("/dashboard");
+  const { me } = viewer;
   const [deal, products, staff] = await Promise.all([getDeal(id), getProducts(), getAllStaff()]);
   if (!deal) notFound();
   const locked = !me.is_admin && deal.sale_date < `${currentMonth()}-01`;

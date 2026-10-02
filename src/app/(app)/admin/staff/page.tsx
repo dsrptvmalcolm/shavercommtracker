@@ -1,4 +1,5 @@
 import { ActionForm } from "@/components/action-form";
+import { ViewAsButton } from "@/components/view-as-button";
 import { getAllStaff, requireAdmin, type Staff } from "@/lib/data";
 import { saveStaff } from "../actions";
 
@@ -28,6 +29,11 @@ export default async function StaffPage() {
               <span className="text-xs text-on-surface-subtle">{s.email ?? "No login yet"}</span>
             </summary>
             <div className="border-t border-surface-border/70 p-6">
+              {s.is_salesperson && s.active && (
+                <div className="mb-4 flex justify-end">
+                  <ViewAsButton staffId={s.id} name={s.name} />
+                </div>
+              )}
               <StaffForm staff={s} />
             </div>
           </details>

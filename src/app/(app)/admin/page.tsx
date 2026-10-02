@@ -1,16 +1,21 @@
 import Link from "next/link";
+import { BarChart } from "@/components/charts/bar-chart";
 import { MonthNav } from "@/components/month-nav";
 import { StatTile } from "@/components/stat-tile";
+import { ViewAsButton } from "@/components/view-as-button";
 import { paceFor, storeVolumeSpiffFor } from "@/lib/commission/engine";
-import { getStoreMonth, requireAdmin } from "@/lib/data";
+import { getStoreMonth, getStoreUnitsByMonth, requireAdmin } from "@/lib/data";
 import { money, money0, units as fmtUnits } from "@/lib/format";
-import { currentMonth, daysElapsed, daysInMonth, isClosed, isMonth, monthLabel } from "@/lib/months";
+import { currentMonth, daysElapsed, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
+
+const CHART_MONTHS = 12;
 
 export default async function StorePage({ searchParams }: { searchParams: Promise<{ month?: string }> }) {
   await requireAdmin();
   const sp = await searchParams;
   const month = isMonth(sp.month) ? sp.month : currentMonth();
-  const view = await getStoreMonth(month);
+  const chartFrom = shiftMonth(month, -(CHART_MONTHS - 1));
+  const [view, storeByMonth] = await Promise.all([getStoreMonth(month), getStoreUnitsByMonth(chartFrom, month)]);
 
   const closed = isClosed(month);
   const pace = closed ? view.storeUnits : paceFor(view.storeUnits, daysElapsed(month), daysInMonth(month));
@@ -21,6 +26,27 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
 
   const rows = view.rows.map((r) => ({ ...r, shown: r.paid?.total ?? r.summary.total }));
   const payroll = rows.reduce((a, r) => a + r.shown, 0);
+
+  const storeBars = Array.from({ length: CHART_MONTHS }, (_, i) => shiftMonth(chartFrom, i)).map((m) => {
+    const u = storeByMonth.get(m) ?? 0;
+    const spiff = storeVolumeSpiffFor(u, tiers);
+    return {
+      key: m,
+      label: monthLabel(m).slice(0, 3),
+      value: u,
+      highlight: m === month,
+      tooltip: [`${u} store units`, spiff > 0 ? `${money0(spiff)} volume spiff each` : "No volume spiff", monthLabel(m)],
+    };
+  });
+  const salespersonBars = rows
+    .map(({ staff, summary, paid }) => ({ staff, units: paid?.units ?? summary.units }))
+    .sort((a, b) => b.units - a.units)
+    .map(({ staff, units: u }) => ({
+      key: staff.id,
+      label: staff.name.split(" ")[0],
+      value: u,
+      tooltip: [staff.name, `${fmtUnits(u)} units`],
+    }));
 
   return (
     <>
@@ -49,6 +75,16 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
         />
       </section>
 
+      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <BarChart
+          title="Store Units by Month"
+          subtitle="Last 12 months"
+          bars={storeBars}
+          refLines={tiers.map((t) => ({ value: t.units, label: `${t.units} units → ${money0(t.amount)}` }))}
+        />
+        <BarChart title="Units by Salesperson" subtitle={monthLabel(month)} bars={salespersonBars} formatValue={(n) => fmtUnits(Math.round(n * 10) / 10)} />
+      </section>
+
       <section className="space-y-4">
         <h2 className="display text-2xl text-white">Salespeople</h2>
         <div className="card overflow-x-auto">
@@ -73,7 +109,10 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
                   <tr key={staff.id} className={`border-b border-[#27272a] ${i % 2 ? "bg-[#1c1c1e]" : "bg-[#141416]"}`}>
                     <td className="px-4 py-3">
                       <Link href={`/dashboard?staff=${staff.id}&month=${month}`} className="font-bold text-white hover:text-primary">{staff.name}</Link>
-                      <Link href={`/history?staff=${staff.id}`} className="ml-2 text-xs text-on-surface-subtle hover:text-primary">history</Link>
+                      <span className="ml-3 inline-flex gap-3 align-middle">
+                        <Link href={`/history?staff=${staff.id}`} className="text-xs font-bold uppercase tracking-wider text-on-surface-subtle hover:text-primary">History</Link>
+                        {staff.active && <ViewAsButton staffId={staff.id} name={staff.name} />}
+                      </span>
                       {summary.personalBest && <span className="chip ml-2 bg-success/10 text-success">Personal best</span>}
                     </td>
                     <td className="px-4 py-3 text-right font-mono">{fmtUnits(paid?.units ?? summary.units)}</td>

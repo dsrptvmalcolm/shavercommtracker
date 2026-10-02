@@ -1,18 +1,24 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { BarChart } from "@/components/charts/bar-chart";
+import { PaceChart } from "@/components/charts/pace-chart";
 import { DealList } from "@/components/deal-list";
 import { MonthNav } from "@/components/month-nav";
 import { StatTile } from "@/components/stat-tile";
 import { TierLadder } from "@/components/tier-ladder";
 import { UnitsGauge } from "@/components/units-gauge";
 import { currentMiniTierIndex, paceFor, storeVolumeSpiffFor } from "@/lib/commission/engine";
-import { getAllStaff, getProducts, getSalespersonMonth, requireMe } from "@/lib/data";
+import { getAllStaff, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer } from "@/lib/data";
 import { money, money0, units as fmtUnits } from "@/lib/format";
-import { currentMonth, daysElapsed, daysInMonth, isClosed, isMonth, monthLabel } from "@/lib/months";
+import { currentMonth, daysElapsed, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
+
+const CHART_MONTHS = 12;
+const shortMonth = (m: string) => monthLabel(m).slice(0, 3);
 
 export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ month?: string; staff?: string }> }) {
-  const me = await requireMe();
-  const sp = await searchParams;
+  const [viewer, sp] = await Promise.all([getViewer(), searchParams]);
+  if (!viewer) redirect("/login");
+  const { me, impersonating } = viewer;
   const month = isMonth(sp.month) ? sp.month : currentMonth();
 
   // Admins can look at any salesperson's dashboard
@@ -21,7 +27,11 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   if (!staff) notFound();
   if (!staff.is_salesperson && !sp.staff) redirect("/admin");
 
-  const [view, products] = await Promise.all([getSalespersonMonth(staff, month), getProducts()]);
+  const [view, products, unitsByMonth] = await Promise.all([
+    getSalespersonMonth(staff, month),
+    getProducts(),
+    getUnitsByMonth(staff.id),
+  ]);
   const { summary, paid, settings } = view;
 
   // Paid months show exactly what was paid; open months show the live calculation
@@ -47,6 +57,26 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   const staffNames = new Map(staffList.map((s) => [s.id, s.name]));
   const commissions = new Map(summary.deals.map((c) => [c.dealId, c]));
   const params: Record<string, string> = sp.staff ? { staff: sp.staff } : {};
+  const canWrite = !impersonating;
+
+  // Charts: day-by-day units this month, and the trailing year by month
+  const daily = Array.from({ length: days }, () => 0);
+  const dealDates = new Map(view.deals.map((d) => [d.id, d.sale_date]));
+  summary.deals.forEach((c) => {
+    const day = Number(dealDates.get(c.dealId)?.slice(8, 10));
+    if (day) daily[day - 1] += c.share;
+  });
+  const chartMonths = Array.from({ length: CHART_MONTHS }, (_, i) => shiftMonth(month, i - CHART_MONTHS + 1));
+  const monthBars = chartMonths.map((m) => {
+    const u = m === month ? units : (unitsByMonth.get(m) ?? 0);
+    return {
+      key: m,
+      label: shortMonth(m),
+      value: u,
+      highlight: m === month,
+      tooltip: [`${fmtUnits(u)} units`, monthLabel(m)],
+    };
+  });
 
   return (
     <>
@@ -119,6 +149,22 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
         </div>
       </section>
 
+      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <PaceChart
+          daily={daily}
+          elapsed={elapsed}
+          monthLabel={monthLabel(month)}
+          target={nextTier ? { units: nextTier.startUnits, label: `Tier ${currentMiniTierIndex(units, tiers) + 2}` } : undefined}
+        />
+        <BarChart
+          title="Units by Month"
+          subtitle="Last 12 months"
+          bars={monthBars}
+          refLines={view.priorBest > 0 ? [{ value: view.priorBest, label: `Personal best: ${fmtUnits(view.priorBest)} units` }] : []}
+          formatValue={(n) => fmtUnits(Math.round(n * 10) / 10)}
+        />
+      </section>
+
       <TierLadder tiers={tiers} units={units} />
 
       <section className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
@@ -161,7 +207,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
             <span className="eyebrow">{fmtUnits(units)} units</span>
             <h3 className="display text-2xl text-white">Deals</h3>
           </div>
-          {staff.id === me.id && !closed && (
+          {staff.id === me.id && !closed && canWrite && (
             <Link href="/deals/new" className="btn-secondary">
               + Log deal
             </Link>
@@ -173,7 +219,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
           productNames={productNames}
           staffNames={staffNames}
           viewerId={staff.id}
-          canEdit={(d) => me.is_admin || (!closed && d.sale_date >= `${currentMonth()}-01`)}
+          canEdit={(d) => canWrite && (me.is_admin || (!closed && d.sale_date >= `${currentMonth()}-01`))}
         />
         {summary.adjustments !== 0 && (
           <p className="text-sm text-on-surface-muted">

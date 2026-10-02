@@ -1,9 +1,14 @@
-import { getAllStaff, getProducts, requireMe } from "@/lib/data";
+import { getAllStaff, getProducts, getViewer } from "@/lib/data";
+import { redirect } from "next/navigation";
 import { currentMonth, todayIso } from "@/lib/months";
 import { DealForm } from "../deal-form";
 
 export default async function NewDealPage() {
-  const me = await requireMe();
+  const viewer = await getViewer();
+  if (!viewer) redirect("/login");
+  // Viewing as someone is read only
+  if (viewer.impersonating) redirect("/dashboard");
+  const { me } = viewer;
   const [products, staff] = await Promise.all([getProducts(), getAllStaff()]);
   return (
     <div className="mx-auto max-w-2xl space-y-6">

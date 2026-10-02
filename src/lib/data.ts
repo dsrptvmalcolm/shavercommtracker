@@ -1,9 +1,10 @@
 import "server-only";
 import { cache } from "react";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { salespersonMonth, shareOf, storeUnitsFor } from "@/lib/commission/engine";
+import { salespersonMonth, storeUnitsFor } from "@/lib/commission/engine";
 import type { CommissionSettings, DealInput, MonthSummary } from "@/lib/commission/types";
-import { APP_TIMEZONE, monthOf, monthRange } from "@/lib/months";
+import { APP_TIMEZONE, monthRange } from "@/lib/months";
 import { createClient } from "@/lib/supabase/server";
 
 export type Staff = {
@@ -128,20 +129,49 @@ export const toEngineSettings = (s: SettingsRow): CommissionSettings => ({
 
 // Auth ----------------------------------------------------------------------
 
-export const getMe = cache(async (): Promise<Staff | null> => {
+export const VIEW_AS_COOKIE = "view_as";
+
+export type Viewer = {
+  /** The signed-in staff member */
+  real: Staff;
+  /** Who the app renders as — the impersonated salesperson, or `real` */
+  me: Staff;
+  impersonating: boolean;
+};
+
+/**
+ * Resolves the signed-in staff member and, for admins, the salesperson they're viewing as.
+ * Impersonation only changes what's rendered — database access still runs as the real admin,
+ * and every write is blocked while impersonating.
+ */
+export const getViewer = cache(async (): Promise<Viewer | null> => {
   const supabase = await createClient();
   const { data } = await supabase.auth.getClaims();
   const email = data?.claims?.email as string | undefined;
   if (!email) return null;
   const { data: row } = await supabase.from("staff").select("*").ilike("email", email).eq("active", true).maybeSingle();
-  return row ? toStaff(row) : null;
+  if (!row) return null;
+  const real = toStaff(row);
+
+  const viewAs = (await cookies()).get(VIEW_AS_COOKIE)?.value;
+  if (real.is_admin && viewAs && viewAs !== real.id) {
+    const { data: target } = await supabase.from("staff").select("*").eq("id", viewAs).maybeSingle();
+    if (target?.is_salesperson) return { real, me: toStaff(target), impersonating: true };
+  }
+  return { real, me: real, impersonating: false };
 });
+
+export const getMe = async (): Promise<Staff | null> => (await getViewer())?.me ?? null;
 
 export const requireMe = async (): Promise<Staff> => {
   const me = await getMe();
   if (!me) redirect("/login?error=no-access");
   return me;
 };
+
+/** A user-facing message when an admin is viewing as someone else (writes are blocked), else undefined. */
+export const assertNotImpersonating = async (): Promise<string | undefined> =>
+  (await getViewer())?.impersonating ? "You're viewing as a salesperson — exit view mode to make changes." : undefined;
 
 export const requireAdmin = async (): Promise<Staff> => {
   const me = await requireMe();
@@ -204,6 +234,14 @@ export const getStoreUnits = cache(async (month: string): Promise<number> => {
   return data as number;
 });
 
+/** Store units (incl. house deals) per month, inclusive range. */
+export const getStoreUnitsByMonth = cache(async (from: string, to: string): Promise<Map<string, number>> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("store_units_by_month", { p_from: from, p_to: to });
+  if (error) throw error;
+  return new Map((data as { month: string; units: number }[]).map((r) => [r.month, r.units]));
+});
+
 export const getAdjustments = cache(async (month: string): Promise<Adjustment[]> => {
   const supabase = await createClient();
   const { data, error } = await supabase.from("adjustments").select("*").eq("month", month).order("created_at");
@@ -220,39 +258,24 @@ export const getPaidMonths = cache(async (staffId?: string): Promise<PaidMonth[]
   return data.map(toPaid);
 });
 
-/** Units per month for one salesperson, from paid history plus deals on record. */
-export const getUnitsByMonth = cache(async (staffId: string): Promise<Map<string, number>> => {
+/**
+ * Units per salesperson per month — deals rolled up in Postgres, with paid history
+ * as the record for its month. One query for everyone the viewer can see.
+ */
+export const getUnitsByStaffMonth = cache(async (): Promise<Map<string, Map<string, number>>> => {
   const supabase = await createClient();
-  const [{ data, error }, paid] = await Promise.all([
-    supabase
-      .from("deals")
-      .select("sale_date, salesperson_id, split_salesperson_id, is_house")
-      .or(`salesperson_id.eq.${staffId},split_salesperson_id.eq.${staffId}`),
-    getPaidMonths(staffId),
-  ]);
+  const [{ data, error }, paid] = await Promise.all([supabase.rpc("units_by_month"), getPaidMonths()]);
   if (error) throw error;
-  const fromDeals = data.reduce<Map<string, number>>((m, d) => {
-    const share = shareOf(
-      {
-        id: "",
-        saleDate: d.sale_date,
-        salespersonId: d.salesperson_id,
-        splitSalespersonId: d.split_salesperson_id,
-        isHouse: d.is_house,
-        frontGross: null,
-        backGross: null,
-        productSpiffs: [],
-        multilingual: false,
-        ninetyDay: false,
-      },
-      staffId,
-    );
-    return m.set(monthOf(d.sale_date), (m.get(monthOf(d.sale_date)) ?? 0) + share);
-  }, new Map());
-  // Paid months are the record for their month
-  paid.forEach((p) => fromDeals.set(p.month, p.units));
-  return fromDeals;
+  const byStaff = new Map<string, Map<string, number>>();
+  const put = (staffId: string, month: string, units: number) =>
+    byStaff.set(staffId, (byStaff.get(staffId) ?? new Map()).set(month, units));
+  (data as { staff_id: string; month: string; units: unknown }[]).forEach((r) => put(r.staff_id, r.month, num(r.units)));
+  paid.forEach((p) => put(p.staff_id, p.month, p.units));
+  return byStaff;
 });
+
+export const getUnitsByMonth = async (staffId: string): Promise<Map<string, number>> =>
+  (await getUnitsByStaffMonth()).get(staffId) ?? new Map();
 
 /** Best month before `month`: the manual baseline or any month on record, whichever is higher. */
 export const priorBestUnits = (staff: Staff, unitsByMonth: Map<string, number>, month: string): number =>
@@ -327,28 +350,28 @@ export type StoreMonthView = {
 
 /** Admin view of the whole store for a month. */
 export const getStoreMonth = async (month: string): Promise<StoreMonthView> => {
-  const [settings, deals, staff, adjustments, paid] = await Promise.all([
+  const [settings, deals, staff, adjustments, paid, unitsByStaff] = await Promise.all([
     getSettingsFor(month),
     getDealsForMonth(month),
     getAllStaff(),
     getAdjustments(month),
     getPaidMonths(),
+    getUnitsByStaffMonth(),
   ]);
   const inputs = deals.map(toDealInput);
   const storeUnits = storeUnitsFor(inputs);
   const onDeals = new Set(deals.flatMap((d) => [d.salesperson_id, d.split_salesperson_id]));
   const paidIds = new Set(paid.filter((p) => p.month === month).map((p) => p.staff_id));
   const salespeople = staff.filter((s) => onTeamFor(s, month, onDeals.has(s.id) || paidIds.has(s.id)));
-  const unitMaps = await Promise.all(salespeople.map((s) => getUnitsByMonth(s.id)));
   const engineSettings = toEngineSettings(settings);
 
-  const rows = salespeople.map((s, i) => ({
+  const rows = salespeople.map((s) => ({
     staff: s,
     summary: salespersonMonth({
       salesperson: {
         id: s.id,
         multilingualEligible: s.multilingual_eligible,
-        priorBestUnits: priorBestUnits(s, unitMaps[i], month),
+        priorBestUnits: priorBestUnits(s, unitsByStaff.get(s.id) ?? new Map(), month),
       },
       deals: inputs,
       storeUnits,

@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { requireMe } from "@/lib/data";
+import { assertNotImpersonating, requireMe } from "@/lib/data";
 import { monthOf } from "@/lib/months";
 import { createClient } from "@/lib/supabase/server";
 
@@ -33,6 +33,8 @@ const schema = z.object({
 
 export async function saveDeal(_: DealFormState, formData: FormData): Promise<DealFormState> {
   const me = await requireMe();
+  const blocked = await assertNotImpersonating();
+  if (blocked) return { error: blocked };
   const parsed = schema.safeParse(Object.fromEntries([...formData.entries()].filter(([k]) => k !== "product_ids")));
   if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "Check the form" };
   const f = parsed.data;
@@ -65,6 +67,8 @@ export async function saveDeal(_: DealFormState, formData: FormData): Promise<De
 
 export async function deleteDeal(id: string): Promise<DealFormState> {
   const me = await requireMe();
+  const blocked = await assertNotImpersonating();
+  if (blocked) return { error: blocked };
   const supabase = await createClient();
   const { error } = await supabase.rpc("delete_deal", { p_id: id });
   if (error) return { error: error.message };

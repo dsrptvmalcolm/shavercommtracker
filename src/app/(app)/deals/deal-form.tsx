@@ -144,7 +144,7 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex gap-3">
-          <button type="submit" disabled={pending} className="btn-primary font-display tracking-wider">
+          <button type="submit" disabled={pending} className="btn-primary">
             {pending ? "Saving…" : deal ? "Save deal" : "Log deal"}
           </button>
           <Link href={me.is_admin ? "/admin/deals" : "/dashboard"} className="btn-secondary">Cancel</Link>
