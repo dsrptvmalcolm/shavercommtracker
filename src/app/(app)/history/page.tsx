@@ -37,31 +37,32 @@ export default async function HistoryPage({ searchParams }: { searchParams: Prom
         <p className="mt-2 text-sm text-on-surface-muted">Best month: <strong className="text-white">{fmtUnits(best)} units</strong></p>
       </div>
       <div className="card overflow-x-auto">
-        <table className="w-full min-w-[640px] text-sm">
+        {/* Phones show Month, Units, Best and Total; the per-month detail columns join from 640px up */}
+        <table className="w-full text-sm sm:min-w-[640px]">
           <thead className="table-head">
             <tr>
-              <th className="px-4 py-3">Month</th>
-              <th className="px-4 py-3 text-right">Units</th>
-              <th className="px-4 py-3 text-right">2-Car</th>
-              <th className="px-4 py-3 text-right">Hat Trick</th>
-              <th className="px-4 py-3 text-center">Best?</th>
-              <th className="px-4 py-3 text-right">Deals only</th>
-              <th className="px-4 py-3 text-right">Total</th>
+              <th className="px-2.5 sm:px-4 py-3">Month</th>
+              <th className="px-2.5 sm:px-4 py-3 text-right">Units</th>
+              <th className="hidden px-2.5 sm:px-4 py-3 text-right sm:table-cell">2-Car</th>
+              <th className="hidden px-2.5 sm:px-4 py-3 text-right sm:table-cell">Hat Trick</th>
+              <th className="px-2.5 sm:px-4 py-3 text-center">Best?</th>
+              <th className="hidden px-2.5 sm:px-4 py-3 text-right sm:table-cell">Deals only</th>
+              <th className="px-2.5 sm:px-4 py-3 text-right">Total</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((r, i) => (
               <tr key={r.month} className={`border-b border-[#27272a] ${i % 2 ? "bg-[#1c1c1e]" : "bg-[#141416]"} hover:bg-surface-card-hover`}>
-                <td className="px-4 py-3">
-                  <Link href={`/dashboard?month=${r.month}${qs}`} className="font-bold text-white hover:text-primary">{monthLabel(r.month)}</Link>
+                <td className="px-2.5 sm:px-4 py-0">
+                  <Link href={`/dashboard?month=${r.month}${qs}`} className="inline-flex min-h-11 items-center font-bold text-white hover:text-primary">{monthLabel(r.month)}</Link>
                   {r.paid && <span className="chip ml-2 bg-surface-subtle text-on-surface-subtle">Paid</span>}
                 </td>
-                <td className="px-4 py-3 text-right font-mono">{fmtUnits(r.units)}</td>
-                <td className="px-4 py-3 text-right font-mono">{r.twoCar}</td>
-                <td className="px-4 py-3 text-right font-mono">{r.hatTrick}</td>
-                <td className="px-4 py-3 text-center">{r.pb ? <span className="text-success">★</span> : <span className="text-on-surface-subtle">—</span>}</td>
-                <td className="px-4 py-3 text-right font-mono">{money(r.vehicle)}</td>
-                <td className="px-4 py-3 text-right font-mono font-bold text-white">{money(r.total)}</td>
+                <td className="px-2.5 sm:px-4 py-3 text-right font-mono">{fmtUnits(r.units)}</td>
+                <td className="hidden px-2.5 sm:px-4 py-3 text-right font-mono sm:table-cell">{r.twoCar}</td>
+                <td className="hidden px-2.5 sm:px-4 py-3 text-right font-mono sm:table-cell">{r.hatTrick}</td>
+                <td className="px-2.5 sm:px-4 py-3 text-center">{r.pb ? <span className="text-success">★</span> : <span className="text-on-surface-subtle">—</span>}</td>
+                <td className="hidden px-2.5 sm:px-4 py-3 text-right font-mono sm:table-cell">{money(r.vehicle)}</td>
+                <td className="px-2.5 sm:px-4 py-3 text-right font-mono font-bold text-white">{money(r.total)}</td>
               </tr>
             ))}
           </tbody>

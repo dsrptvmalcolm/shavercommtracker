@@ -23,8 +23,8 @@ export default async function ChangePasswordPage() {
           <div className="text-left">
             <ChangePasswordForm />
           </div>
-          <form action={signOut} className="mt-4">
-            <button type="submit" className="text-xs font-bold uppercase tracking-wider text-on-surface-subtle hover:text-on-surface">
+          <form action={signOut} className="mt-2">
+            <button type="submit" className="inline-flex min-h-11 items-center px-2 text-xs font-bold uppercase tracking-wider text-on-surface-subtle hover:text-on-surface">
               Sign out
             </button>
           </form>

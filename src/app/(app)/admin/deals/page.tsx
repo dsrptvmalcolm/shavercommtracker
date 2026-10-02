@@ -77,7 +77,7 @@ export default async function AdminDealsPage({ searchParams }: { searchParams: P
                   {d.is_house ? <span className="block text-right text-on-surface-subtle">—</span> : <BackGrossInput dealId={d.id} value={d.back_gross} />}
                 </td>
                 <td className="px-4 py-2.5 text-right">
-                  <Link href={`/deals/${d.id}`} className="text-xs font-bold uppercase tracking-wider text-primary hover:underline">Edit</Link>
+                  <Link href={`/deals/${d.id}`} className="inline-flex min-h-11 items-center px-2 -mr-2 text-xs font-bold uppercase tracking-wider text-primary hover:underline">Edit</Link>
                 </td>
               </tr>
             ))}

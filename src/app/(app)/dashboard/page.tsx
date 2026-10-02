@@ -138,7 +138,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                   <span className="block text-xs font-bold leading-tight text-on-surface">
                     {fmtUnits(nextTier.startUnits - units)} to {money0(nextTier.amount)} / unit
                   </span>
-                  <span className="block text-[11px] text-on-surface-subtle">Pays on every unit this month</span>
+                  <span className="block text-xs text-on-surface-subtle">Pays on every unit this month</span>
                 </div>
                 <span className="rounded-lg bg-primary/10 px-2.5 py-1 font-mono text-xs font-bold text-primary">
                   +{money0((nextTier.amount - summary.miniRate) * nextTier.startUnits)}

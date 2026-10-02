@@ -126,7 +126,7 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
                   <span className="block text-xs font-bold leading-tight text-on-surface">
                     {nextTier.units - storeUnits} units to {money0(nextTier.amount)} each
                   </span>
-                  <span className="block text-[11px] text-on-surface-subtle">
+                  <span className="block text-xs text-on-surface-subtle">
                     {earned > 0 ? `${money0(earned)} each earned so far` : "Paid to every salesperson"}
                   </span>
                 </div>
@@ -226,30 +226,30 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
                   </div>
                   <div className="text-right">
                     <div className="display text-3xl text-white">{fmtUnits(r.units)}</div>
-                    <div className="text-[11px] uppercase tracking-wider text-on-surface-subtle">units</div>
+                    <div className="text-xs uppercase tracking-wider text-on-surface-subtle">units</div>
                   </div>
                 </div>
 
                 <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-surface-subtle">
                   <div className="h-full rounded-full bg-gradient-to-r from-primary/50 to-primary" style={{ width: `${progress * 100}%` }} />
                 </div>
-                <p className="mt-1.5 text-[11px] text-on-surface-subtle">
+                <p className="mt-1.5 text-xs text-on-surface-subtle">
                   {nextMini ? `${fmtUnits(nextMini.startUnits - r.units)} to Tier ${tierIdx + 2}` : "Top mini tier"}
                 </p>
 
                 <div className="mt-4 flex flex-wrap items-end justify-between gap-3 border-t border-surface-border/70 pt-4">
                   <div>
-                    <span className="block text-[11px] uppercase tracking-wider text-on-surface-subtle">Commission</span>
+                    <span className="block text-xs uppercase tracking-wider text-on-surface-subtle">Commission</span>
                     <span className="display text-2xl text-white">{money(r.total)}</span>
                     {Math.abs(r.diff) > 0.01 && (
-                      <span className="block text-[11px] text-amber-300">
+                      <span className="block text-xs text-amber-300">
                         Recalc {r.diff > 0 ? "+" : ""}
                         {money(r.diff)} vs paid
                       </span>
                     )}
                   </div>
-                  <div className="flex items-center gap-4">
-                    <Link href={`/history?staff=${r.staff.id}`} className="text-xs font-bold uppercase tracking-wider text-on-surface-subtle hover:text-primary">
+                  <div className="-mr-2 flex items-center gap-2">
+                    <Link href={`/history?staff=${r.staff.id}`} className="inline-flex min-h-11 items-center px-2 text-xs font-bold uppercase tracking-wider text-on-surface-subtle hover:text-primary">
                       History
                     </Link>
                     {r.staff.active && <ViewAsButton staffId={r.staff.id} name={r.staff.name} />}

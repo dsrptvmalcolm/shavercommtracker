@@ -94,7 +94,7 @@ export default async function SettingsPage() {
           <p className="text-sm text-on-surface-muted">Pacing counts selling days — Monday through Saturday, minus these dates.</p>
         </div>
         <div className="grid gap-6 lg:grid-cols-12">
-          <div className="card overflow-hidden lg:col-span-7">
+          <div className="card overflow-x-auto lg:col-span-7">
             <table className="w-full text-sm">
               <thead className="table-head">
                 <tr>
@@ -110,7 +110,7 @@ export default async function SettingsPage() {
                       {shortDate(h.date)}, {h.date.slice(0, 4)}
                     </td>
                     <td className="px-4 py-3 text-white">{h.name}</td>
-                    <td className="px-4 py-3 text-right">
+                    <td className="px-4 py-0 text-right">
                       <RemoveHolidayButton date={h.date} name={h.name} />
                     </td>
                   </tr>
@@ -173,7 +173,7 @@ function ProductForm({ product }: { product?: Product }) {
         <label htmlFor={`psort-${id}`} className="field-label">Order</label>
         <input id={`psort-${id}`} name="sort_order" inputMode="numeric" defaultValue={product?.sort_order ?? 0} className="input" />
       </div>
-      <label className="flex items-center gap-2 pb-3 text-sm">
+      <label className="flex min-h-11 items-center gap-2 text-sm">
         <input type="checkbox" name="active" defaultChecked={product?.active ?? true} className="h-4 w-4 accent-primary" /> Active
       </label>
     </ActionForm>

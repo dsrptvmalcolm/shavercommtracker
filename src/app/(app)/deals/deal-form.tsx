@@ -42,7 +42,7 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
       {me.is_admin && (
         <fieldset className="card space-y-4 p-6">
           <legend className="sr-only">Assignment</legend>
-          <label className="flex items-center gap-3 text-sm font-bold">
+          <label className="flex min-h-11 items-center gap-3 text-sm font-bold">
             <input type="checkbox" name="is_house" checked={isHouse} onChange={(e) => setIsHouse(e.target.checked)} className="h-4 w-4 accent-primary" />
             House deal <span className="font-normal text-on-surface-muted">— counts toward store volume only</span>
           </label>
@@ -68,15 +68,15 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
         </div>
         <div>
           <label htmlFor="customer_name" className="field-label">Customer name</label>
-          <input id="customer_name" name="customer_name" required defaultValue={deal?.customer_name} autoComplete="off" className="input" />
+          <input id="customer_name" name="customer_name" required defaultValue={deal?.customer_name} autoComplete="off" enterKeyHint="next" className="input" />
         </div>
         <div>
           <label htmlFor="stock_number" className="field-label">Stock #</label>
-          <input id="stock_number" name="stock_number" required defaultValue={deal?.stock_number} autoComplete="off" className="input uppercase" />
+          <input id="stock_number" name="stock_number" required defaultValue={deal?.stock_number} autoComplete="off" autoCapitalize="characters" enterKeyHint="next" className="input uppercase" />
         </div>
         <div>
           <label htmlFor="deal_number" className="field-label">Deal #</label>
-          <input id="deal_number" name="deal_number" defaultValue={deal?.deal_number ?? ""} autoComplete="off" className="input" />
+          <input id="deal_number" name="deal_number" defaultValue={deal?.deal_number ?? ""} autoComplete="off" enterKeyHint="next" className="input" />
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="deal_notes" className="field-label">Deal notes</label>
@@ -91,7 +91,7 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
             <span className="field-label">Products sold</span>
             <div className="grid gap-2 sm:grid-cols-2">
               {visibleProducts.map((p) => (
-                <label key={p.id} className="flex items-center gap-3 rounded-md border border-surface-border bg-surface-subtle px-3 py-2.5 text-sm has-[:checked]:border-primary has-[:checked]:bg-primary-soft">
+                <label key={p.id} className="flex min-h-11 items-center gap-3 rounded-md border border-surface-border bg-surface-subtle px-3 py-2.5 text-sm has-[:checked]:border-primary has-[:checked]:bg-primary-soft">
                   <input type="checkbox" name="product_ids" value={p.id} defaultChecked={onDeal.has(p.id)} className="h-4 w-4 accent-primary" />
                   {p.name}
                 </label>
@@ -100,12 +100,12 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
             <p className="mt-2 text-xs text-on-surface-subtle">Any 3 products on one deal pays the product hat trick bonus.</p>
           </div>
           <div className="grid gap-2 sm:grid-cols-2">
-            <label className="flex items-center gap-3 rounded-md border border-surface-border bg-surface-subtle px-3 py-2.5 text-sm has-[:checked]:border-primary has-[:checked]:bg-primary-soft">
+            <label className="flex min-h-11 items-center gap-3 rounded-md border border-surface-border bg-surface-subtle px-3 py-2.5 text-sm has-[:checked]:border-primary has-[:checked]:bg-primary-soft">
               <input type="checkbox" name="ninety_day" defaultChecked={deal?.ninety_day} className="h-4 w-4 accent-primary" />
               90 Day+ unit
             </label>
             {(owner?.multilingual_eligible || deal?.multilingual) && (
-              <label className="flex items-center gap-3 rounded-md border border-surface-border bg-surface-subtle px-3 py-2.5 text-sm has-[:checked]:border-primary has-[:checked]:bg-primary-soft">
+              <label className="flex min-h-11 items-center gap-3 rounded-md border border-surface-border bg-surface-subtle px-3 py-2.5 text-sm has-[:checked]:border-primary has-[:checked]:bg-primary-soft">
                 <input type="checkbox" name="multilingual" defaultChecked={deal?.multilingual} className="h-4 w-4 accent-primary" />
                 Multi-lingual sale
               </label>

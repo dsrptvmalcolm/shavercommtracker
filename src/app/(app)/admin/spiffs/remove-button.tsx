@@ -10,7 +10,7 @@ export function RemoveButton({ id }: { id: string }) {
       type="button"
       disabled={pending}
       onClick={() => confirm("Remove this spiff?") && start(async () => void (await deleteAdjustment(id)))}
-      className="text-xs font-bold uppercase tracking-wider text-danger hover:underline disabled:opacity-50"
+      className="inline-flex min-h-11 items-center px-2 text-xs font-bold uppercase tracking-wider text-danger hover:underline disabled:opacity-50"
     >
       {pending ? "Removing…" : "Remove"}
     </button>

@@ -38,7 +38,7 @@ export default async function SpiffsPage({ searchParams }: { searchParams: Promi
             </div>
             <div>
               <label htmlFor="amount" className="field-label">Amount</label>
-              <input id="amount" name="amount" inputMode="decimal" required placeholder="250" className="input" />
+              <input id="amount" name="amount" required placeholder="250" className="input" />
               <p className="mt-1 text-xs text-on-surface-subtle">Use a negative number for a chargeback.</p>
             </div>
             <div>
@@ -48,7 +48,7 @@ export default async function SpiffsPage({ searchParams }: { searchParams: Promi
           </ActionForm>
         </div>
 
-        <div className="card overflow-hidden lg:col-span-7">
+        <div className="card overflow-x-auto lg:col-span-7">
           <table className="w-full text-sm">
             <thead className="table-head">
               <tr>
@@ -64,7 +64,7 @@ export default async function SpiffsPage({ searchParams }: { searchParams: Promi
                   <td className="px-4 py-3 font-bold text-white">{names.get(a.staff_id)}</td>
                   <td className="px-4 py-3 text-on-surface-muted">{a.note}</td>
                   <td className="px-4 py-3 text-right font-mono">{money(a.amount)}</td>
-                  <td className="px-4 py-3 text-right"><RemoveButton id={a.id} /></td>
+                  <td className="px-4 py-0 text-right"><RemoveButton id={a.id} /></td>
                 </tr>
               ))}
               {adjustments.length === 0 && (

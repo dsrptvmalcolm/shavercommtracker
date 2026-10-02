@@ -61,14 +61,14 @@ function StaffForm({ staff }: { staff?: Staff }) {
       </div>
       <div>
         <label className="field-label" htmlFor={`password-${staff?.id ?? "new"}`}>{staff?.email ? "Reset password" : "Password"}</label>
-        <input id={`password-${staff?.id ?? "new"}`} name="password" type="text" autoComplete="new-password" placeholder="Leave blank to keep" className="input" />
+        <input id={`password-${staff?.id ?? "new"}`} name="password" type="text" autoComplete="new-password" autoCapitalize="none" autoCorrect="off" spellCheck={false} placeholder="Leave blank to keep" className="input" />
       </div>
       <div>
         <label className="field-label" htmlFor={`pb-${staff?.id ?? "new"}`}>Personal best (units)</label>
         <input id={`pb-${staff?.id ?? "new"}`} name="personal_best_units" inputMode="decimal" required defaultValue={staff?.personal_best_units ?? 0} className="input" />
         <p className="mt-1 text-xs text-on-surface-subtle">Manual baseline. Any higher month on record counts automatically.</p>
       </div>
-      <div className="flex flex-wrap gap-x-6 gap-y-2 sm:col-span-2">
+      <div className="flex flex-wrap gap-x-6 sm:col-span-2">
         {(
           [
             ["is_salesperson", "Salesperson", staff?.is_salesperson ?? true],
@@ -77,7 +77,7 @@ function StaffForm({ staff }: { staff?: Staff }) {
             ["active", "Active", staff?.active ?? true],
           ] as const
         ).map(([name, label, checked]) => (
-          <label key={name} className="flex items-center gap-2 text-sm">
+          <label key={name} className="flex min-h-11 items-center gap-2 text-sm">
             <input type="checkbox" name={name} defaultChecked={checked} className="h-4 w-4 accent-primary" />
             {label}
           </label>
