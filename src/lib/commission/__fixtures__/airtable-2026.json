@@ -1,0 +1,9896 @@
+{
+"products": {
+"LoJack - Standard": 25,
+"Wheel Locks - Standard": 25,
+"Multi-Guard": 50,
+"LoJack - Upsell": 25
+},
+"multilingualEligible": [
+"Khristian Ayala"
+],
+"deals": [
+{
+"id": "d0",
+"saleDate": "2026-01-02",
+"salesperson": "Derrick Kong",
+"backGross": 784.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.84,
+"airtableMini": 225.0
+},
+{
+"id": "d1",
+"saleDate": "2026-01-03",
+"salesperson": "Ed Walker",
+"backGross": 1595.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 315.95,
+"airtableMini": 250.0
+},
+{
+"id": "d2",
+"saleDate": "2026-01-03",
+"salesperson": "Ed Walker",
+"backGross": 1967.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 469.67,
+"airtableMini": 250.0
+},
+{
+"id": "d3",
+"saleDate": "2026-01-05",
+"salesperson": "Ed Walker",
+"backGross": 1489.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 364.89,
+"airtableMini": 250.0
+},
+{
+"id": "d4",
+"saleDate": "2026-01-06",
+"salesperson": "Ed Walker",
+"backGross": 1885.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 318.85,
+"airtableMini": 250.0
+},
+{
+"id": "d5",
+"saleDate": "2026-01-07",
+"salesperson": "Kevin Loughney",
+"backGross": 1738.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 217.38,
+"airtableMini": 200.0
+},
+{
+"id": "d6",
+"saleDate": "2026-01-05",
+"salesperson": "Kevin Loughney",
+"backGross": 1123.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 211.23,
+"airtableMini": 200.0
+},
+{
+"id": "d7",
+"saleDate": "2026-01-06",
+"salesperson": "Khristian Ayala",
+"backGross": 0.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d8",
+"saleDate": "2026-01-05",
+"salesperson": "Khristian Ayala",
+"backGross": 375.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 278.75,
+"airtableMini": 225.0
+},
+{
+"id": "d9",
+"saleDate": "2026-01-09",
+"salesperson": "Derrick Kong",
+"backGross": 1238.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.38,
+"airtableMini": 225.0
+},
+{
+"id": "d10",
+"saleDate": "2026-01-09",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d11",
+"saleDate": "2026-01-08",
+"salesperson": "Ed Walker",
+"backGross": 811.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 258.11,
+"airtableMini": 250.0
+},
+{
+"id": "d12",
+"saleDate": "2026-01-09",
+"salesperson": "Ed Walker",
+"backGross": 2916.0,
+"products": [
+"Wheel Locks - Standard",
+"Multi-Guard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 529.16,
+"airtableMini": 250.0
+},
+{
+"id": "d13",
+"saleDate": "2026-01-09",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d14",
+"saleDate": "2026-01-10",
+"salesperson": "Khristian Ayala",
+"backGross": 0.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d15",
+"saleDate": "2026-01-10",
+"salesperson": "Derrick Kong",
+"backGross": 2511.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 500.11,
+"airtableMini": 225.0
+},
+{
+"id": "d16",
+"saleDate": "2026-01-10",
+"salesperson": "Derrick Kong",
+"backGross": 1627.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 291.27,
+"airtableMini": 225.0
+},
+{
+"id": "d17",
+"saleDate": "2026-01-12",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d18",
+"saleDate": "2026-01-12",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d19",
+"saleDate": "2026-01-12",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d20",
+"saleDate": "2026-01-12",
+"salesperson": "Khristian Ayala",
+"backGross": 2082.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 295.82,
+"airtableMini": 225.0
+},
+{
+"id": "d21",
+"saleDate": "2026-01-13",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d22",
+"saleDate": "2026-01-14",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d23",
+"saleDate": "2026-01-14",
+"salesperson": "Khristian Ayala",
+"backGross": 1130.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.3,
+"airtableMini": 225.0
+},
+{
+"id": "d24",
+"saleDate": "2026-01-15",
+"salesperson": "Derrick Kong",
+"backGross": 2712.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 452.12,
+"airtableMini": 225.0
+},
+{
+"id": "d25",
+"saleDate": "2026-01-15",
+"salesperson": "Ed Walker",
+"backGross": 1447.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.47,
+"airtableMini": 250.0
+},
+{
+"id": "d26",
+"saleDate": "2026-01-16",
+"salesperson": "Ed Walker",
+"backGross": 789.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 257.89,
+"airtableMini": 250.0
+},
+{
+"id": "d27",
+"saleDate": "2026-01-17",
+"salesperson": "Ed Walker",
+"backGross": 1620.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.2,
+"airtableMini": 250.0
+},
+{
+"id": "d28",
+"saleDate": "2026-01-17",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d29",
+"saleDate": "2026-01-17",
+"salesperson": "Kevin Loughney",
+"backGross": 1118.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 261.18,
+"airtableMini": 200.0
+},
+{
+"id": "d30",
+"saleDate": "2026-01-17",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d31",
+"saleDate": "2026-01-17",
+"salesperson": "Ed Walker",
+"backGross": 1406.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.06,
+"airtableMini": 250.0
+},
+{
+"id": "d32",
+"saleDate": "2026-01-19",
+"salesperson": "Ed Walker",
+"backGross": 1552.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 315.52,
+"airtableMini": 250.0
+},
+{
+"id": "d33",
+"saleDate": "2026-01-19",
+"salesperson": "Ed Walker",
+"backGross": 3833.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 538.33,
+"airtableMini": 250.0
+},
+{
+"id": "d34",
+"saleDate": "2026-01-20",
+"salesperson": "Derrick Kong",
+"backGross": 0.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d35",
+"saleDate": "2026-01-20",
+"salesperson": "Ed Walker",
+"backGross": 932.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 309.32,
+"airtableMini": 250.0
+},
+{
+"id": "d36",
+"saleDate": "2026-01-22",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d37",
+"saleDate": "2026-01-22",
+"salesperson": "Khristian Ayala",
+"backGross": 1306.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 288.06,
+"airtableMini": 225.0
+},
+{
+"id": "d38",
+"saleDate": "2026-01-21",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d39",
+"saleDate": "2026-01-22",
+"salesperson": "Ed Walker",
+"backGross": 906.0,
+"products": [
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 359.06,
+"airtableMini": 250.0
+},
+{
+"id": "d40",
+"saleDate": "2026-01-22",
+"salesperson": "Ed Walker",
+"backGross": 859.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 308.59,
+"airtableMini": 250.0
+},
+{
+"id": "d41",
+"saleDate": "2026-01-22",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d42",
+"saleDate": "2026-01-23",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d43",
+"saleDate": "2026-01-23",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d44",
+"saleDate": "2026-01-23",
+"salesperson": "Kevin Loughney",
+"backGross": 1762.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 417.62,
+"airtableMini": 200.0
+},
+{
+"id": "d45",
+"saleDate": "2026-01-23",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d46",
+"saleDate": "2026-01-24",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d47",
+"saleDate": "2026-01-24",
+"salesperson": "Derrick Kong",
+"backGross": 1351.28,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 438.51,
+"airtableMini": 225.0
+},
+{
+"id": "d48",
+"saleDate": "2026-01-24",
+"salesperson": "Ed Walker",
+"backGross": 1203.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.03,
+"airtableMini": 250.0
+},
+{
+"id": "d49",
+"saleDate": "2026-01-26",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d50",
+"saleDate": "2026-01-27",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 200.0
+},
+{
+"id": "d51",
+"saleDate": "2026-01-28",
+"salesperson": "Derrick Kong",
+"backGross": 2453.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 349.53,
+"airtableMini": 225.0
+},
+{
+"id": "d52",
+"saleDate": "2026-01-28",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d53",
+"saleDate": "2026-01-28",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d54",
+"saleDate": "2026-01-29",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d55",
+"saleDate": "2026-01-29",
+"salesperson": "Derrick Kong",
+"backGross": 1616.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 341.16,
+"airtableMini": 225.0
+},
+{
+"id": "d56",
+"saleDate": "2026-01-29",
+"salesperson": "Ed Walker",
+"backGross": 1861.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 518.61,
+"airtableMini": 250.0
+},
+{
+"id": "d57",
+"saleDate": "2026-01-30",
+"salesperson": "Derrick Kong",
+"backGross": 801.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 233.01,
+"airtableMini": 225.0
+},
+{
+"id": "d58",
+"saleDate": "2026-01-30",
+"salesperson": "Derrick Kong",
+"backGross": 2352.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 298.52,
+"airtableMini": 225.0
+},
+{
+"id": "d59",
+"saleDate": "2026-01-30",
+"salesperson": "Khristian Ayala",
+"backGross": 2765.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 352.65,
+"airtableMini": 225.0
+},
+{
+"id": "d60",
+"saleDate": "2026-01-31",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d61",
+"saleDate": "2026-01-31",
+"salesperson": "Khristian Ayala",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 334.06,
+"airtableMini": 225.0
+},
+{
+"id": "d62",
+"saleDate": "2026-01-30",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 500.0,
+"airtableMini": 250.0
+},
+{
+"id": "d63",
+"saleDate": "2026-01-31",
+"salesperson": "Ed Walker",
+"backGross": 1327.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 313.27,
+"airtableMini": 250.0
+},
+{
+"id": "d64",
+"saleDate": "2026-01-31",
+"salesperson": "Ed Walker",
+"backGross": 2422.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 324.22,
+"airtableMini": 250.0
+},
+{
+"id": "d65",
+"saleDate": "2026-01-31",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d66",
+"saleDate": "2026-01-31",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d67",
+"saleDate": "2026-02-02",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 500.0,
+"airtableMini": 250.0
+},
+{
+"id": "d68",
+"saleDate": "2026-02-02",
+"salesperson": "Khristian Ayala",
+"backGross": 884.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 333.84,
+"airtableMini": 225.0
+},
+{
+"id": "d69",
+"saleDate": "2026-02-03",
+"salesperson": "Derrick Kong",
+"backGross": 978.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 334.78,
+"airtableMini": 225.0
+},
+{
+"id": "d70",
+"saleDate": "2026-02-03",
+"salesperson": "Khristian Ayala",
+"backGross": 2126.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 346.26,
+"airtableMini": 225.0
+},
+{
+"id": "d71",
+"saleDate": "2026-02-04",
+"salesperson": "Derrick Kong",
+"backGross": 1110.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.1,
+"airtableMini": 225.0
+},
+{
+"id": "d72",
+"saleDate": "2026-02-04",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d73",
+"saleDate": "2026-02-05",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 200.0
+},
+{
+"id": "d74",
+"saleDate": "2026-02-04",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d75",
+"saleDate": "2026-02-05",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d76",
+"saleDate": "2026-02-06",
+"salesperson": "Ed Walker",
+"backGross": 1133.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 461.33,
+"airtableMini": 250.0
+},
+{
+"id": "d77",
+"saleDate": "2026-02-06",
+"salesperson": "Derrick Kong",
+"backGross": 1500.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 290.0,
+"airtableMini": 225.0
+},
+{
+"id": "d78",
+"saleDate": "2026-02-07",
+"salesperson": "Kevin Loughney",
+"backGross": 1804.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 318.04,
+"airtableMini": 200.0
+},
+{
+"id": "d79",
+"saleDate": "2026-02-07",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d80",
+"saleDate": "2026-02-07",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d81",
+"saleDate": "2026-02-07",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d82",
+"saleDate": "2026-02-07",
+"salesperson": "Khristian Ayala",
+"backGross": 810.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 383.1,
+"airtableMini": 225.0
+},
+{
+"id": "d83",
+"saleDate": "2026-02-07",
+"salesperson": "Ed Walker",
+"backGross": 419.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 254.19,
+"airtableMini": 250.0
+},
+{
+"id": "d84",
+"saleDate": "2026-02-07",
+"salesperson": "Ed Walker",
+"backGross": 1434.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 314.34,
+"airtableMini": 250.0
+},
+{
+"id": "d85",
+"saleDate": "2026-02-09",
+"salesperson": "Ed Walker",
+"backGross": 982.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 509.82,
+"airtableMini": 250.0
+},
+{
+"id": "d86",
+"saleDate": "2026-02-10",
+"salesperson": "Khristian Ayala",
+"backGross": 345.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 278.45,
+"airtableMini": 225.0
+},
+{
+"id": "d87",
+"saleDate": "2026-02-10",
+"salesperson": "Derrick Kong",
+"backGross": 1191.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 336.91,
+"airtableMini": 225.0
+},
+{
+"id": "d88",
+"saleDate": "2026-02-10",
+"salesperson": "Ed Walker",
+"backGross": 1550.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 465.5,
+"airtableMini": 250.0
+},
+{
+"id": "d89",
+"saleDate": "2026-02-11",
+"salesperson": "Khristian Ayala",
+"backGross": 2747.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 502.47,
+"airtableMini": 225.0
+},
+{
+"id": "d90",
+"saleDate": "2026-02-11",
+"salesperson": "Kevin Loughney",
+"backGross": 1653.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 316.53,
+"airtableMini": 200.0
+},
+{
+"id": "d91",
+"saleDate": "2026-02-12",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d92",
+"saleDate": "2026-02-10",
+"salesperson": "Ed Walker",
+"backGross": 1391.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 313.91,
+"airtableMini": 250.0
+},
+{
+"id": "d93",
+"saleDate": "2026-02-12",
+"salesperson": "Ed Walker",
+"backGross": 2197.0,
+"products": [
+"Wheel Locks - Standard",
+"Multi-Guard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 471.97,
+"airtableMini": 250.0
+},
+{
+"id": "d94",
+"saleDate": "2026-02-14",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d95",
+"saleDate": "2026-02-12",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d96",
+"saleDate": "2026-02-13",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d97",
+"saleDate": "2026-02-13",
+"salesperson": "Khristian Ayala",
+"backGross": 1521.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 390.21,
+"airtableMini": 225.0
+},
+{
+"id": "d98",
+"saleDate": "2026-02-14",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d99",
+"saleDate": "2026-02-14",
+"salesperson": "Khristian Ayala",
+"backGross": 1720.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 442.2,
+"airtableMini": 225.0
+},
+{
+"id": "d100",
+"saleDate": "2026-02-14",
+"salesperson": "Ed Walker",
+"backGross": 1967.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 519.67,
+"airtableMini": 250.0
+},
+{
+"id": "d101",
+"saleDate": "2026-02-14",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d102",
+"saleDate": "2026-02-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d103",
+"saleDate": "2026-02-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d104",
+"saleDate": "2026-02-17",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 200.0
+},
+{
+"id": "d105",
+"saleDate": "2026-02-17",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d106",
+"saleDate": "2026-02-17",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d107",
+"saleDate": "2026-02-17",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d108",
+"saleDate": "2026-02-18",
+"salesperson": "Kevin Loughney",
+"backGross": 1455.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 314.55,
+"airtableMini": 200.0
+},
+{
+"id": "d109",
+"saleDate": "2026-02-19",
+"salesperson": "Derrick Kong",
+"backGross": 520.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 330.2,
+"airtableMini": 225.0
+},
+{
+"id": "d110",
+"saleDate": "2026-02-19",
+"salesperson": "Kevin Loughney",
+"backGross": 1000.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 260.0,
+"airtableMini": 200.0
+},
+{
+"id": "d111",
+"saleDate": "2026-02-19",
+"salesperson": "Derrick Kong",
+"backGross": 1401.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.01,
+"airtableMini": 225.0
+},
+{
+"id": "d112",
+"saleDate": "2026-02-19",
+"salesperson": "Ed Walker",
+"backGross": 2705.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 527.05,
+"airtableMini": 250.0
+},
+{
+"id": "d113",
+"saleDate": "2026-02-20",
+"salesperson": "Derrick Kong",
+"backGross": 1870.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 443.7,
+"airtableMini": 225.0
+},
+{
+"id": "d114",
+"saleDate": "2026-02-20",
+"salesperson": "Ed Walker",
+"backGross": 1221.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 512.21,
+"airtableMini": 250.0
+},
+{
+"id": "d115",
+"saleDate": "2026-02-20",
+"salesperson": "Khristian Ayala",
+"backGross": 1270.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.7,
+"airtableMini": 225.0
+},
+{
+"id": "d116",
+"saleDate": "2026-02-20",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d117",
+"saleDate": "2026-02-21",
+"salesperson": "Kevin Loughney",
+"backGross": 2285.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 272.85,
+"airtableMini": 200.0
+},
+{
+"id": "d118",
+"saleDate": "2026-02-21",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 225.0
+},
+{
+"id": "d119",
+"saleDate": "2026-02-21",
+"salesperson": "Derrick Kong",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 332.06,
+"airtableMini": 225.0
+},
+{
+"id": "d120",
+"saleDate": "2026-02-21",
+"salesperson": "Ed Walker",
+"backGross": 1350.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 313.5,
+"airtableMini": 250.0
+},
+{
+"id": "d121",
+"saleDate": "2026-02-21",
+"salesperson": "Ed Walker",
+"backGross": 2106.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 321.06,
+"airtableMini": 250.0
+},
+{
+"id": "d122",
+"saleDate": "2026-02-23",
+"salesperson": "Kevin Loughney",
+"backGross": 424.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 254.24,
+"airtableMini": 200.0
+},
+{
+"id": "d123",
+"saleDate": "2026-02-23",
+"salesperson": "Khristian Ayala",
+"backGross": 1164.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 336.64,
+"airtableMini": 225.0
+},
+{
+"id": "d124",
+"saleDate": "2026-02-23",
+"salesperson": "Ed Walker",
+"backGross": 1095.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.95,
+"airtableMini": 250.0
+},
+{
+"id": "d125",
+"saleDate": "2026-02-24",
+"salesperson": "Kevin Loughney",
+"backGross": 2456.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 274.56,
+"airtableMini": 200.0
+},
+{
+"id": "d126",
+"saleDate": "2026-02-24",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d127",
+"saleDate": "2026-02-24",
+"salesperson": "Ed Walker",
+"backGross": 1060.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.6,
+"airtableMini": 250.0
+},
+{
+"id": "d128",
+"saleDate": "2026-02-24",
+"salesperson": "Kevin Loughney",
+"backGross": 1839.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 268.39,
+"airtableMini": 200.0
+},
+{
+"id": "d129",
+"saleDate": "2026-02-24",
+"salesperson": "Khristian Ayala",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d130",
+"saleDate": "2026-02-25",
+"salesperson": "Khristian Ayala",
+"backGross": 1394.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 288.94,
+"airtableMini": 225.0
+},
+{
+"id": "d131",
+"saleDate": "2026-02-25",
+"salesperson": "Derrick Kong",
+"backGross": 1594.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 290.94,
+"airtableMini": 225.0
+},
+{
+"id": "d132",
+"saleDate": "2026-02-25",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d133",
+"saleDate": "2026-02-26",
+"salesperson": "Derrick Kong",
+"backGross": 2702.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 252.02,
+"airtableMini": 225.0
+},
+{
+"id": "d134",
+"saleDate": "2026-02-27",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d135",
+"saleDate": "2026-02-27",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 225.0
+},
+{
+"id": "d136",
+"saleDate": "2026-02-27",
+"salesperson": "Ed Walker",
+"backGross": 1324.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 313.24,
+"airtableMini": 250.0
+},
+{
+"id": "d137",
+"saleDate": "2026-02-27",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d138",
+"saleDate": "2026-02-28",
+"salesperson": "Khristian Ayala",
+"backGross": 2781.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 302.81,
+"airtableMini": 225.0
+},
+{
+"id": "d139",
+"saleDate": "2026-02-28",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d140",
+"saleDate": "2026-02-28",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d141",
+"saleDate": "2026-02-28",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d142",
+"saleDate": "2026-02-28",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d143",
+"saleDate": "2026-02-28",
+"salesperson": "Ed Walker",
+"backGross": 1322.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 363.22,
+"airtableMini": 250.0
+},
+{
+"id": "d144",
+"saleDate": "2026-03-02",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d145",
+"saleDate": "2026-03-02",
+"salesperson": "Kevin Loughney",
+"backGross": 1106.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 336.06,
+"airtableMini": 225.0
+},
+{
+"id": "d146",
+"saleDate": "2026-03-03",
+"salesperson": "Kevin Loughney",
+"backGross": 2108.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 346.08,
+"airtableMini": 225.0
+},
+{
+"id": "d147",
+"saleDate": "2026-03-03",
+"salesperson": "Ed Walker",
+"backGross": 826.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 458.26,
+"airtableMini": 250.0
+},
+{
+"id": "d148",
+"saleDate": "2026-03-03",
+"salesperson": "Ed Walker",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 309.06,
+"airtableMini": 250.0
+},
+{
+"id": "d149",
+"saleDate": "2026-03-03",
+"salesperson": "Khristian Ayala",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 335.78,
+"airtableMini": 225.0
+},
+{
+"id": "d150",
+"saleDate": "2026-03-04",
+"salesperson": "Ed Walker",
+"backGross": 2031.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 470.31,
+"airtableMini": 250.0
+},
+{
+"id": "d151",
+"saleDate": "2026-03-04",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 375.0,
+"airtableMini": 225.0
+},
+{
+"id": "d152",
+"saleDate": "2026-03-05",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 475.0,
+"airtableMini": 225.0
+},
+{
+"id": "d153",
+"saleDate": "2026-03-06",
+"salesperson": "Ed Walker",
+"backGross": 1919.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 319.19,
+"airtableMini": 250.0
+},
+{
+"id": "d154",
+"saleDate": "2026-03-06",
+"salesperson": "Derrick Kong",
+"backGross": 637.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 281.37,
+"airtableMini": 225.0
+},
+{
+"id": "d155",
+"saleDate": "2026-03-06",
+"salesperson": "Ed Walker",
+"backGross": 606.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.06,
+"airtableMini": 250.0
+},
+{
+"id": "d156",
+"saleDate": "2026-03-06",
+"salesperson": "Ed Walker",
+"backGross": 420.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 304.2,
+"airtableMini": 250.0
+},
+{
+"id": "d157",
+"saleDate": "2026-03-07",
+"salesperson": "Kevin Loughney",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 284.06,
+"airtableMini": 225.0
+},
+{
+"id": "d158",
+"saleDate": "2026-03-07",
+"salesperson": "Ed Walker",
+"backGross": 1038.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.38,
+"airtableMini": 250.0
+},
+{
+"id": "d159",
+"saleDate": "2026-03-07",
+"salesperson": "Kevin Loughney",
+"backGross": 2428.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 299.28,
+"airtableMini": 225.0
+},
+{
+"id": "d160",
+"saleDate": "2026-03-07",
+"salesperson": "Ed Walker",
+"backGross": 889.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 308.89,
+"airtableMini": 250.0
+},
+{
+"id": "d161",
+"saleDate": "2026-03-09",
+"salesperson": "Khristian Ayala",
+"backGross": 1620.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 291.2,
+"airtableMini": 225.0
+},
+{
+"id": "d162",
+"saleDate": "2026-03-09",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d163",
+"saleDate": "2026-03-09",
+"salesperson": "Ed Walker",
+"backGross": 3040.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 480.4,
+"airtableMini": 250.0
+},
+{
+"id": "d164",
+"saleDate": "2026-03-09",
+"salesperson": "Derrick Kong",
+"backGross": 1038.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.38,
+"airtableMini": 225.0
+},
+{
+"id": "d165",
+"saleDate": "2026-03-10",
+"salesperson": "Khristian Ayala",
+"backGross": 863.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.63,
+"airtableMini": 225.0
+},
+{
+"id": "d166",
+"saleDate": "2026-03-10",
+"salesperson": "Ed Walker",
+"backGross": 915.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 309.15,
+"airtableMini": 250.0
+},
+{
+"id": "d167",
+"saleDate": "2026-03-10",
+"salesperson": "Derrick Kong",
+"backGross": 1649.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 441.49,
+"airtableMini": 225.0
+},
+{
+"id": "d168",
+"saleDate": "2026-03-11",
+"salesperson": "Derrick Kong",
+"backGross": 996.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 334.96,
+"airtableMini": 225.0
+},
+{
+"id": "d169",
+"saleDate": "2026-03-11",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d170",
+"saleDate": "2026-03-11",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d171",
+"saleDate": "2026-03-11",
+"salesperson": "Khristian Ayala",
+"backGross": 1321.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 388.21,
+"airtableMini": 225.0
+},
+{
+"id": "d172",
+"saleDate": "2026-03-12",
+"salesperson": "Ed Walker",
+"backGross": 720.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.2,
+"airtableMini": 250.0
+},
+{
+"id": "d173",
+"saleDate": "2026-03-12",
+"salesperson": "Derrick Kong",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d174",
+"saleDate": "2026-03-12",
+"salesperson": "Ed Walker",
+"backGross": 1228.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.28,
+"airtableMini": 250.0
+},
+{
+"id": "d175",
+"saleDate": "2026-03-13",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d176",
+"saleDate": "2026-03-13",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d177",
+"saleDate": "2026-03-13",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 375.0,
+"airtableMini": 225.0
+},
+{
+"id": "d178",
+"saleDate": "2026-03-13",
+"salesperson": "Ed Walker",
+"backGross": 2012.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 370.12,
+"airtableMini": 250.0
+},
+{
+"id": "d179",
+"saleDate": "2026-03-14",
+"salesperson": "Kevin Loughney",
+"backGross": 2195.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 296.95,
+"airtableMini": 225.0
+},
+{
+"id": "d180",
+"saleDate": "2026-03-14",
+"salesperson": "Ed Walker",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.89,
+"airtableMini": 250.0
+},
+{
+"id": "d181",
+"saleDate": "2026-03-14",
+"salesperson": "Khristian Ayala",
+"backGross": 1032.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.32,
+"airtableMini": 225.0
+},
+{
+"id": "d182",
+"saleDate": "2026-03-16",
+"salesperson": "Kevin Loughney",
+"backGross": 1016.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.16,
+"airtableMini": 225.0
+},
+{
+"id": "d183",
+"saleDate": "2026-03-17",
+"salesperson": "Ed Walker",
+"backGross": 1377.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 313.77,
+"airtableMini": 250.0
+},
+{
+"id": "d184",
+"saleDate": "2026-03-17",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d185",
+"saleDate": "2026-03-17",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d186",
+"saleDate": "2026-03-16",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d187",
+"saleDate": "2026-03-18",
+"salesperson": "Kevin Loughney",
+"backGross": 1106.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.06,
+"airtableMini": 225.0
+},
+{
+"id": "d188",
+"saleDate": "2026-03-18",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d189",
+"saleDate": "2026-03-18",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d190",
+"saleDate": "2026-03-18",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d191",
+"saleDate": "2026-03-18",
+"salesperson": "Derrick Kong",
+"backGross": 1388.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 488.88,
+"airtableMini": 225.0
+},
+{
+"id": "d192",
+"saleDate": "2026-03-19",
+"salesperson": "Ed Walker",
+"backGross": 1731.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 317.31,
+"airtableMini": 250.0
+},
+{
+"id": "d193",
+"saleDate": "2026-03-19",
+"salesperson": "Kevin Loughney",
+"backGross": 1820.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 293.2,
+"airtableMini": 225.0
+},
+{
+"id": "d194",
+"saleDate": "2026-03-20",
+"salesperson": "Derrick Kong",
+"backGross": 1231.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.31,
+"airtableMini": 225.0
+},
+{
+"id": "d195",
+"saleDate": "2026-03-20",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d196",
+"saleDate": "2026-03-20",
+"salesperson": "Khristian Ayala",
+"backGross": 552.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 280.52,
+"airtableMini": 225.0
+},
+{
+"id": "d197",
+"saleDate": "2026-03-21",
+"salesperson": "Kevin Loughney",
+"backGross": 1039.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.39,
+"airtableMini": 225.0
+},
+{
+"id": "d198",
+"saleDate": "2026-03-21",
+"salesperson": "Derrick Kong",
+"backGross": 281.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 277.81,
+"airtableMini": 225.0
+},
+{
+"id": "d199",
+"saleDate": "2026-03-21",
+"salesperson": "Ed Walker",
+"backGross": 1430.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.3,
+"airtableMini": 250.0
+},
+{
+"id": "d200",
+"saleDate": "2026-03-20",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d201",
+"saleDate": "2026-03-21",
+"salesperson": "Khristian Ayala",
+"backGross": 2280.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 297.8,
+"airtableMini": 225.0
+},
+{
+"id": "d202",
+"saleDate": "2026-03-21",
+"salesperson": "Kevin Loughney",
+"backGross": 1274.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 237.74,
+"airtableMini": 225.0
+},
+{
+"id": "d203",
+"saleDate": "2026-03-20",
+"salesperson": "Kevin Loughney",
+"backGross": 628.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 231.28,
+"airtableMini": 225.0
+},
+{
+"id": "d204",
+"saleDate": "2026-03-21",
+"salesperson": "Ed Walker",
+"backGross": 1967.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 369.67,
+"airtableMini": 250.0
+},
+{
+"id": "d205",
+"saleDate": "2026-03-21",
+"salesperson": "Khristian Ayala",
+"backGross": 1569.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 340.69,
+"airtableMini": 225.0
+},
+{
+"id": "d206",
+"saleDate": "2026-03-23",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d207",
+"saleDate": "2026-03-23",
+"salesperson": "Ed Walker",
+"backGross": 560.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.6,
+"airtableMini": 250.0
+},
+{
+"id": "d208",
+"saleDate": "2026-03-23",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d209",
+"saleDate": "2026-03-24",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d210",
+"saleDate": "2026-03-21",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d211",
+"saleDate": "2026-03-24",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d212",
+"saleDate": "2026-03-24",
+"salesperson": "Derrick Kong",
+"backGross": 1225.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.25,
+"airtableMini": 225.0
+},
+{
+"id": "d213",
+"saleDate": "2026-03-24",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d214",
+"saleDate": "2026-03-25",
+"salesperson": "Kevin Loughney",
+"backGross": 1452.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.52,
+"airtableMini": 225.0
+},
+{
+"id": "d215",
+"saleDate": "2026-03-25",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d216",
+"saleDate": "2026-03-26",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d217",
+"saleDate": "2026-03-27",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d218",
+"saleDate": "2026-03-27",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d219",
+"saleDate": "2026-03-27",
+"salesperson": "Ed Walker",
+"backGross": 1166.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 361.66,
+"airtableMini": 250.0
+},
+{
+"id": "d220",
+"saleDate": "2026-03-28",
+"salesperson": "Ed Walker",
+"backGross": 1606.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.06,
+"airtableMini": 250.0
+},
+{
+"id": "d221",
+"saleDate": "2026-03-28",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.06,
+"airtableMini": 250.0
+},
+{
+"id": "d222",
+"saleDate": "2026-03-28",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d223",
+"saleDate": "2026-03-28",
+"salesperson": "Kevin Loughney",
+"backGross": 1604.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 291.04,
+"airtableMini": 225.0
+},
+{
+"id": "d224",
+"saleDate": "2026-03-28",
+"salesperson": "Khristian Ayala",
+"backGross": 1428.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 339.28,
+"airtableMini": 225.0
+},
+{
+"id": "d225",
+"saleDate": "2026-03-30",
+"salesperson": "Khristian Ayala",
+"backGross": 2388.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 498.88,
+"airtableMini": 225.0
+},
+{
+"id": "d226",
+"saleDate": "2026-03-30",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.06,
+"airtableMini": 250.0
+},
+{
+"id": "d227",
+"saleDate": "2026-03-30",
+"salesperson": "Kevin Loughney",
+"backGross": 355.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 278.55,
+"airtableMini": 225.0
+},
+{
+"id": "d228",
+"saleDate": "2026-03-30",
+"salesperson": "Ed Walker",
+"backGross": 1476.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 364.76,
+"airtableMini": 250.0
+},
+{
+"id": "d229",
+"saleDate": "2026-03-31",
+"salesperson": "Ed Walker",
+"backGross": 1330.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 313.3,
+"airtableMini": 250.0
+},
+{
+"id": "d230",
+"saleDate": "2026-03-31",
+"salesperson": "Khristian Ayala",
+"backGross": 1731.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 292.31,
+"airtableMini": 225.0
+},
+{
+"id": "d231",
+"saleDate": "2026-04-02",
+"salesperson": "Khristian Ayala",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 332.06,
+"airtableMini": 225.0
+},
+{
+"id": "d232",
+"saleDate": "2026-04-02",
+"salesperson": "Derrick Kong",
+"backGross": 206.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 327.06,
+"airtableMini": 225.0
+},
+{
+"id": "d233",
+"saleDate": "2026-04-02",
+"salesperson": "Ed Walker",
+"backGross": 2029.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 470.29,
+"airtableMini": 250.0
+},
+{
+"id": "d234",
+"saleDate": "2026-04-03",
+"salesperson": "Derrick Kong",
+"backGross": 1780.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 492.8,
+"airtableMini": 225.0
+},
+{
+"id": "d235",
+"saleDate": "2026-04-03",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.06,
+"airtableMini": 250.0
+},
+{
+"id": "d236",
+"saleDate": "2026-04-03",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d237",
+"saleDate": "2026-04-03",
+"salesperson": "Derrick Kong",
+"backGross": 1032.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.32,
+"airtableMini": 225.0
+},
+{
+"id": "d238",
+"saleDate": "2026-04-04",
+"salesperson": "Derrick Kong",
+"backGross": 1812.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 293.12,
+"airtableMini": 225.0
+},
+{
+"id": "d239",
+"saleDate": "2026-04-04",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d240",
+"saleDate": "2026-04-04",
+"salesperson": "Ed Walker",
+"backGross": 2481.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 324.81,
+"airtableMini": 250.0
+},
+{
+"id": "d241",
+"saleDate": "2026-04-04",
+"salesperson": "Ed Walker",
+"backGross": 2118.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 321.18,
+"airtableMini": 250.0
+},
+{
+"id": "d242",
+"saleDate": "2026-04-06",
+"salesperson": "Khristian Ayala",
+"backGross": 2648.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 301.48,
+"airtableMini": 225.0
+},
+{
+"id": "d243",
+"saleDate": "2026-04-07",
+"salesperson": "Khristian Ayala",
+"backGross": 1416.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.16,
+"airtableMini": 225.0
+},
+{
+"id": "d244",
+"saleDate": "2026-04-07",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.06,
+"airtableMini": 250.0
+},
+{
+"id": "d245",
+"saleDate": "2026-04-07",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d246",
+"saleDate": "2026-04-08",
+"salesperson": "Khristian Ayala",
+"backGross": 910.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 284.1,
+"airtableMini": 225.0
+},
+{
+"id": "d247",
+"saleDate": "2026-04-08",
+"salesperson": "Ed Walker",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.78,
+"airtableMini": 250.0
+},
+{
+"id": "d248",
+"saleDate": "2026-04-09",
+"salesperson": "Ed Walker",
+"backGross": 1010.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.1,
+"airtableMini": 250.0
+},
+{
+"id": "d249",
+"saleDate": "2026-04-08",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 200.0
+},
+{
+"id": "d250",
+"saleDate": "2026-04-09",
+"salesperson": "Kevin Loughney",
+"backGross": 2343.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 273.43,
+"airtableMini": 200.0
+},
+{
+"id": "d251",
+"saleDate": "2026-04-10",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d252",
+"saleDate": "2026-04-10",
+"salesperson": "Khristian Ayala",
+"backGross": 1428.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 389.28,
+"airtableMini": 225.0
+},
+{
+"id": "d253",
+"saleDate": "2026-04-10",
+"salesperson": "Ed Walker",
+"backGross": 796.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.96,
+"airtableMini": 250.0
+},
+{
+"id": "d254",
+"saleDate": "2026-04-09",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d255",
+"saleDate": "2026-04-11",
+"salesperson": "Derrick Kong",
+"backGross": 821.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.21,
+"airtableMini": 225.0
+},
+{
+"id": "d256",
+"saleDate": "2026-04-11",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d257",
+"saleDate": "2026-04-11",
+"salesperson": "Khristian Ayala",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d258",
+"saleDate": "2026-04-13",
+"salesperson": "Kevin Loughney",
+"backGross": 206.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 252.06,
+"airtableMini": 200.0
+},
+{
+"id": "d259",
+"saleDate": "2026-04-13",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 225.0
+},
+{
+"id": "d260",
+"saleDate": "2026-04-13",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d261",
+"saleDate": "2026-04-13",
+"salesperson": "Ed Walker",
+"backGross": 2657.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 376.57,
+"airtableMini": 250.0
+},
+{
+"id": "d262",
+"saleDate": "2026-04-13",
+"salesperson": "Ed Walker",
+"backGross": 350.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 303.5,
+"airtableMini": 250.0
+},
+{
+"id": "d263",
+"saleDate": "2026-04-15",
+"salesperson": "Kevin Loughney",
+"backGross": 1460.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 264.6,
+"airtableMini": 200.0
+},
+{
+"id": "d264",
+"saleDate": "2026-04-15",
+"salesperson": "Derrick Kong",
+"backGross": 2052.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 445.52,
+"airtableMini": 225.0
+},
+{
+"id": "d265",
+"saleDate": "2026-04-15",
+"salesperson": "Ed Walker",
+"backGross": 1077.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.77,
+"airtableMini": 250.0
+},
+{
+"id": "d266",
+"saleDate": "2026-04-15",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d267",
+"saleDate": "2026-04-15",
+"salesperson": "Ed Walker",
+"backGross": 1206.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 362.06,
+"airtableMini": 250.0
+},
+{
+"id": "d268",
+"saleDate": "2026-04-16",
+"salesperson": "Derrick Kong",
+"backGross": 3120.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.2,
+"airtableMini": 225.0
+},
+{
+"id": "d269",
+"saleDate": "2026-04-16",
+"salesperson": "Ed Walker",
+"backGross": 2578.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 475.78,
+"airtableMini": 250.0
+},
+{
+"id": "d270",
+"saleDate": "2026-04-17",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 425.0,
+"airtableMini": 225.0
+},
+{
+"id": "d271",
+"saleDate": "2026-04-17",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d272",
+"saleDate": "2026-04-17",
+"salesperson": "Ed Walker",
+"backGross": 620.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.2,
+"airtableMini": 250.0
+},
+{
+"id": "d273",
+"saleDate": "2026-04-17",
+"salesperson": "Ed Walker",
+"backGross": 745.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.45,
+"airtableMini": 250.0
+},
+{
+"id": "d274",
+"saleDate": "2026-04-17",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d275",
+"saleDate": "2026-04-17",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d276",
+"saleDate": "2026-04-17",
+"salesperson": "Derrick Kong",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.89,
+"airtableMini": 225.0
+},
+{
+"id": "d277",
+"saleDate": "2026-04-18",
+"salesperson": "Derrick Kong",
+"backGross": 1233.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.33,
+"airtableMini": 225.0
+},
+{
+"id": "d278",
+"saleDate": "2026-04-18",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d279",
+"saleDate": "2026-04-18",
+"salesperson": "Ed Walker",
+"backGross": 1381.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 363.81,
+"airtableMini": 250.0
+},
+{
+"id": "d280",
+"saleDate": "2026-04-20",
+"salesperson": "Derrick Kong",
+"backGross": 200.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 227.0,
+"airtableMini": 225.0
+},
+{
+"id": "d281",
+"saleDate": "2026-04-20",
+"salesperson": "Khristian Ayala",
+"backGross": 1575.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 290.75,
+"airtableMini": 225.0
+},
+{
+"id": "d282",
+"saleDate": "2026-04-20",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d283",
+"saleDate": "2026-04-21",
+"salesperson": "Derrick Kong",
+"backGross": 1093.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.93,
+"airtableMini": 225.0
+},
+{
+"id": "d284",
+"saleDate": "2026-04-21",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d285",
+"saleDate": "2026-04-22",
+"salesperson": "Derrick Kong",
+"backGross": 863.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.63,
+"airtableMini": 225.0
+},
+{
+"id": "d286",
+"saleDate": "2026-04-22",
+"salesperson": "Khristian Ayala",
+"backGross": 1439.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.39,
+"airtableMini": 225.0
+},
+{
+"id": "d287",
+"saleDate": "2026-04-22",
+"salesperson": "Kevin Loughney",
+"backGross": 215.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 252.15,
+"airtableMini": 200.0
+},
+{
+"id": "d288",
+"saleDate": "2026-04-23",
+"salesperson": "Kevin Loughney",
+"backGross": 2294.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 272.94,
+"airtableMini": 200.0
+},
+{
+"id": "d289",
+"saleDate": "2026-04-23",
+"salesperson": "Derrick Kong",
+"backGross": 1552.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 290.52,
+"airtableMini": 225.0
+},
+{
+"id": "d290",
+"saleDate": "2026-04-23",
+"salesperson": "Derrick Kong",
+"backGross": 736.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.36,
+"airtableMini": 225.0
+},
+{
+"id": "d291",
+"saleDate": "2026-04-25",
+"salesperson": "Khristian Ayala",
+"backGross": 1066.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.66,
+"airtableMini": 225.0
+},
+{
+"id": "d292",
+"saleDate": "2026-04-25",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d293",
+"saleDate": "2026-04-25",
+"salesperson": "Ed Walker",
+"backGross": 1611.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.11,
+"airtableMini": 250.0
+},
+{
+"id": "d294",
+"saleDate": "2026-04-25",
+"salesperson": "Ed Walker",
+"backGross": 863.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 308.63,
+"airtableMini": 250.0
+},
+{
+"id": "d295",
+"saleDate": "2026-04-25",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 375.0,
+"airtableMini": 225.0
+},
+{
+"id": "d296",
+"saleDate": "2026-04-27",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d297",
+"saleDate": "2026-04-28",
+"salesperson": "Ed Walker",
+"backGross": 1702.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 367.02,
+"airtableMini": 250.0
+},
+{
+"id": "d298",
+"saleDate": "2026-04-28",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d299",
+"saleDate": "2026-04-28",
+"salesperson": "Derrick Kong",
+"backGross": 1078.0,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 260.78,
+"airtableMini": 225.0
+},
+{
+"id": "d300",
+"saleDate": "2026-04-29",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d301",
+"saleDate": "2026-04-29",
+"salesperson": "Khristian Ayala",
+"backGross": 372.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 378.72,
+"airtableMini": 225.0
+},
+{
+"id": "d302",
+"saleDate": "2026-05-01",
+"salesperson": "Derrick Kong",
+"backGross": 778.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.78,
+"airtableMini": 225.0
+},
+{
+"id": "d303",
+"saleDate": "2026-05-01",
+"salesperson": "Derrick Kong",
+"backGross": 2163.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 446.63,
+"airtableMini": 225.0
+},
+{
+"id": "d304",
+"saleDate": "2026-05-01",
+"salesperson": "Khristian Ayala",
+"backGross": 991.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 334.91,
+"airtableMini": 225.0
+},
+{
+"id": "d305",
+"saleDate": "2026-05-01",
+"salesperson": "Ed Walker",
+"backGross": 748.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 357.48,
+"airtableMini": 250.0
+},
+{
+"id": "d306",
+"saleDate": "2026-05-02",
+"salesperson": "Ed Walker",
+"backGross": 2306.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 323.06,
+"airtableMini": 250.0
+},
+{
+"id": "d307",
+"saleDate": "2026-05-02",
+"salesperson": "Khristian Ayala",
+"backGross": 769.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 332.69,
+"airtableMini": 225.0
+},
+{
+"id": "d308",
+"saleDate": "2026-05-02",
+"salesperson": "Derrick Kong",
+"backGross": 319.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 278.19,
+"airtableMini": 225.0
+},
+{
+"id": "d309",
+"saleDate": "2026-05-02",
+"salesperson": "Ed Walker",
+"backGross": 229.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 302.29,
+"airtableMini": 250.0
+},
+{
+"id": "d310",
+"saleDate": "2026-05-02",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 375.0,
+"airtableMini": 225.0
+},
+{
+"id": "d311",
+"saleDate": "2026-04-25",
+"salesperson": "Kevin Loughney",
+"backGross": 2028.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 270.28,
+"airtableMini": 200.0
+},
+{
+"id": "d312",
+"saleDate": "2026-05-04",
+"salesperson": "Khristian Ayala",
+"backGross": 2591.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.91,
+"airtableMini": 225.0
+},
+{
+"id": "d313",
+"saleDate": "2026-05-04",
+"salesperson": "Ed Walker",
+"backGross": 1231.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.31,
+"airtableMini": 250.0
+},
+{
+"id": "d314",
+"saleDate": "2026-05-05",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d315",
+"saleDate": "2026-05-05",
+"salesperson": "Kevin Loughney",
+"backGross": 821.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 258.21,
+"airtableMini": 200.0
+},
+{
+"id": "d316",
+"saleDate": "2026-05-05",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d317",
+"saleDate": "2026-05-06",
+"salesperson": "Kevin Loughney",
+"backGross": 1145.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 311.45,
+"airtableMini": 200.0
+},
+{
+"id": "d318",
+"saleDate": "2026-05-08",
+"salesperson": "Ed Walker",
+"backGross": 988.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 359.88,
+"airtableMini": 250.0
+},
+{
+"id": "d319",
+"saleDate": "2026-05-08",
+"salesperson": "Ed Walker",
+"backGross": 2753.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 477.53,
+"airtableMini": 250.0
+},
+{
+"id": "d320",
+"saleDate": "2026-05-08",
+"salesperson": "Khristian Ayala",
+"backGross": 1316.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 288.16,
+"airtableMini": 225.0
+},
+{
+"id": "d321",
+"saleDate": "2026-05-09",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d322",
+"saleDate": "2026-05-09",
+"salesperson": "Khristian Ayala",
+"backGross": 1731.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 442.31,
+"airtableMini": 225.0
+},
+{
+"id": "d323",
+"saleDate": "2026-05-09",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d324",
+"saleDate": "2026-05-09",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d325",
+"saleDate": "2026-05-09",
+"salesperson": "Ed Walker",
+"backGross": 400.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 304.0,
+"airtableMini": 250.0
+},
+{
+"id": "d326",
+"saleDate": "2026-05-09",
+"salesperson": "Ed Walker",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 309.06,
+"airtableMini": 250.0
+},
+{
+"id": "d327",
+"saleDate": "2026-04-16",
+"salesperson": "Kevin Loughney",
+"backGross": 1610.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 266.1,
+"airtableMini": 200.0
+},
+{
+"id": "d328",
+"saleDate": "2026-05-11",
+"salesperson": "Ed Walker",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.89,
+"airtableMini": 250.0
+},
+{
+"id": "d329",
+"saleDate": "2026-05-11",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d330",
+"saleDate": "2026-05-11",
+"salesperson": "Kevin Loughney",
+"backGross": 520.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 255.2,
+"airtableMini": 200.0
+},
+{
+"id": "d331",
+"saleDate": "2026-05-11",
+"salesperson": "Khristian Ayala",
+"backGross": 1520.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 540.2,
+"airtableMini": 225.0
+},
+{
+"id": "d332",
+"saleDate": "2026-05-11",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d333",
+"saleDate": "2026-05-12",
+"salesperson": "Ed Walker",
+"backGross": 1316.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 363.16,
+"airtableMini": 250.0
+},
+{
+"id": "d334",
+"saleDate": "2026-05-12",
+"salesperson": "Kevin Loughney",
+"backGross": 1487.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 314.87,
+"airtableMini": 200.0
+},
+{
+"id": "d335",
+"saleDate": "2026-05-12",
+"salesperson": "Ed Walker",
+"backGross": 1149.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 361.49,
+"airtableMini": 250.0
+},
+{
+"id": "d336",
+"saleDate": "2026-05-13",
+"salesperson": "Derrick Kong",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.89,
+"airtableMini": 225.0
+},
+{
+"id": "d337",
+"saleDate": "2026-05-13",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d338",
+"saleDate": "2026-05-14",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d339",
+"saleDate": "2026-05-14",
+"salesperson": "Ed Walker",
+"backGross": 1802.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 468.02,
+"airtableMini": 250.0
+},
+{
+"id": "d340",
+"saleDate": "2026-05-15",
+"salesperson": "Ed Walker",
+"backGross": 1648.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.48,
+"airtableMini": 250.0
+},
+{
+"id": "d341",
+"saleDate": "2026-05-15",
+"salesperson": "Kevin Loughney",
+"backGross": 1254.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 262.54,
+"airtableMini": 200.0
+},
+{
+"id": "d342",
+"saleDate": "2026-05-16",
+"salesperson": "Derrick Kong",
+"backGross": 714.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 332.14,
+"airtableMini": 225.0
+},
+{
+"id": "d343",
+"saleDate": "2026-05-16",
+"salesperson": "Kevin Loughney",
+"backGross": 2552.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.52,
+"airtableMini": 200.0
+},
+{
+"id": "d344",
+"saleDate": "2026-05-16",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d345",
+"saleDate": "2026-05-16",
+"salesperson": "Khristian Ayala",
+"backGross": 1017.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.17,
+"airtableMini": 225.0
+},
+{
+"id": "d346",
+"saleDate": "2026-05-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d347",
+"saleDate": "2026-05-16",
+"salesperson": "Ed Walker",
+"backGross": 356.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 253.56,
+"airtableMini": 250.0
+},
+{
+"id": "d348",
+"saleDate": "2026-05-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d349",
+"saleDate": "2026-05-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d350",
+"saleDate": "2026-05-18",
+"salesperson": "Kevin Loughney",
+"backGross": 1229.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 262.29,
+"airtableMini": 200.0
+},
+{
+"id": "d351",
+"saleDate": "2026-05-18",
+"salesperson": "Ed Walker",
+"backGross": 863.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 258.63,
+"airtableMini": 250.0
+},
+{
+"id": "d352",
+"saleDate": "2026-05-18",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d353",
+"saleDate": "2026-05-18",
+"salesperson": "Derrick Kong",
+"backGross": 893.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.93,
+"airtableMini": 225.0
+},
+{
+"id": "d354",
+"saleDate": "2026-05-08",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d355",
+"saleDate": "2026-05-19",
+"salesperson": "Ed Walker",
+"backGross": 1663.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 466.63,
+"airtableMini": 250.0
+},
+{
+"id": "d356",
+"saleDate": "2026-05-19",
+"salesperson": "Ed Walker",
+"backGross": 1218.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.18,
+"airtableMini": 250.0
+},
+{
+"id": "d357",
+"saleDate": "2026-05-19",
+"salesperson": "Derrick Kong",
+"backGross": 942.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 284.42,
+"airtableMini": 225.0
+},
+{
+"id": "d358",
+"saleDate": "2026-05-19",
+"salesperson": "Ed Walker",
+"backGross": 1431.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.31,
+"airtableMini": 250.0
+},
+{
+"id": "d359",
+"saleDate": "2026-05-20",
+"salesperson": "Khristian Ayala",
+"backGross": 2017.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 245.17,
+"airtableMini": 225.0
+},
+{
+"id": "d360",
+"saleDate": "2026-05-21",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 357.06,
+"airtableMini": 250.0
+},
+{
+"id": "d361",
+"saleDate": "2026-05-22",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d362",
+"saleDate": "2026-05-22",
+"salesperson": "Derrick Kong",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 284.06,
+"airtableMini": 225.0
+},
+{
+"id": "d363",
+"saleDate": "2026-05-23",
+"salesperson": "Kevin Loughney",
+"backGross": 1300.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 313.0,
+"airtableMini": 200.0
+},
+{
+"id": "d364",
+"saleDate": "2026-05-23",
+"salesperson": "Ed Walker",
+"backGross": 1010.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 360.1,
+"airtableMini": 250.0
+},
+{
+"id": "d365",
+"saleDate": "2026-05-23",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.06,
+"airtableMini": 250.0
+},
+{
+"id": "d366",
+"saleDate": "2026-05-26",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d367",
+"saleDate": "2026-05-27",
+"salesperson": "Derrick Kong",
+"backGross": 1652.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 291.52,
+"airtableMini": 225.0
+},
+{
+"id": "d368",
+"saleDate": "2026-05-27",
+"salesperson": "Khristian Ayala",
+"backGross": 1648.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 291.48,
+"airtableMini": 225.0
+},
+{
+"id": "d369",
+"saleDate": "2026-05-28",
+"salesperson": "Derrick Kong",
+"backGross": 694.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 281.94,
+"airtableMini": 225.0
+},
+{
+"id": "d370",
+"saleDate": "2026-05-27",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d371",
+"saleDate": "2026-05-28",
+"salesperson": "Ed Walker",
+"backGross": 958.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 259.58,
+"airtableMini": 250.0
+},
+{
+"id": "d372",
+"saleDate": "2026-05-28",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d373",
+"saleDate": "2026-05-28",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d374",
+"saleDate": "2026-05-29",
+"salesperson": "Ed Walker",
+"backGross": 260.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 302.6,
+"airtableMini": 250.0
+},
+{
+"id": "d375",
+"saleDate": "2026-05-29",
+"salesperson": "Khristian Ayala",
+"backGross": 870.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.7,
+"airtableMini": 225.0
+},
+{
+"id": "d376",
+"saleDate": "2026-05-30",
+"salesperson": "Kevin Loughney",
+"backGross": 874.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 258.74,
+"airtableMini": 200.0
+},
+{
+"id": "d377",
+"saleDate": "2026-05-30",
+"salesperson": "Khristian Ayala",
+"backGross": 874.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.74,
+"airtableMini": 225.0
+},
+{
+"id": "d378",
+"saleDate": "2026-05-30",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d379",
+"saleDate": "2026-05-30",
+"salesperson": "Derrick Kong",
+"backGross": 1886.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 293.86,
+"airtableMini": 225.0
+},
+{
+"id": "d380",
+"saleDate": "2026-05-30",
+"salesperson": "Derrick Kong",
+"backGross": 1281.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.81,
+"airtableMini": 225.0
+},
+{
+"id": "d381",
+"saleDate": "2026-05-30",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 375.0,
+"airtableMini": 225.0
+},
+{
+"id": "d382",
+"saleDate": "2026-05-30",
+"salesperson": "Kevin Loughney",
+"backGross": 1876.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 268.76,
+"airtableMini": 200.0
+},
+{
+"id": "d383",
+"saleDate": "2026-06-01",
+"salesperson": "Kevin Loughney",
+"backGross": 1641.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 316.41,
+"airtableMini": 200.0
+},
+{
+"id": "d384",
+"saleDate": "2026-06-02",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d385",
+"saleDate": "2026-06-02",
+"salesperson": "Derrick Kong",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d386",
+"saleDate": "2026-06-02",
+"salesperson": "Kevin Loughney",
+"backGross": 1954.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 269.54,
+"airtableMini": 200.0
+},
+{
+"id": "d387",
+"saleDate": "2026-06-03",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d388",
+"saleDate": "2026-06-03",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d389",
+"saleDate": "2026-06-04",
+"salesperson": "Derrick Kong",
+"backGross": 863.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 233.63,
+"airtableMini": 225.0
+},
+{
+"id": "d390",
+"saleDate": "2026-06-05",
+"salesperson": "Kevin Loughney",
+"backGross": 1146.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 261.46,
+"airtableMini": 200.0
+},
+{
+"id": "d391",
+"saleDate": "2026-06-05",
+"salesperson": "Khristian Ayala",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 260.78,
+"airtableMini": 200.0
+},
+{
+"id": "d392",
+"saleDate": "2026-06-06",
+"salesperson": "Derrick Kong",
+"backGross": 1178.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 236.78,
+"airtableMini": 225.0
+},
+{
+"id": "d393",
+"saleDate": "2026-06-06",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d394",
+"saleDate": "2026-06-06",
+"salesperson": "Derrick Kong",
+"backGross": 532.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 280.32,
+"airtableMini": 225.0
+},
+{
+"id": "d395",
+"saleDate": "2026-06-06",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d396",
+"saleDate": "2026-06-06",
+"salesperson": "Khristian Ayala",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 307.06,
+"airtableMini": 200.0
+},
+{
+"id": "d397",
+"saleDate": "2026-06-06",
+"salesperson": "Kevin Loughney",
+"backGross": 920.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 259.2,
+"airtableMini": 200.0
+},
+{
+"id": "d398",
+"saleDate": "2026-06-08",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d399",
+"saleDate": "2026-06-08",
+"salesperson": "Derrick Kong",
+"backGross": 352.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 328.52,
+"airtableMini": 225.0
+},
+{
+"id": "d400",
+"saleDate": "2026-06-09",
+"salesperson": "Ed Walker",
+"backGross": 1286.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.86,
+"airtableMini": 250.0
+},
+{
+"id": "d401",
+"saleDate": "2026-06-10",
+"salesperson": "Derrick Kong",
+"backGross": 1941.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 344.41,
+"airtableMini": 225.0
+},
+{
+"id": "d402",
+"saleDate": "2026-06-10",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d403",
+"saleDate": "2026-06-10",
+"salesperson": "Kevin Loughney",
+"backGross": 910.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 259.1,
+"airtableMini": 200.0
+},
+{
+"id": "d404",
+"saleDate": "2026-06-09",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d405",
+"saleDate": "2026-06-10",
+"salesperson": "Derrick Kong",
+"backGross": 1120.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.2,
+"airtableMini": 225.0
+},
+{
+"id": "d406",
+"saleDate": "2026-06-11",
+"salesperson": "Ed Walker",
+"backGross": 1269.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.69,
+"airtableMini": 250.0
+},
+{
+"id": "d407",
+"saleDate": "2026-06-11",
+"salesperson": "Ed Walker",
+"backGross": 1146.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 361.46,
+"airtableMini": 250.0
+},
+{
+"id": "d408",
+"saleDate": "2026-06-12",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 250.0
+},
+{
+"id": "d409",
+"saleDate": "2026-06-12",
+"salesperson": "Ed Walker",
+"backGross": 1652.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.52,
+"airtableMini": 250.0
+},
+{
+"id": "d410",
+"saleDate": "2026-06-13",
+"salesperson": "Ed Walker",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 357.06,
+"airtableMini": 250.0
+},
+{
+"id": "d411",
+"saleDate": "2026-06-15",
+"salesperson": "Khristian Ayala",
+"backGross": 330.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 253.3,
+"airtableMini": 200.0
+},
+{
+"id": "d412",
+"saleDate": "2026-06-15",
+"salesperson": "Kevin Loughney",
+"backGross": 697.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 256.97,
+"airtableMini": 200.0
+},
+{
+"id": "d413",
+"saleDate": "2026-06-15",
+"salesperson": "Ed Walker",
+"backGross": 2240.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 322.4,
+"airtableMini": 250.0
+},
+{
+"id": "d414",
+"saleDate": "2026-06-15",
+"salesperson": "Ed Walker",
+"backGross": 1042.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 360.42,
+"airtableMini": 250.0
+},
+{
+"id": "d415",
+"saleDate": "2026-06-16",
+"salesperson": "Ed Walker",
+"backGross": 2326.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 373.26,
+"airtableMini": 250.0
+},
+{
+"id": "d416",
+"saleDate": "2026-06-17",
+"salesperson": "Derrick Kong",
+"backGross": 2669.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 301.69,
+"airtableMini": 225.0
+},
+{
+"id": "d417",
+"saleDate": "2026-06-18",
+"salesperson": "Khristian Ayala",
+"backGross": 821.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 258.21,
+"airtableMini": 200.0
+},
+{
+"id": "d418",
+"saleDate": "2026-06-18",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d419",
+"saleDate": "2026-06-18",
+"salesperson": "Ed Walker",
+"backGross": 1020.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 260.2,
+"airtableMini": 250.0
+},
+{
+"id": "d420",
+"saleDate": "2026-06-18",
+"salesperson": "Derrick Kong",
+"backGross": 1000.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.0,
+"airtableMini": 225.0
+},
+{
+"id": "d421",
+"saleDate": "2026-06-18",
+"salesperson": "Ed Walker",
+"backGross": 2000.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 320.0,
+"airtableMini": 250.0
+},
+{
+"id": "d422",
+"saleDate": "2026-06-19",
+"salesperson": "Kevin Loughney",
+"backGross": 3176.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 331.76,
+"airtableMini": 200.0
+},
+{
+"id": "d423",
+"saleDate": "2026-06-19",
+"salesperson": "Ed Walker",
+"backGross": 1669.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.69,
+"airtableMini": 250.0
+},
+{
+"id": "d424",
+"saleDate": "2026-06-19",
+"salesperson": "Kevin Loughney",
+"backGross": 2515.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.15,
+"airtableMini": 200.0
+},
+{
+"id": "d425",
+"saleDate": "2026-06-16",
+"salesperson": "Khristian Ayala",
+"backGross": 370.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 253.7,
+"airtableMini": 200.0
+},
+{
+"id": "d426",
+"saleDate": "2026-06-20",
+"salesperson": "Derrick Kong",
+"backGross": 2270.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 297.7,
+"airtableMini": 225.0
+},
+{
+"id": "d427",
+"saleDate": "2026-06-20",
+"salesperson": "Khristian Ayala",
+"backGross": 1094.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 260.94,
+"airtableMini": 200.0
+},
+{
+"id": "d428",
+"saleDate": "2026-06-20",
+"salesperson": "Ed Walker",
+"backGross": 1979.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 469.79,
+"airtableMini": 250.0
+},
+{
+"id": "d429",
+"saleDate": "2026-06-20",
+"salesperson": "Ed Walker",
+"backGross": 2310.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 323.1,
+"airtableMini": 250.0
+},
+{
+"id": "d430",
+"saleDate": "2026-06-22",
+"salesperson": "Ed Walker",
+"backGross": 586.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.86,
+"airtableMini": 250.0
+},
+{
+"id": "d431",
+"saleDate": "2026-06-22",
+"salesperson": "Ed Walker",
+"backGross": 2009.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 520.09,
+"airtableMini": 250.0
+},
+{
+"id": "d432",
+"saleDate": "2026-06-23",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d433",
+"saleDate": "2026-06-23",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d434",
+"saleDate": "2026-06-24",
+"salesperson": "Ed Walker",
+"backGross": 2023.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 470.23,
+"airtableMini": 250.0
+},
+{
+"id": "d435",
+"saleDate": "2026-06-24",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d436",
+"saleDate": "2026-06-24",
+"salesperson": "Derrick Kong",
+"backGross": 610.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 231.1,
+"airtableMini": 225.0
+},
+{
+"id": "d437",
+"saleDate": "2026-06-24",
+"salesperson": "Khristian Ayala",
+"backGross": 1218.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 312.18,
+"airtableMini": 200.0
+},
+{
+"id": "d438",
+"saleDate": "2026-06-25",
+"salesperson": "Ed Walker",
+"backGross": 2930.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 479.3,
+"airtableMini": 250.0
+},
+{
+"id": "d439",
+"saleDate": "2026-06-26",
+"salesperson": "Khristian Ayala",
+"backGross": 2444.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 324.44,
+"airtableMini": 200.0
+},
+{
+"id": "d440",
+"saleDate": "2026-06-27",
+"salesperson": "Ed Walker",
+"backGross": 621.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.21,
+"airtableMini": 250.0
+},
+{
+"id": "d441",
+"saleDate": "2026-06-27",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d442",
+"saleDate": "2026-06-27",
+"salesperson": "Ed Walker",
+"backGross": 1428.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.28,
+"airtableMini": 250.0
+},
+{
+"id": "d443",
+"saleDate": "2026-06-29",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 450.0,
+"airtableMini": 250.0
+},
+{
+"id": "d444",
+"saleDate": "2026-07-02",
+"salesperson": "Ed Walker",
+"backGross": 978.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 309.78,
+"airtableMini": 250.0
+},
+{
+"id": "d445",
+"saleDate": "2026-07-02",
+"salesperson": "Ed Walker",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 309.06,
+"airtableMini": 250.0
+},
+{
+"id": "d446",
+"saleDate": "2026-07-03",
+"salesperson": "Derrick Kong",
+"backGross": 1434.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.34,
+"airtableMini": 225.0
+},
+{
+"id": "d447",
+"saleDate": "2026-07-03",
+"salesperson": "Ed Walker",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 360.89,
+"airtableMini": 250.0
+},
+{
+"id": "d448",
+"saleDate": "2026-07-03",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 200.0
+},
+{
+"id": "d449",
+"saleDate": "2026-07-02",
+"salesperson": "Ed Walker",
+"backGross": 2249.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 322.49,
+"airtableMini": 250.0
+},
+{
+"id": "d450",
+"saleDate": "2026-07-03",
+"salesperson": "Ed Walker",
+"backGross": 2703.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 377.03,
+"airtableMini": 250.0
+},
+{
+"id": "d451",
+"saleDate": "2026-07-03",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 250.0
+},
+{
+"id": "d452",
+"saleDate": "2026-07-06",
+"salesperson": "Ed Walker",
+"backGross": 1594.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 515.94,
+"airtableMini": 250.0
+},
+{
+"id": "d453",
+"saleDate": "2026-07-06",
+"salesperson": "Khristian Ayala",
+"backGross": 2337.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 273.37,
+"airtableMini": 200.0
+},
+{
+"id": "d454",
+"saleDate": "2026-07-06",
+"salesperson": "Ed Walker",
+"backGross": 1010.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.1,
+"airtableMini": 250.0
+},
+{
+"id": "d455",
+"saleDate": "2026-07-07",
+"salesperson": "Kevin Loughney",
+"backGross": 3026.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.26,
+"airtableMini": 225.0
+},
+{
+"id": "d456",
+"saleDate": "2026-07-06",
+"salesperson": "Kevin Loughney",
+"backGross": 705.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.05,
+"airtableMini": 225.0
+},
+{
+"id": "d457",
+"saleDate": "2026-07-07",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard",
+"LoJack - Upsell"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d458",
+"saleDate": "2026-07-07",
+"salesperson": "Ed Walker",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.78,
+"airtableMini": 250.0
+},
+{
+"id": "d459",
+"saleDate": "2026-07-07",
+"salesperson": "Ed Walker",
+"backGross": 585.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.85,
+"airtableMini": 250.0
+},
+{
+"id": "d460",
+"saleDate": "2026-07-07",
+"salesperson": "Khristian Ayala",
+"backGross": 340.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 303.4,
+"airtableMini": 200.0
+},
+{
+"id": "d461",
+"saleDate": "2026-07-08",
+"salesperson": "Kevin Loughney",
+"backGross": 1723.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 292.23,
+"airtableMini": 225.0
+},
+{
+"id": "d462",
+"saleDate": "2026-07-08",
+"salesperson": "Khristian Ayala",
+"backGross": 310.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 253.1,
+"airtableMini": 200.0
+},
+{
+"id": "d463",
+"saleDate": "2026-07-08",
+"salesperson": "Kevin Loughney",
+"backGross": 1011.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.11,
+"airtableMini": 225.0
+},
+{
+"id": "d464",
+"saleDate": "2026-07-09",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d465",
+"saleDate": "2026-07-09",
+"salesperson": "Kevin Loughney",
+"backGross": 2165.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 296.65,
+"airtableMini": 225.0
+},
+{
+"id": "d466",
+"saleDate": "2026-07-10",
+"salesperson": "Ed Walker",
+"backGross": 200.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 302.0,
+"airtableMini": 250.0
+},
+{
+"id": "d467",
+"saleDate": "2026-07-10",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 425.0,
+"airtableMini": 225.0
+},
+{
+"id": "d468",
+"saleDate": "2026-07-11",
+"salesperson": "Ed Walker",
+"backGross": 978.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 259.78,
+"airtableMini": 250.0
+},
+{
+"id": "d469",
+"saleDate": "2026-07-11",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 250.0
+},
+{
+"id": "d470",
+"saleDate": "2026-07-11",
+"salesperson": "Khristian Ayala",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 310.89,
+"airtableMini": 200.0
+},
+{
+"id": "d471",
+"saleDate": "2026-07-13",
+"salesperson": "Kevin Loughney",
+"backGross": 1786.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 292.86,
+"airtableMini": 225.0
+},
+{
+"id": "d472",
+"saleDate": "2026-07-13",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d473",
+"saleDate": "2026-07-13",
+"salesperson": "Ed Walker",
+"backGross": 726.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 307.26,
+"airtableMini": 250.0
+},
+{
+"id": "d474",
+"saleDate": "2026-07-14",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d475",
+"saleDate": "2026-07-14",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d476",
+"saleDate": "2026-07-14",
+"salesperson": "Khristian Ayala",
+"backGross": 2054.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 370.54,
+"airtableMini": 200.0
+},
+{
+"id": "d477",
+"saleDate": "2026-07-15",
+"salesperson": "Kevin Loughney",
+"backGross": 863.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.63,
+"airtableMini": 225.0
+},
+{
+"id": "d478",
+"saleDate": "2026-07-15",
+"salesperson": "Ed Walker",
+"backGross": 1600.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.0,
+"airtableMini": 250.0
+},
+{
+"id": "d479",
+"saleDate": "2026-07-15",
+"salesperson": "Derrick Kong",
+"backGross": 1969.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 344.69,
+"airtableMini": 225.0
+},
+{
+"id": "d480",
+"saleDate": "2026-07-15",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d481",
+"saleDate": "2026-07-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d482",
+"saleDate": "2026-07-16",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d483",
+"saleDate": "2026-07-16",
+"salesperson": "Derrick Kong",
+"backGross": 2215.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 297.15,
+"airtableMini": 225.0
+},
+{
+"id": "d484",
+"saleDate": "2026-07-16",
+"salesperson": "Ed Walker",
+"backGross": 2720.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 327.2,
+"airtableMini": 250.0
+},
+{
+"id": "d485",
+"saleDate": "2026-07-16",
+"salesperson": "Kevin Loughney",
+"backGross": 3308.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 308.08,
+"airtableMini": 225.0
+},
+{
+"id": "d486",
+"saleDate": "2026-07-16",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d487",
+"saleDate": "2026-07-17",
+"salesperson": "Derrick Kong",
+"backGross": 1166.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.66,
+"airtableMini": 225.0
+},
+{
+"id": "d488",
+"saleDate": "2026-07-17",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 350.0,
+"airtableMini": 200.0
+},
+{
+"id": "d489",
+"saleDate": "2026-07-17",
+"salesperson": "Ed Walker",
+"backGross": 2961.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 379.61,
+"airtableMini": 250.0
+},
+{
+"id": "d490",
+"saleDate": "2026-07-18",
+"salesperson": "Derrick Kong",
+"backGross": 88.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.88,
+"airtableMini": 225.0
+},
+{
+"id": "d491",
+"saleDate": "2026-07-18",
+"salesperson": "Kevin Loughney",
+"backGross": 2118.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 296.18,
+"airtableMini": 225.0
+},
+{
+"id": "d492",
+"saleDate": "2026-07-18",
+"salesperson": "Ed Walker",
+"backGross": 2072.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 270.72,
+"airtableMini": 250.0
+},
+{
+"id": "d493",
+"saleDate": "2026-07-18",
+"salesperson": "Derrick Kong",
+"backGross": 2152.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 296.52,
+"airtableMini": 225.0
+},
+{
+"id": "d494",
+"saleDate": "2026-07-18",
+"salesperson": "Khristian Ayala",
+"backGross": 2641.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 426.41,
+"airtableMini": 200.0
+},
+{
+"id": "d495",
+"saleDate": "2026-07-20",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d496",
+"saleDate": "2026-07-20",
+"salesperson": "Ed Walker",
+"backGross": 1927.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 319.27,
+"airtableMini": 250.0
+},
+{
+"id": "d497",
+"saleDate": "2026-07-20",
+"salesperson": "Khristian Ayala",
+"backGross": 488.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 254.88,
+"airtableMini": 200.0
+},
+{
+"id": "d498",
+"saleDate": "2026-07-20",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d499",
+"saleDate": "2026-07-21",
+"salesperson": "Ed Walker",
+"backGross": 1161.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 311.61,
+"airtableMini": 250.0
+},
+{
+"id": "d500",
+"saleDate": "2026-07-22",
+"salesperson": "Derrick Kong",
+"backGross": 1439.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 339.39,
+"airtableMini": 225.0
+},
+{
+"id": "d501",
+"saleDate": "2026-07-22",
+"salesperson": "Ed Walker",
+"backGross": 1111.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 311.11,
+"airtableMini": 250.0
+},
+{
+"id": "d502",
+"saleDate": "2026-07-24",
+"salesperson": "Ed Walker",
+"backGross": 1881.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 368.81,
+"airtableMini": 250.0
+},
+{
+"id": "d503",
+"saleDate": "2026-07-24",
+"salesperson": "Ed Walker",
+"backGross": 1779.75,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 317.8,
+"airtableMini": 250.0
+},
+{
+"id": "d504",
+"saleDate": "2026-07-25",
+"salesperson": "Derrick Kong",
+"backGross": 1726.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 292.26,
+"airtableMini": 225.0
+},
+{
+"id": "d505",
+"saleDate": "2026-07-25",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d506",
+"saleDate": "2026-07-25",
+"salesperson": "Kevin Loughney",
+"backGross": 706.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 232.06,
+"airtableMini": 225.0
+},
+{
+"id": "d507",
+"saleDate": "2026-07-25",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d508",
+"saleDate": "2026-07-25",
+"salesperson": "Ed Walker",
+"backGross": 688.75,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.89,
+"airtableMini": 250.0
+},
+{
+"id": "d509",
+"saleDate": "2026-07-25",
+"salesperson": "Derrick Kong",
+"backGross": 821.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.21,
+"airtableMini": 225.0
+},
+{
+"id": "d510",
+"saleDate": "2026-07-02",
+"salesperson": "Joey Golub",
+"backGross": 3166.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 281.66,
+"airtableMini": 200.0
+},
+{
+"id": "d511",
+"saleDate": "2026-07-17",
+"salesperson": "Joey Golub",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 259.06,
+"airtableMini": 200.0
+},
+{
+"id": "d512",
+"saleDate": "2026-07-17",
+"salesperson": "Joey Golub",
+"backGross": 1073.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 210.73,
+"airtableMini": 200.0
+},
+{
+"id": "d513",
+"saleDate": "2026-07-18",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d514",
+"saleDate": "2026-07-27",
+"salesperson": "Kevin Loughney",
+"backGross": 1943.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 294.43,
+"airtableMini": 225.0
+},
+{
+"id": "d515",
+"saleDate": "2026-07-27",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d516",
+"saleDate": "2026-07-27",
+"salesperson": "Kevin Loughney",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d517",
+"saleDate": "2026-07-27",
+"salesperson": "Khristian Ayala",
+"backGross": 1401.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 264.01,
+"airtableMini": 200.0
+},
+{
+"id": "d518",
+"saleDate": "2026-07-28",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d519",
+"saleDate": "2026-07-28",
+"salesperson": "Kevin Loughney",
+"backGross": 1542.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 290.42,
+"airtableMini": 225.0
+},
+{
+"id": "d520",
+"saleDate": "2026-07-29",
+"salesperson": "Derrick Kong",
+"backGross": 806.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.06,
+"airtableMini": 225.0
+},
+{
+"id": "d521",
+"saleDate": "2026-07-29",
+"salesperson": "Kevin Loughney",
+"backGross": 462.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 279.62,
+"airtableMini": 225.0
+},
+{
+"id": "d522",
+"saleDate": "2026-07-30",
+"salesperson": "Kevin Loughney",
+"backGross": 2126.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 296.26,
+"airtableMini": 225.0
+},
+{
+"id": "d523",
+"saleDate": "2026-07-30",
+"salesperson": "Kevin Loughney",
+"backGross": 995.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 284.95,
+"airtableMini": 225.0
+},
+{
+"id": "d524",
+"saleDate": "2026-07-31",
+"salesperson": "Derrick Kong",
+"backGross": 1678.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 491.78,
+"airtableMini": 225.0
+},
+{
+"id": "d525",
+"saleDate": "2026-07-31",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 200.0
+},
+{
+"id": "d526",
+"saleDate": "2026-07-30",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d527",
+"saleDate": "2026-07-31",
+"salesperson": "Derrick Kong",
+"backGross": 692.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 281.92,
+"airtableMini": 225.0
+},
+{
+"id": "d528",
+"saleDate": "2026-07-31",
+"salesperson": "Joey Golub",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 260.78,
+"airtableMini": 200.0
+},
+{
+"id": "d529",
+"saleDate": "2026-07-31",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d530",
+"saleDate": "2026-08-01",
+"salesperson": "Derrick Kong",
+"backGross": 1213.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.13,
+"airtableMini": 225.0
+},
+{
+"id": "d531",
+"saleDate": "2026-08-01",
+"salesperson": "Khristian Ayala",
+"backGross": 3192.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.92,
+"airtableMini": 225.0
+},
+{
+"id": "d532",
+"saleDate": "2026-08-01",
+"salesperson": "Khristian Ayala",
+"backGross": 1848.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": true,
+"airtableTotal": 443.48,
+"airtableMini": 225.0
+},
+{
+"id": "d533",
+"saleDate": "2026-08-03",
+"salesperson": "Derrick Kong",
+"backGross": 2520.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 450.2,
+"airtableMini": 225.0
+},
+{
+"id": "d534",
+"saleDate": "2026-08-03",
+"salesperson": "Khristian Ayala",
+"backGross": 810.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.1,
+"airtableMini": 225.0
+},
+{
+"id": "d535",
+"saleDate": "2026-08-03",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d536",
+"saleDate": "2026-08-03",
+"salesperson": "Khristian Ayala",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 334.06,
+"airtableMini": 225.0
+},
+{
+"id": "d537",
+"saleDate": "2026-08-04",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d538",
+"saleDate": "2026-08-03",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d539",
+"saleDate": "2026-08-04",
+"salesperson": "Khristian Ayala",
+"backGross": 1929.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 294.29,
+"airtableMini": 225.0
+},
+{
+"id": "d540",
+"saleDate": "2026-08-05",
+"salesperson": "Ed Walker",
+"backGross": 1435.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.35,
+"airtableMini": 250.0
+},
+{
+"id": "d541",
+"saleDate": "2026-08-05",
+"salesperson": "Khristian Ayala",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d542",
+"saleDate": "2026-08-06",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d543",
+"saleDate": "2026-08-07",
+"salesperson": "Derrick Kong",
+"backGross": 1457.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.57,
+"airtableMini": 225.0
+},
+{
+"id": "d544",
+"saleDate": "2026-08-07",
+"salesperson": "Ed Walker",
+"backGross": 556.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.56,
+"airtableMini": 250.0
+},
+{
+"id": "d545",
+"saleDate": "2026-08-07",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d546",
+"saleDate": "2026-08-07",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 200.0
+},
+{
+"id": "d547",
+"saleDate": "2026-08-06",
+"salesperson": "Kevin Loughney",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 257.06,
+"airtableMini": 200.0
+},
+{
+"id": "d548",
+"saleDate": "2026-08-08",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d549",
+"saleDate": "2026-08-08",
+"salesperson": "Derrick Kong",
+"backGross": 712.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 332.12,
+"airtableMini": 225.0
+},
+{
+"id": "d550",
+"saleDate": "2026-08-08",
+"salesperson": "Khristian Ayala",
+"backGross": 215.0,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 352.15,
+"airtableMini": 225.0
+},
+{
+"id": "d551",
+"saleDate": "2026-08-10",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d552",
+"saleDate": "2026-08-11",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d553",
+"saleDate": "2026-08-13",
+"salesperson": "Khristian Ayala",
+"backGross": 810.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.1,
+"airtableMini": 225.0
+},
+{
+"id": "d554",
+"saleDate": "2026-08-14",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d555",
+"saleDate": "2026-08-14",
+"salesperson": "Ed Walker",
+"backGross": 2734.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 327.34,
+"airtableMini": 250.0
+},
+{
+"id": "d556",
+"saleDate": "2026-08-15",
+"salesperson": "Ed Walker",
+"backGross": 611.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.11,
+"airtableMini": 250.0
+},
+{
+"id": "d557",
+"saleDate": "2026-08-15",
+"salesperson": "Kevin Loughney",
+"backGross": 1089.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 210.89,
+"airtableMini": 200.0
+},
+{
+"id": "d558",
+"saleDate": "2026-08-15",
+"salesperson": "Kevin Loughney",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 257.06,
+"airtableMini": 200.0
+},
+{
+"id": "d559",
+"saleDate": "2026-08-15",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d560",
+"saleDate": "2026-08-17",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d561",
+"saleDate": "2026-08-17",
+"salesperson": "Ed Walker",
+"backGross": 1113.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 311.13,
+"airtableMini": 250.0
+},
+{
+"id": "d562",
+"saleDate": "2026-08-17",
+"salesperson": "Ed Walker",
+"backGross": 3076.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 380.76,
+"airtableMini": 250.0
+},
+{
+"id": "d563",
+"saleDate": "2026-08-18",
+"salesperson": "Khristian Ayala",
+"backGross": 1382.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 288.82,
+"airtableMini": 225.0
+},
+{
+"id": "d564",
+"saleDate": "2026-08-18",
+"salesperson": "Derrick Kong",
+"backGross": 3006.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.06,
+"airtableMini": 225.0
+},
+{
+"id": "d565",
+"saleDate": "2026-08-18",
+"salesperson": "Ed Walker",
+"backGross": 826.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 308.26,
+"airtableMini": 250.0
+},
+{
+"id": "d566",
+"saleDate": "2026-08-19",
+"salesperson": "Derrick Kong",
+"backGross": 1170.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.7,
+"airtableMini": 225.0
+},
+{
+"id": "d567",
+"saleDate": "2026-08-19",
+"salesperson": "Ed Walker",
+"backGross": 1872.0,
+"products": [
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 318.72,
+"airtableMini": 250.0
+},
+{
+"id": "d568",
+"saleDate": "2026-08-19",
+"salesperson": "Khristian Ayala",
+"backGross": 1416.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 289.16,
+"airtableMini": 225.0
+},
+{
+"id": "d569",
+"saleDate": "2026-08-19",
+"salesperson": "Kevin Loughney",
+"backGross": 2273.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 272.73,
+"airtableMini": 200.0
+},
+{
+"id": "d570",
+"saleDate": "2026-08-20",
+"salesperson": "Kevin Loughney",
+"backGross": 821.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 258.21,
+"airtableMini": 200.0
+},
+{
+"id": "d571",
+"saleDate": "2026-08-20",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d572",
+"saleDate": "2026-08-20",
+"salesperson": "Derrick Kong",
+"backGross": 1111.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.11,
+"airtableMini": 225.0
+},
+{
+"id": "d573",
+"saleDate": "2026-08-20",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d574",
+"saleDate": "2026-08-21",
+"salesperson": "Ed Walker",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.78,
+"airtableMini": 250.0
+},
+{
+"id": "d575",
+"saleDate": "2026-08-21",
+"salesperson": "Ed Walker",
+"backGross": 2726.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 377.26,
+"airtableMini": 250.0
+},
+{
+"id": "d576",
+"saleDate": "2026-08-01",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d577",
+"saleDate": "2026-08-01",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d578",
+"saleDate": "2026-08-07",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 250.0,
+"airtableMini": 200.0
+},
+{
+"id": "d579",
+"saleDate": "2026-08-15",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d580",
+"saleDate": "2026-08-22",
+"salesperson": "Derrick Kong",
+"backGross": 1089.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.89,
+"airtableMini": 225.0
+},
+{
+"id": "d581",
+"saleDate": "2026-08-24",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d582",
+"saleDate": "2026-08-24",
+"salesperson": "Kevin Loughney",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 257.06,
+"airtableMini": 200.0
+},
+{
+"id": "d583",
+"saleDate": "2026-08-25",
+"salesperson": "Kevin Loughney",
+"backGross": 1623.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 266.23,
+"airtableMini": 200.0
+},
+{
+"id": "d584",
+"saleDate": "2026-08-26",
+"salesperson": "Ed Walker",
+"backGross": 1076.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.76,
+"airtableMini": 250.0
+},
+{
+"id": "d585",
+"saleDate": "2026-08-26",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d586",
+"saleDate": "2026-08-26",
+"salesperson": "Derrick Kong",
+"backGross": 831.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 333.31,
+"airtableMini": 225.0
+},
+{
+"id": "d587",
+"saleDate": "2026-08-27",
+"salesperson": "Derrick Kong",
+"backGross": 1235.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 287.35,
+"airtableMini": 225.0
+},
+{
+"id": "d588",
+"saleDate": "2026-08-27",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d589",
+"saleDate": "2026-08-27",
+"salesperson": "Ed Walker",
+"backGross": 637.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 306.37,
+"airtableMini": 250.0
+},
+{
+"id": "d590",
+"saleDate": "2026-08-27",
+"salesperson": "Derrick Kong",
+"backGross": 1098.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 285.98,
+"airtableMini": 225.0
+},
+{
+"id": "d591",
+"saleDate": "2026-08-29",
+"salesperson": "Ed Walker",
+"backGross": 1475.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.75,
+"airtableMini": 250.0
+},
+{
+"id": "d592",
+"saleDate": "2026-08-29",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d593",
+"saleDate": "2026-08-29",
+"salesperson": "Khristian Ayala",
+"backGross": 1824.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 293.24,
+"airtableMini": 225.0
+},
+{
+"id": "d594",
+"saleDate": "2026-08-29",
+"salesperson": "Khristian Ayala",
+"backGross": 1422.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 339.22,
+"airtableMini": 225.0
+},
+{
+"id": "d595",
+"saleDate": "2026-08-29",
+"salesperson": "Ed Walker",
+"backGross": 1931.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 319.31,
+"airtableMini": 250.0
+},
+{
+"id": "d596",
+"saleDate": "2026-08-29",
+"salesperson": "Ed Walker",
+"backGross": 1350.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 363.5,
+"airtableMini": 250.0
+},
+{
+"id": "d597",
+"saleDate": "2026-08-31",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d598",
+"saleDate": "2026-08-31",
+"salesperson": "Khristian Ayala",
+"backGross": 2103.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 246.03,
+"airtableMini": 225.0
+},
+{
+"id": "d599",
+"saleDate": "2026-08-31",
+"salesperson": "Khristian Ayala",
+"backGross": 2408.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 399.08,
+"airtableMini": 225.0
+},
+{
+"id": "d600",
+"saleDate": "2026-08-28",
+"salesperson": "Khristian Ayala",
+"backGross": 1100.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.0,
+"airtableMini": 225.0
+},
+{
+"id": "d601",
+"saleDate": "2026-08-31",
+"salesperson": "Ed Walker",
+"backGross": 371.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 303.71,
+"airtableMini": 250.0
+},
+{
+"id": "d602",
+"saleDate": "2026-09-01",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d603",
+"saleDate": "2026-09-01",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d604",
+"saleDate": "2026-09-02",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d605",
+"saleDate": "2026-09-02",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d606",
+"saleDate": "2026-09-02",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d607",
+"saleDate": "2026-09-02",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d608",
+"saleDate": "2026-09-03",
+"salesperson": "Derrick Kong",
+"backGross": 520.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 280.2,
+"airtableMini": 225.0
+},
+{
+"id": "d609",
+"saleDate": "2026-09-03",
+"salesperson": "Kevin Loughney",
+"backGross": 305.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 278.05,
+"airtableMini": 225.0
+},
+{
+"id": "d610",
+"saleDate": "2026-09-03",
+"salesperson": "Ed Walker",
+"backGross": 821.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 308.21,
+"airtableMini": 250.0
+},
+{
+"id": "d611",
+"saleDate": "2026-09-04",
+"salesperson": "Derrick Kong",
+"backGross": 863.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 333.63,
+"airtableMini": 225.0
+},
+{
+"id": "d612",
+"saleDate": "2026-09-04",
+"salesperson": "Ed Walker",
+"backGross": 1546.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 265.46,
+"airtableMini": 250.0
+},
+{
+"id": "d613",
+"saleDate": "2026-09-04",
+"salesperson": "Ed Walker",
+"backGross": 1467.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 364.67,
+"airtableMini": 250.0
+},
+{
+"id": "d614",
+"saleDate": "2026-09-04",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d615",
+"saleDate": "2026-09-05",
+"salesperson": "Derrick Kong",
+"backGross": 1121.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.21,
+"airtableMini": 225.0
+},
+{
+"id": "d616",
+"saleDate": "2026-09-05",
+"salesperson": "Khristian Ayala",
+"backGross": 1261.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": true,
+"airtableTotal": 437.61,
+"airtableMini": 225.0
+},
+{
+"id": "d617",
+"saleDate": "2026-09-05",
+"salesperson": "Ed Walker",
+"backGross": 1891.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 368.91,
+"airtableMini": 250.0
+},
+{
+"id": "d618",
+"saleDate": "2026-09-05",
+"salesperson": "Derrick Kong",
+"backGross": 1106.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.06,
+"airtableMini": 225.0
+},
+{
+"id": "d619",
+"saleDate": "2026-09-05",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d620",
+"saleDate": "2026-09-05",
+"salesperson": "Khristian Ayala",
+"backGross": 1933.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 294.33,
+"airtableMini": 225.0
+},
+{
+"id": "d621",
+"saleDate": "2026-09-05",
+"salesperson": "Ed Walker",
+"backGross": 1656.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.56,
+"airtableMini": 250.0
+},
+{
+"id": "d622",
+"saleDate": "2026-09-05",
+"salesperson": "Ed Walker",
+"backGross": 1120.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 311.2,
+"airtableMini": 250.0
+},
+{
+"id": "d623",
+"saleDate": "2026-09-08",
+"salesperson": "Derrick Kong",
+"backGross": 806.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.06,
+"airtableMini": 225.0
+},
+{
+"id": "d624",
+"saleDate": "2026-09-08",
+"salesperson": "Kevin Loughney",
+"backGross": 631.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 281.31,
+"airtableMini": 225.0
+},
+{
+"id": "d625",
+"saleDate": "2026-09-09",
+"salesperson": "Ed Walker",
+"backGross": 553.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 305.53,
+"airtableMini": 250.0
+},
+{
+"id": "d626",
+"saleDate": "2026-09-09",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 225.0
+},
+{
+"id": "d627",
+"saleDate": "2026-09-09",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d628",
+"saleDate": "2026-09-09",
+"salesperson": "Kevin Loughney",
+"backGross": 504.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 280.04,
+"airtableMini": 225.0
+},
+{
+"id": "d629",
+"saleDate": "2026-09-09",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d630",
+"saleDate": "2026-09-09",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d631",
+"saleDate": "2026-09-10",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 300.0,
+"airtableMini": 250.0
+},
+{
+"id": "d632",
+"saleDate": "2026-09-11",
+"salesperson": "Derrick Kong",
+"backGross": 906.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 434.06,
+"airtableMini": 225.0
+},
+{
+"id": "d633",
+"saleDate": "2026-09-11",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 250.0,
+"airtableMini": 250.0
+},
+{
+"id": "d634",
+"saleDate": "2026-09-12",
+"salesperson": "Ed Walker",
+"backGross": 1323.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 463.23,
+"airtableMini": 250.0
+},
+{
+"id": "d635",
+"saleDate": "2026-09-12",
+"salesperson": "Derrick Kong",
+"backGross": 956.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 284.56,
+"airtableMini": 225.0
+},
+{
+"id": "d636",
+"saleDate": "2026-09-12",
+"salesperson": "Khristian Ayala",
+"backGross": 942.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 234.42,
+"airtableMini": 225.0
+},
+{
+"id": "d637",
+"saleDate": "2026-09-12",
+"salesperson": "Khristian Ayala",
+"backGross": 1426.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 439.26,
+"airtableMini": 225.0
+},
+{
+"id": "d638",
+"saleDate": "2026-09-14",
+"salesperson": "Derrick Kong",
+"backGross": 1884.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 293.84,
+"airtableMini": 225.0
+},
+{
+"id": "d639",
+"saleDate": "2026-09-14",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d640",
+"saleDate": "2026-09-14",
+"salesperson": "Ed Walker",
+"backGross": 1205.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.05,
+"airtableMini": 250.0
+},
+{
+"id": "d641",
+"saleDate": "2026-09-14",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d642",
+"saleDate": "2026-09-14",
+"salesperson": "Ed Walker",
+"backGross": 556.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 355.56,
+"airtableMini": 250.0
+},
+{
+"id": "d643",
+"saleDate": "2026-09-15",
+"salesperson": "Ed Walker",
+"backGross": 1494.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.94,
+"airtableMini": 250.0
+},
+{
+"id": "d644",
+"saleDate": "2026-09-15",
+"salesperson": "Ed Walker",
+"backGross": 2248.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 322.48,
+"airtableMini": 250.0
+},
+{
+"id": "d645",
+"saleDate": "2026-09-15",
+"salesperson": "Kevin Loughney",
+"backGross": 1241.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 237.41,
+"airtableMini": 225.0
+},
+{
+"id": "d646",
+"saleDate": "2026-09-16",
+"salesperson": "Kevin Loughney",
+"backGross": 1920.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 294.2,
+"airtableMini": 225.0
+},
+{
+"id": "d647",
+"saleDate": "2026-09-17",
+"salesperson": "Derrick Kong",
+"backGross": 1088.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 235.88,
+"airtableMini": 225.0
+},
+{
+"id": "d648",
+"saleDate": "2026-09-18",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d649",
+"saleDate": "2026-09-18",
+"salesperson": "Ed Walker",
+"backGross": 2891.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 328.91,
+"airtableMini": 250.0
+},
+{
+"id": "d650",
+"saleDate": "2026-09-19",
+"salesperson": "Kevin Loughney",
+"backGross": 2306.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 348.06,
+"airtableMini": 225.0
+},
+{
+"id": "d651",
+"saleDate": "2026-09-19",
+"salesperson": "Khristian Ayala",
+"backGross": 706.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 282.06,
+"airtableMini": 225.0
+},
+{
+"id": "d652",
+"saleDate": "2026-09-19",
+"salesperson": "Derrick Kong",
+"backGross": 905.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 334.05,
+"airtableMini": 225.0
+},
+{
+"id": "d653",
+"saleDate": "2026-09-19",
+"salesperson": "Ed Walker",
+"backGross": 1000.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.0,
+"airtableMini": 250.0
+},
+{
+"id": "d654",
+"saleDate": "2026-09-18",
+"salesperson": "Khristian Ayala",
+"backGross": 1199.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 236.99,
+"airtableMini": 225.0
+},
+{
+"id": "d655",
+"saleDate": "2026-09-21",
+"salesperson": "Ed Walker",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.0,
+"airtableMini": 250.0
+},
+{
+"id": "d656",
+"saleDate": "2026-09-21",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d657",
+"saleDate": "2026-09-21",
+"salesperson": "Ed Walker",
+"backGross": 1420.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 314.2,
+"airtableMini": 250.0
+},
+{
+"id": "d658",
+"saleDate": "2026-09-21",
+"salesperson": "Ed Walker",
+"backGross": 1070.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.7,
+"airtableMini": 250.0
+},
+{
+"id": "d659",
+"saleDate": "2026-09-22",
+"salesperson": "Derrick Kong",
+"backGross": 1952.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 344.52,
+"airtableMini": 225.0
+},
+{
+"id": "d660",
+"saleDate": "2026-09-22",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 225.0,
+"airtableMini": 225.0
+},
+{
+"id": "d661",
+"saleDate": "2026-09-17",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d662",
+"saleDate": "2026-09-22",
+"salesperson": "Ed Walker",
+"backGross": 1671.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 316.71,
+"airtableMini": 250.0
+},
+{
+"id": "d663",
+"saleDate": "2026-09-22",
+"salesperson": "Kevin Loughney",
+"backGross": 456.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 329.56,
+"airtableMini": 225.0
+},
+{
+"id": "d664",
+"saleDate": "2026-09-24",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d665",
+"saleDate": "2026-09-24",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard",
+"Multi-Guard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 475.0,
+"airtableMini": 225.0
+},
+{
+"id": "d666",
+"saleDate": "2026-09-24",
+"salesperson": "Ed Walker",
+"backGross": 1116.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 311.16,
+"airtableMini": 250.0
+},
+{
+"id": "d667",
+"saleDate": "2026-09-24",
+"salesperson": "Kevin Loughney",
+"backGross": 810.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 283.1,
+"airtableMini": 225.0
+},
+{
+"id": "d668",
+"saleDate": "2026-09-24",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d669",
+"saleDate": "2026-09-25",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": true,
+"ninetyDay": false,
+"airtableTotal": 375.0,
+"airtableMini": 225.0
+},
+{
+"id": "d670",
+"saleDate": "2026-09-23",
+"salesperson": "Khristian Ayala",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d671",
+"saleDate": "2026-09-25",
+"salesperson": "Khristian Ayala",
+"backGross": 2176.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 296.76,
+"airtableMini": 225.0
+},
+{
+"id": "d672",
+"saleDate": "2026-09-25",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 325.0,
+"airtableMini": 225.0
+},
+{
+"id": "d673",
+"saleDate": "2026-09-24",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d674",
+"saleDate": "2026-09-18",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d675",
+"saleDate": "2026-09-26",
+"salesperson": "Ed Walker",
+"backGross": 79.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 350.79,
+"airtableMini": 250.0
+},
+{
+"id": "d676",
+"saleDate": "2026-09-26",
+"salesperson": "Ed Walker",
+"backGross": 3202.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 332.02,
+"airtableMini": 250.0
+},
+{
+"id": "d677",
+"saleDate": "2026-09-28",
+"salesperson": "Ed Walker",
+"backGross": 871.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 308.71,
+"airtableMini": 250.0
+},
+{
+"id": "d678",
+"saleDate": "2026-09-29",
+"salesperson": "Ed Walker",
+"backGross": 388.0,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 253.88,
+"airtableMini": 250.0
+},
+{
+"id": "d679",
+"saleDate": "2026-09-28",
+"salesperson": "Khristian Ayala",
+"backGross": 1847.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 343.47,
+"airtableMini": 225.0
+},
+{
+"id": "d680",
+"saleDate": "2026-09-28",
+"salesperson": "Khristian Ayala",
+"backGross": 1062.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 335.62,
+"airtableMini": 225.0
+},
+{
+"id": "d681",
+"saleDate": "2026-09-29",
+"salesperson": "Kevin Loughney",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d682",
+"saleDate": "2026-09-29",
+"salesperson": "Ed Walker",
+"backGross": 1235.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 312.35,
+"airtableMini": 250.0
+},
+{
+"id": "d683",
+"saleDate": "2026-09-29",
+"salesperson": "Khristian Ayala",
+"backGross": 1196.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 286.96,
+"airtableMini": 225.0
+},
+{
+"id": "d684",
+"saleDate": "2026-09-29",
+"salesperson": "Ed Walker",
+"backGross": 1045.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 310.45,
+"airtableMini": 250.0
+},
+{
+"id": "d685",
+"saleDate": "2026-09-26",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d686",
+"saleDate": "2026-09-30",
+"salesperson": "Derrick Kong",
+"backGross": null,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 275.0,
+"airtableMini": 225.0
+},
+{
+"id": "d687",
+"saleDate": "2026-09-30",
+"salesperson": "Joey Golub",
+"backGross": null,
+"products": [],
+"multilingual": false,
+"ninetyDay": false,
+"airtableTotal": 200.0,
+"airtableMini": 200.0
+},
+{
+"id": "d688",
+"saleDate": "2026-09-30",
+"salesperson": "Ed Walker",
+"backGross": 1078.0,
+"products": [
+"LoJack - Standard",
+"Wheel Locks - Standard"
+],
+"multilingual": false,
+"ninetyDay": true,
+"airtableTotal": 360.78,
+"airtableMini": 250.0
+}
+],
+"months": [
+{
+"salesperson": "Ed Walker",
+"month": "2026-01",
+"units": 27,
+"vehicleCommission": 7058.2,
+"productSpiffs": 2000.0,
+"twoCarDaySpiffs": 800.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 450.0,
+"total": 10308.2
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-01",
+"units": 16,
+"vehicleCommission": 3685.64,
+"productSpiffs": 600.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 500.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 150.0,
+"total": 5435.64
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-01",
+"units": 16,
+"vehicleCommission": 3774.45,
+"productSpiffs": 1150.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 250.0,
+"total": 5474.45
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-01",
+"units": 8,
+"vehicleCommission": 1657.41,
+"productSpiffs": 425.0,
+"twoCarDaySpiffs": 0.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 50.0,
+"total": 2132.41
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-02",
+"units": 25,
+"vehicleCommission": 6482.56,
+"productSpiffs": 2350.0,
+"twoCarDaySpiffs": 800.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 500.0,
+"total": 10632.56
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-02",
+"units": 17,
+"vehicleCommission": 3999.68,
+"productSpiffs": 1050.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 500.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 350.0,
+"total": 6699.68
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-02",
+"units": 21,
+"vehicleCommission": 4860.72,
+"productSpiffs": 1000.0,
+"twoCarDaySpiffs": 600.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 500.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 400.0,
+"total": 7860.72
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-02",
+"units": 14,
+"vehicleCommission": 2929.16,
+"productSpiffs": 500.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 250.0,
+"total": 4479.16
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-03",
+"units": 33,
+"vehicleCommission": 8566.94,
+"productSpiffs": 1950.0,
+"twoCarDaySpiffs": 900.0,
+"hatTrickDaySpiffs": 400.0,
+"personalBestSpiff": 500.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 250.0,
+"total": 13316.94
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-03",
+"units": 21,
+"vehicleCommission": 4915.37,
+"productSpiffs": 950.0,
+"twoCarDaySpiffs": 400.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 500.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 150.0,
+"total": 7665.37
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-03",
+"units": 16,
+"vehicleCommission": 3758.62,
+"productSpiffs": 950.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 250.0,
+"total": 5808.62
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-03",
+"units": 17,
+"vehicleCommission": 3916.51,
+"productSpiffs": 1200.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 300.0,
+"total": 6466.51
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-04",
+"units": 17,
+"vehicleCommission": 3947.66,
+"productSpiffs": 825.0,
+"twoCarDaySpiffs": 200.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 100.0,
+"total": 5072.66
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-04",
+"units": 18,
+"vehicleCommission": 4236.67,
+"productSpiffs": 1225.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 100.0,
+"total": 5861.67
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-04",
+"units": 28,
+"vehicleCommission": 7257.14,
+"productSpiffs": 1600.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 600.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 350.0,
+"total": 10107.14
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-04",
+"units": 10,
+"vehicleCommission": 2101.56,
+"productSpiffs": 475.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 0.0,
+"total": 2676.56
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-05",
+"units": 15,
+"vehicleCommission": 3508.17,
+"productSpiffs": 800.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 100.0,
+"total": 5208.17
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-05",
+"units": 16,
+"vehicleCommission": 3753.44,
+"productSpiffs": 1000.0,
+"twoCarDaySpiffs": 400.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 150.0,
+"total": 5803.44
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-05",
+"units": 34,
+"vehicleCommission": 8757.36,
+"productSpiffs": 1850.0,
+"twoCarDaySpiffs": 600.0,
+"hatTrickDaySpiffs": 800.0,
+"personalBestSpiff": 500.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 350.0,
+"total": 13357.36
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-05",
+"units": 14,
+"vehicleCommission": 2930.58,
+"productSpiffs": 550.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 500.0,
+"ninetyDaySpiffs": 200.0,
+"total": 4480.58
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-06",
+"units": 9,
+"vehicleCommission": 1929.59,
+"productSpiffs": 400.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 150.0,
+"total": 2579.59
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-06",
+"units": 12,
+"vehicleCommission": 2480.61,
+"productSpiffs": 450.0,
+"twoCarDaySpiffs": 0.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 150.0,
+"total": 3280.61
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-06",
+"units": 17,
+"vehicleCommission": 3957.41,
+"productSpiffs": 600.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 200.0,
+"total": 5257.41
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-06",
+"units": 23,
+"vehicleCommission": 6052.42,
+"productSpiffs": 1825.0,
+"twoCarDaySpiffs": 800.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 250.0,
+"total": 8927.42
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-07",
+"units": 31,
+"vehicleCommission": 8069.98,
+"productSpiffs": 1550.0,
+"twoCarDaySpiffs": 700.0,
+"hatTrickDaySpiffs": 600.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 350.0,
+"total": 12019.98
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-07",
+"units": 17,
+"vehicleCommission": 3986.86,
+"productSpiffs": 1100.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 250.0,
+"total": 6586.86
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-07",
+"units": 14,
+"vehicleCommission": 2906.6,
+"productSpiffs": 725.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 150.0,
+"total": 4631.6
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-07",
+"units": 18,
+"vehicleCommission": 4301.85,
+"productSpiffs": 800.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 0.0,
+"total": 6151.85
+},
+{
+"salesperson": "Joey Golub",
+"month": "2026-07",
+"units": 6,
+"vehicleCommission": 1262.23,
+"productSpiffs": 200.0,
+"twoCarDaySpiffs": 100.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 0.0,
+"total": 2312.23
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-08",
+"units": 15,
+"vehicleCommission": 3529.42,
+"productSpiffs": 800.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 200.0,
+"total": 4829.42
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-08",
+"units": 17,
+"vehicleCommission": 4045.71,
+"productSpiffs": 575.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 250.0,
+"total": 5370.71
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-08",
+"units": 25,
+"vehicleCommission": 6478.67,
+"productSpiffs": 1150.0,
+"twoCarDaySpiffs": 700.0,
+"hatTrickDaySpiffs": 200.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 300.0,
+"total": 8828.67
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-08",
+"units": 11,
+"vehicleCommission": 2279.24,
+"productSpiffs": 375.0,
+"twoCarDaySpiffs": 200.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 0.0,
+"total": 2854.24
+},
+{
+"salesperson": "Joey Golub",
+"month": "2026-08",
+"units": 4,
+"vehicleCommission": 800.0,
+"productSpiffs": 0.0,
+"twoCarDaySpiffs": 0.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 0.0,
+"ninetyDaySpiffs": 50.0,
+"total": 850.0
+},
+{
+"salesperson": "Kevin Loughney",
+"month": "2026-09",
+"units": 17,
+"vehicleCommission": 3906.73,
+"productSpiffs": 400.0,
+"twoCarDaySpiffs": 300.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 200.0,
+"total": 5556.73
+},
+{
+"salesperson": "Derrick Kong",
+"month": "2026-09",
+"units": 21,
+"vehicleCommission": 4846.07,
+"productSpiffs": 1175.0,
+"twoCarDaySpiffs": 0.0,
+"hatTrickDaySpiffs": 400.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 250.0,
+"total": 7421.07
+},
+{
+"salesperson": "Khristian Ayala",
+"month": "2026-09",
+"units": 16,
+"vehicleCommission": 3737.48,
+"productSpiffs": 650.0,
+"twoCarDaySpiffs": 400.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 250.0,
+"total": 5787.48
+},
+{
+"salesperson": "Ed Walker",
+"month": "2026-09",
+"units": 30,
+"vehicleCommission": 7829.46,
+"productSpiffs": 1500.0,
+"twoCarDaySpiffs": 400.0,
+"hatTrickDaySpiffs": 800.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 300.0,
+"total": 11579.46
+},
+{
+"salesperson": "Joey Golub",
+"month": "2026-09",
+"units": 3,
+"vehicleCommission": 600.0,
+"productSpiffs": 0.0,
+"twoCarDaySpiffs": 0.0,
+"hatTrickDaySpiffs": 0.0,
+"personalBestSpiff": 0.0,
+"storeVolumeSpiff": 750.0,
+"ninetyDaySpiffs": 0.0,
+"total": 1350.0
+}
+]
+}

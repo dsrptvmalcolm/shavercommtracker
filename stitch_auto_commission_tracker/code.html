@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_dashboard" name="shell-type"/>
+<title>Apex Motors — Commission &amp; Performance</title>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#0e0e11",
+            "surface-subtle": "#141418",
+            "surface-card": "#18181d",
+            "surface-card-hover": "#202026",
+            "surface-border": "#282830",
+            primary: "#facc15",
+            "primary-hover": "#eab308",
+            "primary-soft": "rgba(250, 204, 21, 0.12)",
+            secondary: "#ffb95f",
+            "on-surface": "#f4f4f6",
+            "on-surface-muted": "#9696a4",
+            "on-surface-subtle": "#686877"
+          },
+          fontFamily: {
+            sans: ["'Inter'", "'Plus Jakarta Sans'", "sans-serif"],
+            display: ["'Anton'", "sans-serif"],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased selection:bg-primary selection:text-black">
+<!-- TOP MINIMAL HEADER -->
+<header class="fixed top-0 left-0 right-0 h-20 bg-surface/85 backdrop-blur-xl border-b border-surface-border/60 z-50">
+<div class="max-w-7xl mx-auto h-full px-6 lg:px-10 flex items-center justify-between gap-6">
+<!-- Brand & Location Switcher -->
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<img alt="Apex Motors Logo" class="h-9 w-auto object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1UMxTMemeeFEDISwiJ9PEIMnUXI0RSq0PvmSXv3bjVErHG05jpd_wQDXLZc71OfLdjgy8mUGBwrXlds2L2p3xkL7YSB7Zn8Rt7xeukqRBcZcOTxFk6mMTJ20dG3ooK_d8Mxuzn4sar2jgMs7YZ_lb8ao1o_w0d6SGzsKbTT89Cbx00Ixno2y-6PXU6MdqgJJKH7io8kAzik2ICDkTdh-mA07a3wBMdSeC6smcZRLnohpl6F4rg4kFvsXn0"/>
+</div>
+<div class="hidden sm:block h-6 w-[1px] bg-surface-border"></div>
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-subtle border border-surface-border/80 text-xs text-on-surface-muted hover:text-on-surface hover:border-surface-border cursor-pointer transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-medium text-on-surface">Westside Store #104</span>
+<span class="text-on-surface-subtle">·</span>
+<span>October 2024</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-subtle ml-0.5">keyboard_arrow_down</span>
+</div>
+</div>
+<!-- User Profile & Action -->
+<div class="flex items-center gap-4">
+<button class="group flex items-center gap-2 bg-primary hover:bg-primary-hover text-black px-5 py-2.5 rounded-full font-display uppercase tracking-wider text-sm shadow-[0_0_24px_rgba(250,204,21,0.25)] hover:shadow-[0_0_32px_rgba(250,204,21,0.4)] transition-all transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px] font-bold">add</span>
+<span class="pt-0.5">Log Deal</span>
+</button>
+<div class="h-6 w-[1px] bg-surface-border"></div>
+<div class="flex items-center gap-3 pl-1">
+<div class="relative">
+<img alt="Marcus Vance" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/40" src="https://lh3.googleusercontent.com/aida/AEtjO1WL0hM12WNf63b8EjcqY-TzfQ9s13cvrNyD9po7MUc2VH-cUyEiZXI1lxnckjD2689tCt9EhCFMMY_9LVI7O_1cJpisKKA9axq5H2tikwSvyddnGbd3oSybg95svR7gwzikL1AeGARAbHXxN4rWs1TnRSaWtUDOKmnI3jxCjEvFVpjfnn1FuXHRLUaY9LCkGcK_xTZZuepsSbWf_iDBdz86s_7XpwTVpvEqBXei_y-pKzckNzRlBPoHiQ"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-surface"></span>
+</div>
+<div class="hidden md:flex flex-col text-left">
+<span class="text-sm font-bold text-on-surface tracking-tight leading-tight">Marcus Vance</span>
+<span class="text-xs text-primary font-medium tracking-wide">Senior Sales Consultant</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN VIEWPORT -->
+<main class="pt-28 pb-20 px-6 lg:px-10 max-w-7xl mx-auto space-y-10">
+<!-- ROW 1: DUAL HERO (PAYOUT STATEMENT & CIRCULAR CAR GOAL GAUGE) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- HERO PAYOUT CARD (7 cols) -->
+<div class="lg:col-span-7 relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-card via-surface-card to-surface-subtle border border-surface-border/80 p-8 lg:p-10 flex flex-col justify-between shadow-2xl">
+<!-- Subtle golden glow aura behind number -->
+<div class="absolute -left-16 -top-16 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute right-0 bottom-0 w-64 h-64 bg-primary/5 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="px-3 py-1 rounded-full bg-primary-soft text-primary border border-primary/30 text-xs font-bold tracking-wider uppercase">
+              MTD Estimated Net Payout
+            </span>
+</div>
+<span class="text-xs font-semibold text-on-surface-subtle tracking-wide">Disbursing Nov 5</span>
+</div>
+<div class="relative z-10 my-8">
+<div class="flex items-baseline gap-2">
+<h1 class="text-6xl sm:text-7xl lg:text-8xl font-display uppercase tracking-wide text-white">
+              $14,850
+            </h1>
+<span class="text-3xl font-display text-on-surface-subtle">.00</span>
+</div>
+<div class="flex items-center gap-3 mt-4">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+              +18.4% vs Last Month
+            </div>
+<span class="text-xs text-on-surface-muted">+$2,310 ahead of projected pacing</span>
+</div>
+</div>
+<!-- Payout Quick Footnotes -->
+<div class="relative z-10 pt-6 border-t border-surface-border/70 flex flex-wrap items-center justify-between gap-4 text-xs">
+<div class="flex items-center gap-6">
+<div>
+<span class="text-on-surface-subtle uppercase tracking-wider text-[11px] block font-medium">Front Gross Pay</span>
+<span class="text-base font-display tracking-wide text-on-surface mt-0.5 block">$12,936</span>
+</div>
+<div class="w-[1px] h-6 bg-surface-border"></div>
+<div>
+<span class="text-on-surface-subtle uppercase tracking-wider text-[11px] block font-medium">F&amp;I Share</span>
+<span class="text-base font-display tracking-wide text-on-surface mt-0.5 block">$3,420</span>
+</div>
+<div class="w-[1px] h-6 bg-surface-border"></div>
+<div>
+<span class="text-on-surface-subtle uppercase tracking-wider text-[11px] block font-medium">Bonus Stips</span>
+<span class="text-base font-display tracking-wide text-primary mt-0.5 block">+$2,550</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-subtle">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>Synced 14m ago</span>
+</div>
+</div>
+</div>
+<!-- VISUAL CAR DELIVERY GOAL (CIRCULAR GAUGE) (5 cols) -->
+<div class="lg:col-span-5 relative overflow-hidden rounded-3xl bg-surface-card border border-surface-border/80 p-8 flex flex-col items-center justify-between text-center shadow-xl">
+<div class="w-full flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-muted">Delivery Goal Pace</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-subtle text-primary border border-primary/20 text-xs font-semibold font-mono">
+            6 Days Left
+          </span>
+</div>
+<!-- Sleek Radial Progress Meter -->
+<div class="relative my-4 flex items-center justify-center">
+<svg class="w-56 h-56 transform -rotate-90" viewbox="0 0 120 120">
+<!-- Background circle track -->
+<circle cx="60" cy="60" fill="none" r="48" stroke="#23232c" stroke-linecap="round" stroke-width="9"></circle>
+<!-- 92.5% Completed Progress ring (circumference = 2 * PI * 48 = 301.6) -> offset = 301.6 * (1 - 0.925) = 22.6 -->
+<circle class="transition-all duration-1000 ease-out" cx="60" cy="60" fill="none" r="48" stroke="#facc15" stroke-dasharray="301.6" stroke-dashoffset="22.6" stroke-linecap="round" stroke-width="9"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="text-5xl font-display tracking-wide text-white">18.5</span>
+<span class="text-xs font-semibold text-on-surface-subtle uppercase tracking-widest mt-0.5">of 20 Target</span>
+</div>
+</div>
+<!-- Next Tier Teaser -->
+<div class="w-full bg-surface-subtle rounded-2xl p-4 border border-surface-border/60 flex items-center justify-between">
+<div class="flex items-center gap-3 text-left">
+<div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+</div>
+<div>
+<span class="text-xs text-on-surface font-bold block leading-tight">1.5 Cars to Tier 4 Unlock</span>
+<span class="text-[11px] text-on-surface-subtle block">Retroactive 32% pay on all units</span>
+</div>
+</div>
+<span class="text-xs font-bold text-primary font-mono bg-primary/10 px-2.5 py-1 rounded-lg">+$2.5k</span>
+</div>
+</div>
+</section>
+<!-- ROW 2: TIER PROGRESSION STEPPER -->
+<section class="rounded-3xl bg-surface-card border border-surface-border/80 p-8 shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Commission Ladder</span>
+<h2 class="text-2xl font-display uppercase tracking-wide text-white mt-0.5">Tier Performance Path</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs text-on-surface-muted font-medium">Currently at <strong class="text-primary font-bold">Tier 3 (28% Front Gross)</strong></span>
+</div>
+</div>
+<!-- Stepper Track -->
+<div class="relative pt-2 pb-1">
+<!-- Connecting Track Bar -->
+<div class="absolute top-6 left-0 right-0 h-1.5 bg-surface-subtle rounded-full -translate-y-1/2">
+<!-- Active fill from Tier 1 through Tier 3 (approx 75%) -->
+<div class="h-full bg-gradient-to-r from-primary/50 via-primary to-primary rounded-full w-[73%]"></div>
+</div>
+<!-- 4 Tier Milestone Nodes -->
+<div class="relative grid grid-cols-4 gap-2">
+<!-- Node 1: Tier 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-2xl bg-surface-card border-2 border-primary/60 flex items-center justify-center text-primary shadow-lg z-10">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<span class="text-base font-display uppercase tracking-wide text-white mt-3">Tier 1</span>
+<span class="text-xs text-on-surface-muted">10 Cars · 20%</span>
+<span class="text-[10px] text-emerald-400 font-semibold mt-1 font-mono">CLEARED</span>
+</div>
+<!-- Node 2: Tier 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-2xl bg-surface-card border-2 border-primary/80 flex items-center justify-center text-primary shadow-lg z-10">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<span class="text-base font-display uppercase tracking-wide text-white mt-3">Tier 2</span>
+<span class="text-xs text-on-surface-muted">15 Cars · 25%</span>
+<span class="text-[10px] text-emerald-400 font-semibold mt-1 font-mono">CLEARED</span>
+</div>
+<!-- Node 3: Tier 3 (ACTIVE) -->
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-2xl bg-primary text-black flex items-center justify-center font-black shadow-[0_0_20px_rgba(250,204,21,0.4)] ring-4 ring-primary/20 z-10">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<span class="text-base font-display uppercase tracking-wide text-primary mt-3 flex items-center gap-1">
+              Tier 3
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</span>
+<span class="text-xs text-white font-medium">16–19 Cars · 28%</span>
+<span class="text-[10px] font-bold text-primary bg-primary-soft px-2 py-0.5 rounded-full mt-1">CURRENT</span>
+</div>
+<!-- Node 4: Tier 4 (NEXT TARGET) -->
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-2xl bg-surface-subtle border-2 border-dashed border-surface-border flex items-center justify-center text-on-surface-subtle z-10 group hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">stars</span>
+</div>
+<span class="text-base font-display uppercase tracking-wide text-on-surface-muted mt-3">Tier 4 Platinum</span>
+<span class="text-xs text-on-surface-subtle">20+ Cars · 32% Retro</span>
+<span class="text-[10px] text-primary font-bold mt-1 font-mono">+4% Jump on 1.5 units</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ROW 3: THREE VISUAL METRIC CARDS WITH SPARKLINES / MINI GAUGES -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Metric 1: Front-End Gross -->
+<div class="rounded-3xl bg-surface-card border border-surface-border/80 p-6 flex flex-col justify-between hover:border-surface-border transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-muted">Front-End Gross</span>
+<span class="text-xs text-primary font-mono font-bold">#2 in Store</span>
+</div>
+<div class="my-5">
+<div class="text-4xl font-display uppercase tracking-wide text-white">$46,200</div>
+<span class="text-xs text-on-surface-subtle mt-1 block">Avg $2,497 profit / delivered vehicle</span>
+</div>
+<!-- Minimal sparkline graphic -->
+<div class="flex items-end gap-1.5 h-10 pt-2">
+<div class="flex-1 bg-surface-subtle rounded-t-md h-[40%] hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-surface-subtle rounded-t-md h-[55%] hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-surface-subtle rounded-t-md h-[70%] hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-surface-subtle rounded-t-md h-[60%] hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-surface-subtle rounded-t-md h-[85%] hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary rounded-t-md h-[100%] shadow-[0_0_12px_rgba(250,204,21,0.3)]"></div>
+</div>
+</div>
+<!-- Metric 2: Back-End F&I Pool -->
+<div class="rounded-3xl bg-surface-card border border-surface-border/80 p-6 flex flex-col justify-between hover:border-surface-border transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-muted">Back-End F&amp;I</span>
+<span class="text-xs text-emerald-400 font-mono font-bold">78% Penetration</span>
+</div>
+<div class="my-5">
+<div class="text-4xl font-display uppercase tracking-wide text-white">$22,800</div>
+<span class="text-xs text-on-surface-subtle mt-1 block">29 VSC &amp; GAP warranty contracts signed</span>
+</div>
+<!-- Progress bar visual -->
+<div class="space-y-1.5">
+<div class="w-full h-2 rounded-full bg-surface-subtle overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[78%]"></div>
+</div>
+<div class="flex justify-between text-[11px] text-on-surface-subtle font-mono">
+<span>Pool Target: $20k</span>
+<span class="text-primary font-bold">114% Achieved</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: CSI Rating -->
+<div class="rounded-3xl bg-surface-card border border-surface-border/80 p-6 flex flex-col justify-between hover:border-surface-border transition-all">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-muted">Customer Satisfaction (CSI)</span>
+<span class="text-xs text-emerald-400 font-mono font-bold">Bonus Active</span>
+</div>
+<div class="my-5">
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-display uppercase tracking-wide text-white">98.2%</span>
+<span class="text-xs text-on-surface-subtle font-medium">/ 95 benchmark</span>
+</div>
+<span class="text-xs text-on-surface-subtle mt-1 block">Qualifies for full +$750 monthly stipend</span>
+</div>
+<!-- Rating dots visual -->
+<div class="flex items-center justify-between pt-1 text-primary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+</div>
+<span class="text-xs font-bold text-on-surface font-mono">42 Reviews</span>
+</div>
+</div>
+</section>
+<!-- ROW 4: RECENT DELIVERIES (CLEAN VISUAL CARDS, NO HEAVY TABLES) -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-muted">Activity</span>
+<h3 class="text-2xl font-display uppercase tracking-wide text-white">Recent Deliveries</h3>
+</div>
+<a class="text-xs font-bold font-display uppercase tracking-wider text-primary hover:underline flex items-center gap-1" href="#">
+          View all 18 cars
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Delivery Card 1 -->
+<div class="group rounded-2xl bg-surface-card border border-surface-border/80 p-5 hover:border-primary/50 hover:bg-surface-card-hover transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-xs font-bold">
+              +$1,358 Pay
+            </span>
+</div>
+<div class="mt-4">
+<h4 class="text-lg font-display uppercase tracking-wide text-white group-hover:text-primary transition-colors">2024 BMW M4 Competition</h4>
+<div class="flex items-center gap-2 mt-1 text-xs text-on-surface-subtle">
+<span>Stock #N8492</span>
+<span>·</span>
+<span>Delivered Yesterday</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-border/50 flex items-center justify-between text-xs">
+<span class="text-on-surface-muted font-medium">Front Gross: <strong class="text-on-surface font-mono">$4,850</strong></span>
+<span class="text-[11px] text-on-surface-subtle font-mono">Funded &amp; Closed</span>
+</div>
+</div>
+<!-- Delivery Card 2 -->
+<div class="group rounded-2xl bg-surface-card border border-surface-border/80 p-5 hover:border-primary/50 hover:bg-surface-card-hover transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-xs font-bold">
+              +$1,092 Pay
+            </span>
+</div>
+<div class="mt-4">
+<h4 class="text-lg font-display uppercase tracking-wide text-white group-hover:text-primary transition-colors">2023 Porsche Macan GTS</h4>
+<div class="flex items-center gap-2 mt-1 text-xs text-on-surface-subtle">
+<span>Stock #U2941</span>
+<span>·</span>
+<span>Pre-Owned · Oct 24</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-border/50 flex items-center justify-between text-xs">
+<span class="text-on-surface-muted font-medium">Front Gross: <strong class="text-on-surface font-mono">$3,900</strong></span>
+<span class="text-[11px] text-on-surface-subtle font-mono">Funded &amp; Closed</span>
+</div>
+</div>
+<!-- Delivery Card 3 -->
+<div class="group rounded-2xl bg-surface-card border border-surface-border/80 p-5 hover:border-primary/50 hover:bg-surface-card-hover transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 font-mono text-xs font-bold">
+              +$756 Pay
+            </span>
+</div>
+<div class="mt-4">
+<h4 class="text-lg font-display uppercase tracking-wide text-white group-hover:text-primary transition-colors">2024 BMW X5 xDrive40i</h4>
+<div class="flex items-center gap-2 mt-1 text-xs text-on-surface-subtle">
+<span>Stock #N8820</span>
+<span>·</span>
+<span>Oct 22</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-border/50 flex items-center justify-between text-xs">
+<span class="text-on-surface-muted font-medium">Front Gross: <strong class="text-on-surface font-mono">$2,700</strong></span>
+<span class="text-[11px] text-amber-300 font-mono">F&amp;I Finalizing</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

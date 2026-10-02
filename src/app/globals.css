@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* "High-Octane Automotive" — from the Stitch design file */
+@theme {
+  --color-surface: #0e0e11;
+  --color-surface-subtle: #141418;
+  --color-surface-card: #18181d;
+  --color-surface-card-hover: #202026;
+  --color-surface-border: #282830;
+  --color-primary: #facc15;
+  --color-primary-hover: #eab308;
+  --color-primary-soft: rgb(250 204 21 / 0.12);
+  --color-on-surface: #f4f4f6;
+  --color-on-surface-muted: #9696a4;
+  --color-on-surface-subtle: #686877;
+  --color-success: #4ade80;
+  --color-danger: #f87171;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anton), ui-sans-serif, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-surface text-on-surface antialiased;
+  }
+  ::selection {
+    @apply bg-primary text-black;
+  }
+}
+
+@utility card {
+  @apply rounded-3xl border border-surface-border/80 bg-surface-card;
+}
+@utility eyebrow {
+  @apply text-xs font-bold uppercase tracking-wider text-on-surface-muted;
+}
+@utility display {
+  @apply font-display uppercase tracking-wide;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-extrabold uppercase tracking-wider transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+@utility btn-primary {
+  @apply btn bg-primary text-black shadow-[0_0_24px_rgba(250,204,21,0.25)] hover:bg-primary-hover hover:shadow-[0_0_32px_rgba(250,204,21,0.4)];
+}
+@utility btn-secondary {
+  @apply btn border border-surface-border bg-surface-subtle text-on-surface hover:border-primary/50;
+}
+@utility btn-danger {
+  @apply btn border border-danger/40 bg-danger/10 text-danger hover:bg-danger/20;
+}
+@utility field-label {
+  @apply mb-1.5 block text-[11px] font-bold uppercase tracking-wider text-on-surface-muted;
+}
+@utility input {
+  @apply w-full rounded-md border border-[#3f3f46] bg-[#1e1e20] px-3 py-2.5 text-sm text-on-surface placeholder:text-on-surface-subtle focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+}
+@utility table-head {
+  @apply bg-primary text-left text-[11px] font-extrabold uppercase tracking-wider text-black;
+}
+@utility chip {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-bold;
+}
