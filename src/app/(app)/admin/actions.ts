@@ -117,7 +117,8 @@ export async function saveStaff(_: ActionState, formData: FormData): Promise<Act
   if (password && !row.email) return { error: "Add an email before setting a password" };
 
   const supabase = await createClient();
-  const values = { ...row, email: row.email || null };
+  // An admin-assigned password is temporary — they pick their own at next sign-in
+  const values = { ...row, email: row.email || null, ...(password ? { must_change_password: true } : {}) };
   const { error } = id
     ? await supabase.from("staff").update(values).eq("id", id)
     : await supabase.from("staff").insert(values);
@@ -127,7 +128,7 @@ export async function saveStaff(_: ActionState, formData: FormData): Promise<Act
     const loginError = await syncLogin(row.email, password || undefined);
     if (loginError) return { error: `Saved, but the login couldn't be updated: ${loginError}` };
   }
-  return done(password ? "Saved — share the password with them directly" : "Saved");
+  return done(password ? "Saved — they'll set their own password at next sign-in" : "Saved");
 }
 
 // Settings ------------------------------------------------------------------
@@ -196,4 +197,29 @@ export async function saveProduct(_: ActionState, formData: FormData): Promise<A
     : await supabase.from("products").insert(row);
   if (error) return { error: error.code === "23505" ? "A product with that name already exists" : error.message };
   return done(id ? "Product saved" : "Product added");
+}
+
+// Holidays ------------------------------------------------------------------
+
+const holidaySchema = z.object({
+  date: z.iso.date("Pick a date"),
+  name: z.string().trim().min(1, "Name the holiday"),
+});
+
+export async function addHoliday(_: ActionState, formData: FormData): Promise<ActionState> {
+  await requireAdmin();
+  const parsed = holidaySchema.safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message };
+  const supabase = await createClient();
+  const { error } = await supabase.from("holidays").upsert(parsed.data);
+  if (error) return { error: error.message };
+  return done("Holiday saved");
+}
+
+export async function deleteHoliday(date: string): Promise<ActionState> {
+  await requireAdmin();
+  const supabase = await createClient();
+  const { error } = await supabase.from("holidays").delete().eq("date", date);
+  if (error) return { error: error.message };
+  return done("Removed");
 }

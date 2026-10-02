@@ -3,10 +3,12 @@
 import { useState } from "react";
 
 type Props = {
-  /** Units sold on each day of the month (index 0 = day 1) */
+  /** Units sold on each calendar day of the month (index 0 = day 1) */
   daily: number[];
-  /** Days elapsed so far (0 for future months, full month when closed) */
-  elapsed: number;
+  /** Calendar days elapsed (0 for future months, full month when closed) */
+  todayDay: number;
+  /** Whether each calendar day is a selling day (Mon–Sat, not a holiday) */
+  workingDayFlags: boolean[];
   target?: { units: number; label: string };
   monthLabel: string;
 };
@@ -14,22 +16,39 @@ type Props = {
 const W = 600;
 const H = 180;
 const fmt = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
+const round1 = (n: number) => Math.round(n * 10) / 10;
 
-/** Cumulative units through the month, with a projection at the current pace and the next tier as a target line. */
-export function PaceChart({ daily, elapsed, target, monthLabel }: Props) {
+/**
+ * Cumulative units through the month. The projection grows only on selling days,
+ * at the rate sold so far per selling day; closed days are shaded.
+ */
+export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel }: Props) {
   const [hover, setHover] = useState<number | null>(null);
   const days = daily.length;
   const cumulative = daily.reduce<number[]>((acc, u, i) => [...acc, (acc[i - 1] ?? 0) + u], []);
-  const sold = cumulative[elapsed - 1] ?? 0;
-  const projected = elapsed > 0 ? (sold / elapsed) * days : 0;
-  const max = Math.max(projected, target?.units ?? 0, sold, 1) * 1.1;
+  const sold = cumulative[todayDay - 1] ?? 0;
+  const elapsedWorking = workingDayFlags.slice(0, todayDay).filter(Boolean).length;
+  const rate = elapsedWorking > 0 ? sold / elapsedWorking : 0;
 
+  // Projected cumulative for each future day — only selling days add units
+  const projection: number[] = [];
+  workingDayFlags.forEach((working, i) => {
+    if (i < todayDay) return;
+    const prev = projection.at(-1) ?? sold;
+    projection.push(prev + (working ? rate : 0));
+  });
+  const projected = projection.at(-1) ?? sold;
+  const pending = todayDay > 0 && todayDay < days;
+
+  const max = Math.max(projected, target?.units ?? 0, sold, 1) * 1.1;
   const x = (day: number) => ((day - 0.5) / days) * W;
   const y = (units: number) => H - (units / max) * H;
+  const colW = W / days;
 
-  const actual = cumulative.slice(0, elapsed).map((u, i) => `${x(i + 1)},${y(u)}`).join(" ");
-  const pending = elapsed < days && elapsed > 0;
-  const shown = hover ?? (elapsed > 0 ? elapsed : null);
+  const actual = cumulative.slice(0, todayDay).map((u, i) => `${x(i + 1)},${y(u)}`).join(" ");
+  const pacePoints = [`${x(todayDay)},${y(sold)}`, ...projection.map((u, i) => `${x(todayDay + i + 1)},${y(u)}`)].join(" ");
+  const shown = hover ?? (todayDay > 0 ? todayDay : null);
+  const valueAt = (day: number) => (day <= todayDay ? cumulative[day - 1] : projection[day - todayDay - 1]);
 
   return (
     <figure className="card p-6">
@@ -42,6 +61,7 @@ export function PaceChart({ daily, elapsed, target, monthLabel }: Props) {
           <span className="flex items-center gap-1.5"><span className="h-0.5 w-4 rounded bg-primary" /> Units sold</span>
           {pending && <span className="flex items-center gap-1.5"><span className="w-4 border-t-2 border-dotted border-primary/60" /> Pace</span>}
           {target && <span className="flex items-center gap-1.5"><span className="w-4 border-t border-dashed border-on-surface-subtle" /> {target.label}</span>}
+          <span className="flex items-center gap-1.5"><span className="h-3 w-3 rounded-sm bg-white/[0.06]" /> Closed</span>
         </div>
       </figcaption>
 
@@ -56,16 +76,19 @@ export function PaceChart({ daily, elapsed, target, monthLabel }: Props) {
           }}
           onMouseLeave={() => setHover(null)}
           role="img"
-          aria-label={`${fmt(sold)} units sold in ${elapsed} days${pending ? `, pacing for ${fmt(Math.round(projected * 10) / 10)}` : ""}`}
+          aria-label={`${fmt(sold)} units sold in ${elapsedWorking} selling days${pending ? `, pacing for ${fmt(round1(projected))}` : ""}`}
         >
+          {workingDayFlags.map((working, i) =>
+            working ? null : <rect key={i} x={i * colW} y={0} width={colW} height={H} fill="#ffffff" fillOpacity={0.05} />,
+          )}
           <line x1={0} x2={W} y1={H} y2={H} stroke="#282830" vectorEffect="non-scaling-stroke" />
           {target && (
             <line x1={0} x2={W} y1={y(target.units)} y2={y(target.units)} stroke="#686877" strokeDasharray="5 4" vectorEffect="non-scaling-stroke" />
           )}
           {pending && (
-            <line x1={x(elapsed)} y1={y(sold)} x2={x(days)} y2={y(projected)} stroke="#facc15" strokeOpacity={0.6} strokeWidth={2} strokeDasharray="2 4" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+            <polyline points={pacePoints} fill="none" stroke="#facc15" strokeOpacity={0.6} strokeWidth={2} strokeDasharray="2 4" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
           )}
-          {elapsed > 0 && (
+          {todayDay > 0 && (
             <polyline points={actual} fill="none" stroke="#facc15" strokeWidth={2} strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
           )}
           {hover !== null && (
@@ -79,15 +102,15 @@ export function PaceChart({ daily, elapsed, target, monthLabel }: Props) {
             {fmt(target.units)}
           </span>
         )}
-        {shown !== null && shown <= elapsed && (
+        {shown !== null && valueAt(shown) !== undefined && (
           <span
-            className="pointer-events-none absolute h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary ring-2 ring-surface-card"
-            style={{ left: `${(x(shown) / W) * 100}%`, top: y(cumulative[shown - 1]) }}
+            className={`pointer-events-none absolute h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-surface-card ${shown <= todayDay ? "bg-primary" : "bg-primary/60"}`}
+            style={{ left: `${(x(shown) / W) * 100}%`, top: y(valueAt(shown)) }}
           />
         )}
         {pending && hover === null && (
           <span className="pointer-events-none absolute right-0 font-mono text-[10px] font-bold text-primary" style={{ top: Math.max(y(projected) - 16, 0) }}>
-            pace {fmt(Math.round(projected * 10) / 10)}
+            pace {fmt(round1(projected))}
           </span>
         )}
         {hover !== null && (
@@ -95,14 +118,17 @@ export function PaceChart({ daily, elapsed, target, monthLabel }: Props) {
             className="pointer-events-none absolute top-0 z-10 w-max rounded-lg border border-surface-border bg-surface-subtle px-3 py-2 text-xs shadow-[0_8px_24px_rgba(0,0,0,0.6)]"
             style={hover > days / 2 ? { right: `${100 - (x(hover) / W) * 100 + 2}%` } : { left: `${(x(hover) / W) * 100 + 2}%` }}
           >
-            <p className="font-bold text-white">Day {hover}</p>
-            {hover <= elapsed ? (
+            <p className="font-bold text-white">
+              Day {hover}
+              {!workingDayFlags[hover - 1] && <span className="font-normal text-on-surface-subtle"> · closed</span>}
+            </p>
+            {hover <= todayDay ? (
               <>
                 <p className="text-on-surface-muted">{fmt(daily[hover - 1])} sold that day</p>
                 <p className="text-on-surface-muted">{fmt(cumulative[hover - 1])} for the month</p>
               </>
             ) : (
-              <p className="text-on-surface-muted">Pace: {fmt(Math.round((projected / days) * hover * 10) / 10)}</p>
+              todayDay > 0 && <p className="text-on-surface-muted">On pace for {fmt(round1(valueAt(hover)))}</p>
             )}
           </div>
         )}

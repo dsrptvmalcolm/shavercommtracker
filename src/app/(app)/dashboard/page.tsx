@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Breakdown } from "@/components/breakdown";
 import { notFound, redirect } from "next/navigation";
 import { BarChart } from "@/components/charts/bar-chart";
 import { PaceChart } from "@/components/charts/pace-chart";
@@ -8,9 +9,9 @@ import { StatTile } from "@/components/stat-tile";
 import { TierLadder } from "@/components/tier-ladder";
 import { UnitsGauge } from "@/components/units-gauge";
 import { currentMiniTierIndex, paceFor, storeVolumeSpiffFor } from "@/lib/commission/engine";
-import { getAllStaff, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer } from "@/lib/data";
+import { getAllStaff, getMonthCalendar, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer } from "@/lib/data";
 import { money, money0, units as fmtUnits } from "@/lib/format";
-import { currentMonth, daysElapsed, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
+import { currentMonth, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
 
 const CHART_MONTHS = 12;
 const shortMonth = (m: string) => monthLabel(m).slice(0, 3);
@@ -27,10 +28,11 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   if (!staff) notFound();
   if (!staff.is_salesperson && !sp.staff) redirect("/admin");
 
-  const [view, products, unitsByMonth] = await Promise.all([
+  const [view, products, unitsByMonth, cal] = await Promise.all([
     getSalespersonMonth(staff, month),
     getProducts(),
     getUnitsByMonth(staff.id),
+    getMonthCalendar(month),
   ]);
   const { summary, paid, settings } = view;
 
@@ -41,11 +43,11 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   const bonus = total - vehicle - productSpiffs;
   const units = paid?.units ?? summary.units;
 
-  const elapsed = daysElapsed(month);
+  // Pace runs on selling days (Mon–Sat, minus holidays)
   const days = daysInMonth(month);
   const closed = isClosed(month);
-  const pace = closed ? units : paceFor(units, elapsed, days);
-  const storePace = closed ? view.storeUnits : paceFor(view.storeUnits, elapsed, days);
+  const pace = closed ? units : paceFor(units, cal.elapsed, cal.workingDays);
+  const storePace = closed ? view.storeUnits : paceFor(view.storeUnits, cal.elapsed, cal.workingDays);
 
   const tiers = [...settings.mini_tiers].sort((a, b) => a.startUnits - b.startUnits);
   const nextTier = tiers[currentMiniTierIndex(units, tiers) + 1];
@@ -96,7 +98,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
               {paid ? "Paid" : closed ? "Month total" : "MTD commission"}
             </span>
             <span className="text-xs font-semibold text-on-surface-subtle">
-              {closed ? "Month closed" : `${days - elapsed} days left`}
+              {closed ? "Month closed" : `${cal.remaining} selling days left`}
             </span>
           </div>
           <div className="relative my-8">
@@ -152,7 +154,8 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
       <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <PaceChart
           daily={daily}
-          elapsed={elapsed}
+          todayDay={cal.todayDay}
+          workingDayFlags={cal.workingDayFlags}
           monthLabel={monthLabel(month)}
           target={nextTier ? { units: nextTier.startUnits, label: `Tier ${currentMiniTierIndex(units, tiers) + 2}` } : undefined}
         />
@@ -165,7 +168,21 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
         />
       </section>
 
-      <TierLadder tiers={tiers} units={units} />
+      <TierLadder
+        eyebrow="Mini ladder"
+        title="Tier Path"
+        value={units}
+        steps={tiers.map((t) => ({ at: t.startUnits, amount: t.amount }))}
+        firstStepIsBase
+        stepDetail={(t) => `${t.at}+ cars · ${money0(t.amount)}`}
+        // The reached tier pays on every unit, so the jump applies to all units at that point
+        gainFor={(t, cur) => (t.amount - (cur?.amount ?? 0)) * Math.max(units, t.at)}
+        summary={
+          <>
+            At <strong className="font-bold text-primary">Tier {currentMiniTierIndex(units, tiers) + 1} — {money0(summary.miniRate)} / unit</strong> on all {fmtUnits(units)} units
+          </>
+        }
+      />
 
       <section className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
         <StatTile
@@ -208,7 +225,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
             <h3 className="display text-2xl text-white">Deals</h3>
           </div>
           {staff.id === me.id && !closed && canWrite && (
-            <Link href="/deals/new" className="btn-secondary">
+            <Link href="/deals/new" className="btn-primary">
               + Log deal
             </Link>
           )}
@@ -228,14 +245,5 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
         )}
       </section>
     </>
-  );
-}
-
-function Breakdown({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
-  return (
-    <div>
-      <span className="block text-[11px] font-medium uppercase tracking-wider text-on-surface-subtle">{label}</span>
-      <span className={`display mt-0.5 block text-base ${highlight ? "text-primary" : "text-on-surface"}`}>{value}</span>
-    </div>
   );
 }

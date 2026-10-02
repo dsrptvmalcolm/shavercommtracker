@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { salespersonMonth, storeUnitsFor } from "@/lib/commission/engine";
 import type { CommissionSettings, DealInput, MonthSummary } from "@/lib/commission/types";
-import { APP_TIMEZONE, monthRange } from "@/lib/months";
+import { APP_TIMEZONE, datesInMonth, isWorkingDay, monthRange, todayIso } from "@/lib/months";
 import { createClient } from "@/lib/supabase/server";
 
 export type Staff = {
@@ -17,6 +17,7 @@ export type Staff = {
   active: boolean;
   personal_best_units: number;
   created_at: string;
+  must_change_password: boolean;
 };
 
 export type Product = { id: string; name: string; spiff_amount: number; active: boolean; sort_order: number };
@@ -233,6 +234,43 @@ export const getStoreUnits = cache(async (month: string): Promise<number> => {
   if (error) throw error;
   return data as number;
 });
+
+export type Holiday = { date: string; name: string };
+
+export const getHolidays = cache(async (): Promise<Holiday[]> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("holidays").select("date, name").order("date");
+  if (error) throw error;
+  return data;
+});
+
+export type MonthCalendar = {
+  /** Working day flag per calendar day (index 0 = day 1) */
+  workingDayFlags: boolean[];
+  workingDays: number;
+  /** Working days elapsed, including today */
+  elapsed: number;
+  remaining: number;
+  /** Calendar day of month for "today" — 0 for future months, last day for past */
+  todayDay: number;
+};
+
+/** Mon–Sat working days for a month, minus holidays. Pacing runs on these. */
+export const getMonthCalendar = async (month: string): Promise<MonthCalendar> => {
+  const holidays = new Set((await getHolidays()).map((h) => h.date));
+  const dates = datesInMonth(month);
+  const today = todayIso();
+  const workingDayFlags = dates.map((d) => isWorkingDay(d, holidays));
+  const workingDays = workingDayFlags.filter(Boolean).length;
+  const elapsed = dates.filter((d, i) => d <= today && workingDayFlags[i]).length;
+  return {
+    workingDayFlags,
+    workingDays,
+    elapsed,
+    remaining: workingDays - elapsed,
+    todayDay: dates.filter((d) => d <= today).length,
+  };
+};
 
 /** Store units (incl. house deals) per month, inclusive range. */
 export const getStoreUnitsByMonth = cache(async (from: string, to: string): Promise<Map<string, number>> => {

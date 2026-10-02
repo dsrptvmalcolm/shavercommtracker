@@ -5,5 +5,6 @@ import { getViewer } from "@/lib/data";
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const viewer = await getViewer();
   if (!viewer) redirect("/login?error=no-access");
+  if (viewer.real.must_change_password) redirect("/change-password");
   return <AppShell viewer={viewer}>{children}</AppShell>;
 }

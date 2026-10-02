@@ -3,6 +3,7 @@ import Link from "next/link";
 import { signOut } from "@/app/login/actions";
 import { stopViewAs } from "@/app/(app)/view-as-actions";
 import type { Viewer } from "@/lib/data";
+import { DealFab } from "./deal-fab";
 import { NavLink } from "./nav-link";
 
 export function AppShell({ viewer, children }: { viewer: Viewer; children: React.ReactNode }) {
@@ -29,9 +30,9 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
             <span className="display hidden text-lg text-white sm:inline">Shaver Team</span>
           </Link>
           <div className="flex items-center gap-3">
-            {me.is_salesperson && !impersonating && (
-              <Link href="/deals/new" className="btn-primary px-4 py-2">
-                <span aria-hidden className="text-lg leading-none">+</span> Log Deal
+            {!impersonating && (
+              <Link href="/deals/new" className="btn-primary hidden px-5 py-2.5 sm:inline-flex">
+                <span aria-hidden className="text-lg leading-none">+</span> {me.is_salesperson ? "Log Deal" : "Add Deal"}
               </Link>
             )}
             <div className="hidden text-right md:block">
@@ -65,7 +66,8 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
           )}
         </nav>
       </header>
-      <main className="mx-auto max-w-7xl space-y-8 px-4 pt-6 pb-20 lg:px-10 lg:pt-10">{children}</main>
+      <main className="mx-auto max-w-7xl space-y-8 px-4 pt-6 pb-28 lg:px-10 lg:pt-10">{children}</main>
+      {!impersonating && <DealFab label={me.is_salesperson ? "Log Deal" : "Add Deal"} />}
     </>
   );
 }

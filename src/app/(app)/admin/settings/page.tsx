@@ -1,14 +1,17 @@
 import { ActionForm } from "@/components/action-form";
-import { getProducts, getSettingsFor, requireAdmin, type Product } from "@/lib/data";
+import { getHolidays, getProducts, getSettingsFor, requireAdmin, type Product } from "@/lib/data";
+import { shortDate } from "@/lib/format";
 import { currentMonth, monthLabel } from "@/lib/months";
-import { saveProduct, saveSettings } from "../actions";
+import { addHoliday, saveProduct, saveSettings } from "../actions";
+import { RemoveHolidayButton } from "./remove-holiday-button";
 
 const EXTRA_TIER_ROWS = 2;
 
 export default async function SettingsPage() {
   await requireAdmin();
   const month = currentMonth();
-  const [s, products] = await Promise.all([getSettingsFor(month), getProducts()]);
+  const [s, products, holidays] = await Promise.all([getSettingsFor(month), getProducts(), getHolidays()]);
+  const upcoming = holidays.filter((h) => h.date >= `${month}-01`);
   const mini = [...s.mini_tiers, ...Array.from({ length: EXTRA_TIER_ROWS }, () => null)];
   const store = [...s.store_volume_tiers, ...Array.from({ length: EXTRA_TIER_ROWS }, () => null)];
 
@@ -29,9 +32,20 @@ export default async function SettingsPage() {
           Changes apply from <strong className="text-white">{monthLabel(month)}</strong> onward. Closed months keep the rates they were paid on.
           {s.effective_month !== month && ` Current rates have been in effect since ${monthLabel(s.effective_month)}.`}
         </p>
+        <nav className="mt-4 flex flex-wrap gap-2" aria-label="Settings sections">
+          {[
+            ["#rates", "Tiers & spiffs"],
+            ["#holidays", "Holidays & pacing"],
+            ["#products", "Products"],
+          ].map(([href, label]) => (
+            <a key={href} href={href} className="chip bg-surface-subtle px-3 py-1.5 text-on-surface hover:bg-primary-soft hover:text-primary">
+              {label}
+            </a>
+          ))}
+        </nav>
       </div>
 
-      <ActionForm action={saveSettings} submitLabel="Save settings" className="space-y-6">
+      <ActionForm action={saveSettings} submitLabel="Save settings" className="scroll-mt-32 space-y-6" id="rates">
         <section className="card grid gap-6 p-6 lg:grid-cols-2">
           <div>
             <h2 className="display mb-1 text-xl text-white">Mini tiers</h2>
@@ -74,7 +88,58 @@ export default async function SettingsPage() {
         </section>
       </ActionForm>
 
-      <section className="space-y-4">
+      <section id="holidays" className="scroll-mt-32 space-y-4">
+        <div>
+          <h2 className="display text-2xl text-white">Holidays &amp; Pacing</h2>
+          <p className="text-sm text-on-surface-muted">Pacing counts selling days — Monday through Saturday, minus these dates.</p>
+        </div>
+        <div className="grid gap-6 lg:grid-cols-12">
+          <div className="card overflow-hidden lg:col-span-7">
+            <table className="w-full text-sm">
+              <thead className="table-head">
+                <tr>
+                  <th className="px-4 py-3">Date</th>
+                  <th className="px-4 py-3">Holiday</th>
+                  <th className="px-4 py-3" />
+                </tr>
+              </thead>
+              <tbody>
+                {upcoming.map((h, i) => (
+                  <tr key={h.date} className={`border-b border-[#27272a] ${i % 2 ? "bg-[#1c1c1e]" : "bg-[#141416]"}`}>
+                    <td className="px-4 py-3 font-mono">
+                      {shortDate(h.date)}, {h.date.slice(0, 4)}
+                    </td>
+                    <td className="px-4 py-3 text-white">{h.name}</td>
+                    <td className="px-4 py-3 text-right">
+                      <RemoveHolidayButton date={h.date} name={h.name} />
+                    </td>
+                  </tr>
+                ))}
+                {upcoming.length === 0 && (
+                  <tr>
+                    <td colSpan={3} className="px-4 py-8 text-center text-on-surface-muted">No upcoming holidays.</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+          <div className="card p-6 lg:col-span-5">
+            <p className="field-label">Add a holiday</p>
+            <ActionForm action={addHoliday} submitLabel="Add holiday" className="space-y-4">
+              <div>
+                <label htmlFor="holiday-date" className="field-label">Date</label>
+                <input id="holiday-date" name="date" type="date" required className="input" />
+              </div>
+              <div>
+                <label htmlFor="holiday-name" className="field-label">Name</label>
+                <input id="holiday-name" name="name" required placeholder="Christmas Eve" className="input" />
+              </div>
+            </ActionForm>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" className="scroll-mt-32 space-y-4">
         <div>
           <h2 className="display text-2xl text-white">Products</h2>
           <p className="text-sm text-on-surface-muted">Spiff changes apply to products added to deals from now on. Deactivate a product to hide it from new deals.</p>

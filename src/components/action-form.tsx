@@ -7,14 +7,15 @@ type Props = {
   action: (state: ActionState, formData: FormData) => Promise<ActionState>;
   submitLabel: string;
   className?: string;
+  id?: string;
   children: React.ReactNode;
 };
 
 /** Form wrapper for admin server actions with inline success / error feedback. */
-export function ActionForm({ action, submitLabel, className, children }: Props) {
+export function ActionForm({ action, submitLabel, className, id, children }: Props) {
   const [state, formAction, pending] = useActionState<ActionState, FormData>(action, {});
   return (
-    <form action={formAction} className={className}>
+    <form action={formAction} className={className} id={id}>
       {children}
       <div className="col-span-full flex flex-wrap items-center gap-3 pt-2">
         <button type="submit" disabled={pending} className="btn-primary px-4 py-2">

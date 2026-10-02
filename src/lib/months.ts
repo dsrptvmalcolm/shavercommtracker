@@ -44,3 +44,25 @@ export const monthLabel = (month: string): string => {
 export const isClosed = (month: string, now: Date = new Date()): boolean => month < currentMonth(now);
 
 export const monthOf = (isoDate: string): string => isoDate.slice(0, 7);
+
+// Working days ------------------------------------------------------------
+// The store sells Monday–Saturday; holidays (admin-managed) are excluded.
+
+/** Every date in the month as YYYY-MM-DD */
+export const datesInMonth = (month: string): string[] =>
+  Array.from({ length: daysInMonth(month) }, (_, i) => `${month}-${String(i + 1).padStart(2, "0")}`);
+
+export const isWorkingDay = (isoDate: string, holidays: ReadonlySet<string>): boolean => {
+  const [y, m, d] = isoDate.split("-").map(Number);
+  const weekday = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+  return weekday !== 0 && !holidays.has(isoDate);
+};
+
+export const workingDaysIn = (month: string, holidays: ReadonlySet<string>): number =>
+  datesInMonth(month).filter((d) => isWorkingDay(d, holidays)).length;
+
+/** Working days elapsed including today; all of them for past months, 0 for future */
+export const workingDaysElapsed = (month: string, holidays: ReadonlySet<string>, now: Date = new Date()): number => {
+  const today = todayIso(now);
+  return datesInMonth(month).filter((d) => d <= today && isWorkingDay(d, holidays)).length;
+};
