@@ -62,7 +62,7 @@ export function DealList({ deals, commissions, productNames, staffNames, viewerI
               {c ? (
                 <>
                   <div className="display text-xl text-white">{money(c.total)}</div>
-                  <div className="text-[11px] text-on-surface-subtle">
+                  <div className="text-xs text-on-surface-subtle">
                     Back {money(d.back_gross)}
                   </div>
                 </>

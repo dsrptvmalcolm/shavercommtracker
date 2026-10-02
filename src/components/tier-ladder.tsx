@@ -65,9 +65,9 @@ export function TierLadder({ eyebrow, title, value, steps, firstStepIsBase = fal
                 </span>
                 <span className="text-xs text-on-surface-muted">{stepDetail(t)}</span>
                 {state === "current" && <span className="chip mt-1 bg-primary-soft text-primary">CURRENT</span>}
-                {state === "cleared" && <span className="mt-1 font-mono text-[10px] font-semibold text-success">CLEARED</span>}
+                {state === "cleared" && <span className="mt-1 font-mono text-xs font-semibold text-success">CLEARED</span>}
                 {state === "next" && (
-                  <span className="mt-1 font-mono text-[10px] font-bold text-primary">
+                  <span className="mt-1 font-mono text-xs font-bold text-primary">
                     {fmtUnits(t.at - value)} to go · +{money0(gainFor(t, current))}
                   </span>
                 )}

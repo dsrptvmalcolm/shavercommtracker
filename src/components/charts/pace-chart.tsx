@@ -48,6 +48,10 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
   const actual = cumulative.slice(0, todayDay).map((u, i) => `${x(i + 1)},${y(u)}`).join(" ");
   const pacePoints = [`${x(todayDay)},${y(sold)}`, ...projection.map((u, i) => `${x(todayDay + i + 1)},${y(u)}`)].join(" ");
   const shown = hover ?? (todayDay > 0 ? todayDay : null);
+  const scrub = (e: React.PointerEvent<SVGSVGElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    setHover(Math.min(days, Math.max(1, Math.ceil(((e.clientX - r.left) / r.width) * days))));
+  };
   const valueAt = (day: number) => (day <= todayDay ? cumulative[day - 1] : projection[day - todayDay - 1]);
 
   return (
@@ -57,7 +61,7 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
           <span className="eyebrow">{monthLabel}</span>
           <h3 className="display text-xl text-white">Month Pace</h3>
         </div>
-        <div className="flex flex-wrap gap-4 text-[11px] text-on-surface-muted">
+        <div className="flex flex-wrap gap-4 text-xs text-on-surface-muted">
           <span className="flex items-center gap-1.5"><span className="h-0.5 w-4 rounded bg-primary" /> Units sold</span>
           {pending && <span className="flex items-center gap-1.5"><span className="w-4 border-t-2 border-dotted border-primary/60" /> Pace</span>}
           {target && <span className="flex items-center gap-1.5"><span className="w-4 border-t border-dashed border-on-surface-subtle" /> {target.label}</span>}
@@ -69,12 +73,14 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
         <svg
           viewBox={`0 0 ${W} ${H}`}
           preserveAspectRatio="none"
-          className="absolute inset-0 h-full w-full overflow-visible"
-          onMouseMove={(e) => {
-            const r = e.currentTarget.getBoundingClientRect();
-            setHover(Math.min(days, Math.max(1, Math.ceil(((e.clientX - r.left) / r.width) * days))));
+          className="absolute inset-0 h-full w-full touch-pan-y overflow-visible"
+          // Pointer events cover mouse, pen and touch: tap or drag sideways to scrub; vertical drags still scroll
+          onPointerDown={scrub}
+          onPointerMove={scrub}
+          onPointerLeave={(e) => {
+            if (e.pointerType === "mouse") setHover(null);
           }}
-          onMouseLeave={() => setHover(null)}
+          onPointerCancel={() => setHover(null)}
           role="img"
           aria-label={`${fmt(sold)} units sold in ${elapsedWorking} selling days${pending ? `, pacing for ${fmt(round1(projected))}` : ""}`}
         >
@@ -83,7 +89,7 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
           )}
           <line x1={0} x2={W} y1={H} y2={H} stroke="#282830" vectorEffect="non-scaling-stroke" />
           {target && (
-            <line x1={0} x2={W} y1={y(target.units)} y2={y(target.units)} stroke="#686877" strokeDasharray="5 4" vectorEffect="non-scaling-stroke" />
+            <line x1={0} x2={W} y1={y(target.units)} y2={y(target.units)} stroke="#868695" strokeDasharray="5 4" vectorEffect="non-scaling-stroke" />
           )}
           {pending && (
             <polyline points={pacePoints} fill="none" stroke="#facc15" strokeOpacity={0.6} strokeWidth={2} strokeDasharray="2 4" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
@@ -98,7 +104,7 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
 
         {/* Markers and labels live in HTML so they don't stretch with the SVG */}
         {target && (
-          <span className="pointer-events-none absolute right-0 -translate-y-full font-mono text-[10px] text-on-surface-muted" style={{ top: y(target.units) }}>
+          <span className="pointer-events-none absolute right-0 -translate-y-full font-mono text-xs text-on-surface-muted" style={{ top: y(target.units) }}>
             {fmt(target.units)}
           </span>
         )}
@@ -109,7 +115,7 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
           />
         )}
         {pending && hover === null && (
-          <span className="pointer-events-none absolute right-0 font-mono text-[10px] font-bold text-primary" style={{ top: Math.max(y(projected) - 16, 0) }}>
+          <span className="pointer-events-none absolute right-0 font-mono text-xs font-bold text-primary" style={{ top: Math.max(y(projected) - 16, 0) }}>
             pace {fmt(round1(projected))}
           </span>
         )}
@@ -133,7 +139,7 @@ export function PaceChart({ daily, todayDay, workingDayFlags, target, monthLabel
           </div>
         )}
       </div>
-      <div className="mt-2 flex justify-between font-mono text-[10px] text-on-surface-subtle">
+      <div className="mt-2 flex justify-between font-mono text-xs text-on-surface-subtle">
         <span>Day 1</span>
         <span>Day {Math.ceil(days / 2)}</span>
         <span>Day {days}</span>

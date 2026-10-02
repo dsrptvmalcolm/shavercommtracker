@@ -56,7 +56,7 @@
   @apply font-display uppercase tracking-wide;
 }
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-extrabold uppercase tracking-wider transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-extrabold uppercase tracking-wider transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
 }
 @utility btn-primary {
   @apply btn bg-primary text-black shadow-[0_0_24px_rgba(250,204,21,0.25)] hover:bg-primary-hover hover:shadow-[0_0_32px_rgba(250,204,21,0.4)];
@@ -71,7 +71,7 @@
   @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-on-surface-muted;
 }
 @utility input {
-  @apply w-full rounded-md border border-[#3f3f46] bg-[#1e1e20] px-3 py-2.5 text-base text-on-surface placeholder:text-on-surface-subtle focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm;
+  @apply min-h-11 w-full rounded-md border border-[#3f3f46] bg-[#1e1e20] px-3 py-2.5 text-base text-on-surface placeholder:text-on-surface-subtle focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm;
 }
 @utility table-head {
   @apply bg-primary text-left text-xs font-extrabold uppercase tracking-wider text-black;

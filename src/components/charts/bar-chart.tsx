@@ -27,7 +27,7 @@ const niceMax = (n: number): number => {
 };
 
 /**
- * Single-series column chart. Server-rendered HTML; hover/focus shows a tooltip.
+ * Single-series column chart. Server-rendered HTML; hover, focus or tap shows a tooltip.
  * Values are direct-labeled only on the highlighted bar and the peak.
  */
 export function BarChart({ title, subtitle, bars, refLines = [], formatValue = String, height = 180 }: Props) {
@@ -43,7 +43,7 @@ export function BarChart({ title, subtitle, bars, refLines = [], formatValue = S
         <h3 className="display text-xl text-white">{title}</h3>
       </figcaption>
       <div className="flex gap-3">
-        <div className="relative w-8 shrink-0 text-right font-mono text-[10px] text-on-surface-subtle" style={{ height }}>
+        <div className="relative w-8 shrink-0 text-right font-mono text-xs text-on-surface-subtle" style={{ height }}>
           {ticks.map((t) => (
             <span key={t} className="absolute right-0 -translate-y-1/2" style={{ bottom: pct(t) }}>
               {formatValue(t)}
@@ -58,20 +58,22 @@ export function BarChart({ title, subtitle, bars, refLines = [], formatValue = S
             <div key={r.label} className="absolute inset-x-0 border-t border-dashed border-on-surface-subtle/60" style={{ bottom: pct(r.value) }} />
           ))}
           <div className="absolute inset-0 flex items-end gap-[2px] border-b border-surface-border">
-            {bars.map((b) => {
+            {bars.map((b, i) => {
               const showLabel = b.highlight || (b.value === peak && b.value > 0);
+              // Edge bars anchor their tooltip inward so it never runs off a phone screen
+              const tipAlign = i < 2 ? "left-0" : i >= bars.length - 2 ? "right-0" : "left-1/2 -translate-x-1/2";
               return (
-                <div key={b.key} tabIndex={0} className="group relative flex h-full flex-1 items-end justify-center outline-none" aria-label={`${b.label}: ${b.tooltip.join(", ")}`}>
+                <div key={b.key} tabIndex={0} role="img" className="group relative flex h-full flex-1 items-end justify-center" aria-label={`${b.label}: ${b.tooltip.join(", ")}`}>
                   <div
                     className={`w-full max-w-10 rounded-t transition-colors ${b.highlight ? "bg-primary" : "bg-primary/35 group-hover:bg-primary/60 group-focus:bg-primary/60"}`}
                     style={{ height: pct(b.value), minHeight: b.value > 0 ? 2 : 0 }}
                   />
                   {showLabel && (
-                    <span className="pointer-events-none absolute -translate-y-1 font-mono text-[10px] font-bold text-on-surface" style={{ bottom: pct(b.value) }}>
+                    <span className="pointer-events-none absolute -translate-y-1 font-mono text-xs font-bold text-on-surface" style={{ bottom: pct(b.value) }}>
                       {formatValue(b.value)}
                     </span>
                   )}
-                  <div className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 hidden w-max -translate-x-1/2 rounded-lg border border-surface-border bg-surface-subtle px-3 py-2 text-xs shadow-[0_8px_24px_rgba(0,0,0,0.6)] group-hover:block group-focus:block">
+                  <div className={`pointer-events-none absolute bottom-full ${tipAlign} z-10 mb-2 hidden w-max rounded-lg border border-surface-border bg-surface-subtle px-3 py-2 text-xs shadow-[0_8px_24px_rgba(0,0,0,0.6)] group-hover:block group-focus:block`}>
                     <p className="font-bold text-white">{b.label}</p>
                     {b.tooltip.map((t) => (
                       <p key={t} className="text-on-surface-muted">{t}</p>
@@ -83,15 +85,16 @@ export function BarChart({ title, subtitle, bars, refLines = [], formatValue = S
           </div>
         </div>
       </div>
+      {/* 12 month labels share ~240px on a 360px phone; 12px would truncate them, so phones keep 10px, tightly tracked */}
       <div className="mt-2 ml-11 flex gap-[2px]">
         {bars.map((b) => (
-          <span key={b.key} className={`flex-1 truncate text-center font-mono text-[10px] ${b.highlight ? "font-bold text-primary" : "text-on-surface-subtle"}`}>
+          <span key={b.key} className={`flex-1 truncate text-center font-mono text-[10px] tracking-tighter sm:text-xs sm:tracking-normal ${b.highlight ? "font-bold text-primary" : "text-on-surface-subtle"}`}>
             {b.label}
           </span>
         ))}
       </div>
       {refLines.length > 0 && (
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-surface-border/60 pt-3 text-[11px] text-on-surface-muted">
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-surface-border/60 pt-3 text-xs text-on-surface-muted">
           <span className="w-4 border-t border-dashed border-on-surface-subtle" aria-hidden />
           {refLines.map((r) => (
             <span key={r.label} className="font-mono">{r.label}</span>
