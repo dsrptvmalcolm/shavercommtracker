@@ -1,6 +1,7 @@
 // Creates or resets a login for an existing staff email. Prompts for the password so it never lands in shell history.
 // Usage: npm run user:password -- you@example.com
 import { createInterface } from "node:readline/promises";
+import { Writable } from "node:stream";
 import { createClient } from "@supabase/supabase-js";
 
 const main = async () => {
@@ -13,9 +14,13 @@ const main = async () => {
   const { data: staff } = await sb.from("staff").select("name").ilike("email", email).maybeSingle();
   if (!staff) throw new Error(`No staff member has the email ${email} — add it on the Staff page or in the staff table first`);
 
-  const rl = createInterface({ input: process.stdin, output: process.stdout });
-  const password = await rl.question(`New password for ${staff.name} (8+ chars): `);
+  // Print the prompt, then swallow terminal echo so the password never shows on screen
+  process.stdout.write(`New password for ${staff.name} (8+ chars, hidden): `);
+  const silent = new Writable({ write: (_chunk, _enc, done) => done() });
+  const rl = createInterface({ input: process.stdin, output: silent, terminal: true });
+  const password = await rl.question("");
   rl.close();
+  process.stdout.write("\n");
   if (password.length < 8) throw new Error("Password must be at least 8 characters");
 
   const { data } = await sb.auth.admin.listUsers({ perPage: 1000 });

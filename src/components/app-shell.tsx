@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { signOut } from "@/app/login/actions";
 import type { Staff } from "@/lib/data";
@@ -9,7 +10,7 @@ export function AppShell({ me, children }: { me: Staff; children: React.ReactNod
       <header className="sticky top-0 z-50 border-b border-surface-border/60 bg-surface/85 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 lg:px-10">
           <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-display text-lg text-black">S</span>
+            <Image src="/logo.png" alt="Shaver Preferred Motors" width={36} height={36} priority className="h-9 w-9 object-contain" />
             <span className="display hidden text-lg text-white sm:inline">Shaver Team</span>
           </Link>
           <div className="flex items-center gap-3">
