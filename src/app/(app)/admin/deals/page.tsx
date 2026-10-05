@@ -4,6 +4,7 @@ import { getAllStaff, getDealsForMonth, getProducts, requireAdmin } from "@/lib/
 import { shortDate } from "@/lib/format";
 import { currentMonth, isMonth, monthLabel } from "@/lib/months";
 import { BackGrossInput } from "./back-gross-input";
+import { ClickableRow } from "./clickable-row";
 
 export default async function AdminDealsPage({ searchParams }: { searchParams: Promise<{ month?: string; filter?: string }> }) {
   await requireAdmin();
@@ -50,7 +51,7 @@ export default async function AdminDealsPage({ searchParams }: { searchParams: P
           </thead>
           <tbody>
             {shown.map((d, i) => (
-              <tr key={d.id} className={`border-b border-[#27272a] ${i % 2 ? "bg-[#1c1c1e]" : "bg-[#141416]"}`}>
+              <ClickableRow key={d.id} href={`/deals/${d.id}`} className={`border-b border-[#27272a] ${i % 2 ? "bg-[#1c1c1e]" : "bg-[#141416]"}`}>
                 <td className="px-4 py-2.5 font-mono text-xs">{shortDate(d.sale_date)}</td>
                 <td className="px-4 py-2.5 font-mono text-xs">{d.stock_number}</td>
                 <td className="px-4 py-2.5 font-bold text-white">{d.customer_name}</td>
@@ -79,7 +80,7 @@ export default async function AdminDealsPage({ searchParams }: { searchParams: P
                 <td className="px-4 py-2.5 text-right">
                   <Link href={`/deals/${d.id}`} className="inline-flex min-h-11 items-center px-2 -mr-2 text-xs font-bold uppercase tracking-wider text-primary hover:underline">Edit</Link>
                 </td>
-              </tr>
+              </ClickableRow>
             ))}
             {shown.length === 0 && (
               <tr>
