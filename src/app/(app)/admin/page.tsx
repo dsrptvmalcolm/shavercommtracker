@@ -8,7 +8,7 @@ import { TierLadder } from "@/components/tier-ladder";
 import { UnitsGauge } from "@/components/units-gauge";
 import { ViewAsButton } from "@/components/view-as-button";
 import { currentMiniTierIndex, paceFor, storeVolumeSpiffFor } from "@/lib/commission/engine";
-import { getMonthCalendar, getStoreMonth, getStoreUnitsByMonth, requireAdmin } from "@/lib/data";
+import { getDealsNeedingAction, getMonthCalendar, getStoreMonth, getStoreUnitsByMonth, requireAdmin } from "@/lib/data";
 import { money, money0, units as fmtUnits } from "@/lib/format";
 import { currentMonth, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
 
@@ -19,10 +19,11 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
   const sp = await searchParams;
   const month = isMonth(sp.month) ? sp.month : currentMonth();
   const chartFrom = shiftMonth(month, -(CHART_MONTHS - 1));
-  const [view, storeByMonth, cal] = await Promise.all([
+  const [view, storeByMonth, cal, needsAction] = await Promise.all([
     getStoreMonth(month),
     getStoreUnitsByMonth(chartFrom, month),
     getMonthCalendar(month),
+    getDealsNeedingAction(),
   ]);
 
   const closed = isClosed(month);
@@ -177,7 +178,18 @@ export default async function StorePage({ searchParams }: { searchParams: Promis
         }
       />
 
-      <section className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+      <section className="grid grid-cols-2 gap-4 lg:grid-cols-5 lg:gap-6">
+        <StatTile
+          label="Needs action"
+          value={needsAction.length}
+          tone={needsAction.length > 0 ? "primary" : "success"}
+          className="col-span-2 lg:col-span-1"
+          detail={
+            <Link href="/admin/review#needs-action" className="-my-3 inline-flex min-h-11 items-center underline hover:text-white">
+              {needsAction.length > 0 ? "Review deals →" : "Open Deal Review →"}
+            </Link>
+          }
+        />
         <StatTile label="House deals" value={view.houseUnits} detail="Count toward store volume" />
         <StatTile label="2-car days" value={twoCarDays} detail="Across the team" />
         <StatTile label="Hat tricks" value={hatTricks} detail="3+ cars in a day" />

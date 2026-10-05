@@ -27,6 +27,7 @@ const schema = z.object({
   is_house: z.literal("on").optional(),
   multilingual: z.literal("on").optional(),
   ninety_day: z.literal("on").optional(),
+  needs_action: z.literal("on").optional(),
   back_gross: optionalMoney.optional(),
   front_gross: optionalMoney.optional(),
 });
@@ -38,9 +39,10 @@ export async function saveDeal(_: DealFormState, formData: FormData): Promise<De
   const parsed = schema.safeParse(Object.fromEntries([...formData.entries()].filter(([k]) => k !== "product_ids")));
   if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "Check the form" };
   const f = parsed.data;
+  if (me.is_admin && f.needs_action === "on" && !f.deal_notes) return { error: "Add what needs to happen to the deal notes" };
 
   const supabase = await createClient();
-  const { error } = await supabase.rpc("save_deal", {
+  const { data: dealId, error } = await supabase.rpc("save_deal", {
     p: {
       id: f.id || null,
       sale_date: f.sale_date,
@@ -59,6 +61,10 @@ export async function saveDeal(_: DealFormState, formData: FormData): Promise<De
     },
   });
   if (error) return { error: error.message };
+  if (me.is_admin) {
+    const flag = await supabase.rpc("set_deal_needs_action", { p_id: dealId, p_flag: f.needs_action === "on" });
+    if (flag.error) return { error: `Deal saved, but the Needs action flag wasn't: ${flag.error.message}` };
+  }
 
   revalidatePath("/", "layout");
   const month = monthOf(f.sale_date);

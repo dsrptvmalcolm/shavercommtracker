@@ -4,16 +4,18 @@ export function StatTile({
   detail,
   badge,
   tone = "default",
+  className = "",
 }: {
   label: string;
   value: React.ReactNode;
   detail?: React.ReactNode;
   badge?: React.ReactNode;
   tone?: "default" | "primary" | "success";
+  className?: string;
 }) {
   const valueTone = tone === "primary" ? "text-primary" : tone === "success" ? "text-success" : "text-white";
   return (
-    <div className="card flex flex-col justify-between p-5 lg:p-6">
+    <div className={`card flex flex-col justify-between p-5 lg:p-6 ${className}`}>
       <div className="flex items-start justify-between gap-2">
         <span className="eyebrow">{label}</span>
         {badge && <span className="font-mono text-xs font-bold text-primary">{badge}</span>}

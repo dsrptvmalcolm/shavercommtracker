@@ -6,13 +6,13 @@ There is one database and it is production. `npm run db:migrate` applies pending
 - `migrations/0001_init.sql` — tables (staff, commission_settings, products, deals, deal_products, adjustments, paid_months), helpers (`my_staff_id`, `is_admin`, `month_start`, `store_units`), deal write functions, RLS.
 - `0003` — NULL-safe ownership checks in `save_deal`/`delete_deal`.
 - `0004` — RLS helpers wrapped in `(select …)` + `units_by_month()`.
-- `0005` — `store_units_by_month()`. `0006` — holidays, `must_change_password`, `clear_my_password_flag()`.
+- `0005` — `store_units_by_month()`. `0006` — holidays, `must_change_password`, `clear_my_password_flag()`. `0007` — `deals.needs_action` + `set_deal_needs_action()` (admin; appends the note to deal_notes).
 
 ## Local conventions
 <!-- added 2026-10-02: initial setup -->
 - Never edit an applied migration; add the next number. Migrations run inside a transaction.
 <!-- added 2026-10-02: initial setup -->
-- Deal writes only via `save_deal` / `delete_deal` / `set_deal_gross` (security definer). Tables expose SELECT policies to non-admins, never write policies.
+- Deal writes only via `save_deal` / `delete_deal` / `set_deal_gross` / `set_deal_needs_action` (security definer). Tables expose SELECT policies to non-admins, never write policies.
 <!-- added 2026-10-02: initial setup -->
 - Wrap auth helpers in policies as `(select public.is_admin())` so they run once per query.
 <!-- added 2026-10-02: initial setup -->

@@ -12,9 +12,11 @@ type Props = {
   viewerId?: string;
   canEdit: (deal: DealRow) => boolean;
   emptyText?: string;
+  /** Show deal notes in full instead of one truncated line */
+  fullNotes?: boolean;
 };
 
-export function DealList({ deals, commissions, productNames, staffNames, viewerId, canEdit, emptyText = "No deals yet this month." }: Props) {
+export function DealList({ deals, commissions, productNames, staffNames, viewerId, canEdit, emptyText = "No deals yet this month.", fullNotes = false }: Props) {
   if (deals.length === 0) {
     return <p className="card p-8 text-center text-sm text-on-surface-muted">{emptyText}</p>;
   }
@@ -34,6 +36,7 @@ export function DealList({ deals, commissions, productNames, staffNames, viewerI
                 </span>
               </div>
               <div className="mt-2 flex flex-wrap gap-1.5">
+                {d.needs_action && <span className="chip bg-danger/10 text-danger">Needs action</span>}
                 {d.is_house && <span className="chip bg-surface-subtle text-on-surface-muted">House</span>}
                 {!viewerId && d.salesperson_id && (
                   <span className="chip bg-surface-subtle text-on-surface">
@@ -56,7 +59,9 @@ export function DealList({ deals, commissions, productNames, staffNames, viewerI
                   <span className="chip border border-dashed border-surface-border text-on-surface-subtle">No back gross</span>
                 )}
               </div>
-              {d.deal_notes && <p className="mt-2 truncate text-xs text-on-surface-subtle">{d.deal_notes}</p>}
+              {d.deal_notes && (
+                <p className={`mt-2 text-xs ${fullNotes ? "whitespace-pre-line text-on-surface" : "truncate text-on-surface-subtle"}`}>{d.deal_notes}</p>
+              )}
             </div>
             <div className="shrink-0 text-right">
               {c ? (

@@ -21,6 +21,7 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
         <>
           <NavLink href="/admin">Store</NavLink>
           <NavLink href="/admin/deals">Deals</NavLink>
+          <NavLink href="/admin/review">Review</NavLink>
           <NavLink href="/admin/spiffs">Spiffs</NavLink>
           <NavLink href="/admin/staff">Staff</NavLink>
           <NavLink href="/admin/settings">Settings</NavLink>

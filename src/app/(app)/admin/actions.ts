@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-import { getAllStaff, requireAdmin } from "@/lib/data";
+import { assertNotImpersonating, getAllStaff, requireAdmin } from "@/lib/data";
 import { currentMonth } from "@/lib/months";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
@@ -42,6 +42,30 @@ export async function setBackGross(dealId: string, value: string): Promise<Actio
   });
   if (error) return { error: error.message };
   return done("Saved");
+}
+
+const needsActionSchema = z.object({
+  dealId: z.string().min(1),
+  flag: z.boolean(),
+  note: z.string().trim().max(500).optional(),
+});
+
+/** Flags a deal "Needs action" (the note is appended to its deal notes) or resolves it. */
+export async function setNeedsAction(dealId: string, flag: boolean, note?: string): Promise<ActionState> {
+  await requireAdmin();
+  const blocked = await assertNotImpersonating();
+  if (blocked) return { error: blocked };
+  const parsed = needsActionSchema.safeParse({ dealId, flag, note });
+  if (!parsed.success) return { error: "Check the action details" };
+  if (parsed.data.flag && !parsed.data.note) return { error: "Say what needs to happen" };
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("set_deal_needs_action", {
+    p_id: parsed.data.dealId,
+    p_flag: parsed.data.flag,
+    p_note: parsed.data.note ?? null,
+  });
+  if (error) return { error: error.message };
+  return done(parsed.data.flag ? "Flagged" : "Resolved");
 }
 
 // Spiffs --------------------------------------------------------------------

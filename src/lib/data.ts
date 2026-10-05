@@ -36,6 +36,7 @@ export type DealRow = {
   back_gross: number | null;
   multilingual: boolean;
   ninety_day: boolean;
+  needs_action: boolean;
   deal_products: { product_id: string; spiff_amount: number }[];
 };
 
@@ -76,7 +77,7 @@ export type SettingsRow = {
 };
 
 const DEAL_SELECT =
-  "id, sale_date, customer_name, stock_number, deal_number, deal_notes, salesperson_id, split_salesperson_id, is_house, front_gross, back_gross, multilingual, ninety_day, deal_products(product_id, spiff_amount)";
+  "id, sale_date, customer_name, stock_number, deal_number, deal_notes, salesperson_id, split_salesperson_id, is_house, front_gross, back_gross, multilingual, ninety_day, needs_action, deal_products(product_id, spiff_amount)";
 
 // Postgres numerics arrive as strings
 const num = (v: unknown): number => (v == null ? 0 : Number(v));
@@ -224,6 +225,31 @@ export const getDealsForMonth = cache(async (month: string, staffId?: string): P
   let q = supabase.from("deals").select(DEAL_SELECT).gte("sale_date", start).lt("sale_date", end);
   if (staffId) q = q.or(`salesperson_id.eq.${staffId},split_salesperson_id.eq.${staffId}`);
   const { data, error } = await q.order("sale_date", { ascending: false }).order("created_at", { ascending: false });
+  if (error) throw error;
+  return data.map(toDeal);
+});
+
+/** Deals flagged "Needs action" that the viewer can see (optionally one salesperson's), oldest first. */
+export const getDealsNeedingAction = cache(async (staffId?: string): Promise<DealRow[]> => {
+  const supabase = await createClient();
+  let q = supabase.from("deals").select(DEAL_SELECT).eq("needs_action", true);
+  if (staffId) q = q.or(`salesperson_id.eq.${staffId},split_salesperson_id.eq.${staffId}`);
+  const { data, error } = await q.order("sale_date");
+  if (error) throw error;
+  return data.map(toDeal);
+});
+
+/** Salesperson deals on or after `fromMonth` with no back gross entered yet, oldest first. */
+export const getDealsMissingBackGross = cache(async (fromMonth: string): Promise<DealRow[]> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("deals")
+    .select(DEAL_SELECT)
+    .eq("is_house", false)
+    .is("back_gross", null)
+    .gte("sale_date", `${fromMonth}-01`)
+    .order("sale_date")
+    .order("created_at");
   if (error) throw error;
   return data.map(toDeal);
 });

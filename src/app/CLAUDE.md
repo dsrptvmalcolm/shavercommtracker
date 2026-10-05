@@ -4,7 +4,7 @@
 - `(app)/layout.tsx` — auth gate: resolves the viewer, forces `/change-password` when `must_change_password`, renders `AppShell`.
 - `(app)/dashboard` — salesperson month view (admins can pass `?staff=`). `(app)/history` — month table.
 - `(app)/deals/{new,[id]}` + `deals/deal-form.tsx` + `deals/actions.ts` — the one deal form for salespeople and admins.
-- `(app)/admin/*` — Store, Deals (inline back gross), Spiffs, Staff, Settings (tiers, holidays, products). All admin mutations are in `admin/actions.ts`.
+- `(app)/admin/*` — Store, Deals (inline back gross), Review (Needs action flags + deals with no back gross since the last paid month), Spiffs, Staff, Settings (tiers, holidays, products). All admin mutations are in `admin/actions.ts`.
 - `(app)/view-as-actions.ts` — start/stop impersonation (read only).
 - `login/`, `change-password/` — outside the app shell.
 - `../proxy.ts` — session refresh + redirect signed-out users to `/login`.

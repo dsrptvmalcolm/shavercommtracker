@@ -9,7 +9,7 @@ import { StatTile } from "@/components/stat-tile";
 import { TierLadder } from "@/components/tier-ladder";
 import { UnitsGauge } from "@/components/units-gauge";
 import { currentMiniTierIndex, paceFor, storeVolumeSpiffFor } from "@/lib/commission/engine";
-import { getAllStaff, getMonthCalendar, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer } from "@/lib/data";
+import { getAllStaff, getDealsNeedingAction, getMonthCalendar, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer } from "@/lib/data";
 import { money, money0, units as fmtUnits } from "@/lib/format";
 import { currentMonth, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
 
@@ -28,11 +28,12 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
   if (!staff) notFound();
   if (!staff.is_salesperson && !sp.staff) redirect("/admin");
 
-  const [view, products, unitsByMonth, cal] = await Promise.all([
+  const [view, products, unitsByMonth, cal, needsAction] = await Promise.all([
     getSalespersonMonth(staff, month),
     getProducts(),
     getUnitsByMonth(staff.id),
     getMonthCalendar(month),
+    getDealsNeedingAction(staff.id),
   ]);
   const { summary, paid, settings } = view;
 
@@ -184,7 +185,22 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
         }
       />
 
-      <section className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+      <section className="grid grid-cols-2 gap-4 lg:grid-cols-5 lg:gap-6">
+        <StatTile
+          label="Needs action"
+          value={needsAction.length}
+          tone={needsAction.length > 0 ? "primary" : "success"}
+          className="col-span-2 lg:col-span-1"
+          detail={
+            needsAction.length > 0 ? (
+              <Link href={sp.staff ? `/needs-action?staff=${sp.staff}` : "/needs-action"} className="-my-3 inline-flex min-h-11 items-center underline hover:text-white">
+                Review deals →
+              </Link>
+            ) : (
+              "All clear"
+            )
+          }
+        />
         <StatTile
           label="2-car days"
           value={paid?.two_car_day_count ?? summary.twoCarDayCount}

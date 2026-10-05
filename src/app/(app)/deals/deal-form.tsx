@@ -46,6 +46,10 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
             <input type="checkbox" name="is_house" checked={isHouse} onChange={(e) => setIsHouse(e.target.checked)} className="h-4 w-4 accent-primary" />
             House deal <span className="font-normal text-on-surface-muted">— counts toward store volume only</span>
           </label>
+          <label className="flex min-h-11 items-center gap-3 text-sm font-bold">
+            <input type="checkbox" name="needs_action" defaultChecked={deal?.needs_action} className="h-4 w-4 accent-primary" />
+            Needs action <span className="font-normal text-on-surface-muted">— put what needs to happen in deal notes</span>
+          </label>
           {!isHouse && (
             <div>
               <label htmlFor="salesperson_id" className="field-label">Salesperson</label>
