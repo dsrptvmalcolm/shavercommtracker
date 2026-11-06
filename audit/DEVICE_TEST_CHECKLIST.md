@@ -68,7 +68,7 @@
 - [ ] Open a car and swipe the photo strip sideways. The page itself doesn't move sideways.
 - [ ] Tap **Post on Marketplace**. Untick two photos (tap the photo or its box) — the count drops to 18. Tap **Get 18 photos** (it counts up to 18/18), then **Save 18 photos**. *iPhone:* the share sheet opens; tap **Save 18 Images** and they appear in Photos. *Android:* share to Photos/Gallery or Files and they appear there. If it says "Tap Save again", tapping Save again should open sharing without re-downloading.
 - [ ] Tap **Copy description**, open Facebook Marketplace → Create listing → Vehicle, and paste into Description. Line breaks and bullets come through.
-- [ ] Copy **VIN**, **Title** and **Price** one at a time and paste each into Facebook's matching field. Price pastes as a plain number (e.g. `21729`).
+- [ ] Copy **VIN**, **Title**, **Price** and **Miles** one at a time and paste each into Facebook's matching field. Price and Miles paste as plain numbers (e.g. `21729`, `40403`).
 - [ ] Search box: the keyboard's return key says **Search** and the page doesn't zoom in.
 
 ## 6. Phone settings checks (iPhone)
