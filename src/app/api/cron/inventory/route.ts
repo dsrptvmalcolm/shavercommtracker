@@ -1,11 +1,18 @@
+import { timingSafeEqual } from "node:crypto";
 import { runIngest } from "@/lib/inventory/ingest";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 // Daily inventory refresh, called by Vercel Cron (vercel.json) with `Authorization: Bearer $CRON_SECRET`.
 // The one approved use of the service-role client outside login management — see docs/decisions/0003.
+const authorized = (header: string | null, secret: string | undefined): boolean => {
+  if (!secret || !header) return false;
+  const a = Buffer.from(header);
+  const b = Buffer.from(`Bearer ${secret}`);
+  return a.length === b.length && timingSafeEqual(a, b);
+};
+
 export async function GET(request: Request) {
-  const secret = process.env.CRON_SECRET;
-  if (!secret || request.headers.get("authorization") !== `Bearer ${secret}`) {
+  if (!authorized(request.headers.get("authorization"), process.env.CRON_SECRET)) {
     return new Response("Unauthorized", { status: 401 });
   }
   try {

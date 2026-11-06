@@ -24,11 +24,12 @@ const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPAB
 });
 
 const remove = async () => {
-  // Inventory rows that point at QA staff: drop their test posts/posted events, keep refresh runs but forget who ran them
+  // Inventory rows that point at QA staff: drop their test alerts/posts/posted events, keep refresh runs but forget who ran them
   const { data: qaStaff } = await sb.from("staff").select("id").like("email", `%${QA_DOMAIN}`);
   const ids = (qaStaff ?? []).map((s) => s.id as string);
   if (ids.length) {
     for (const res of [
+      await sb.from("inventory_alerts").delete().in("staff_id", ids),
       await sb.from("vehicle_posts").delete().in("posted_by", ids),
       await sb.from("vehicle_events").delete().in("by_staff", ids),
       await sb.from("inventory_runs").update({ triggered_by: null }).in("triggered_by", ids),

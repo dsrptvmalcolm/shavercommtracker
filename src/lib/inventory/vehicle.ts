@@ -13,8 +13,11 @@ export type Vehicle = FeedVehicle & {
 
 export type InventoryTab = "not-posted" | "posted" | "all";
 
+/** "Year Make Model Trim". VinCue fills a missing trim with "Other", which isn't a trim. */
 export const vehicleTitle = (v: Pick<Vehicle, "year" | "make" | "model" | "trim">): string =>
-  [v.year, v.make, v.model, v.trim].filter((p) => p !== null && String(p).trim() !== "").join(" ");
+  [v.year, v.make, v.model, v.trim.trim().toLowerCase() === "other" ? "" : v.trim]
+    .filter((p) => p !== null && String(p).trim() !== "")
+    .join(" ");
 
 const dayNumber = (iso: string): number => {
   const [y, m, d] = iso.slice(0, 10).split("-").map(Number);

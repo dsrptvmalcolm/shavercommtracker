@@ -6,7 +6,7 @@ import { homePath, isPorterOnly, type Viewer } from "@/lib/data";
 import { DealFab } from "./deal-fab";
 import { NavLink } from "./nav-link";
 
-export function AppShell({ viewer, children }: { viewer: Viewer; children: React.ReactNode }) {
+export function AppShell({ viewer, alertCount = 0, children }: { viewer: Viewer; alertCount?: number; children: React.ReactNode }) {
   const { me, real, impersonating } = viewer;
   const home = homePath(me);
   const porterOnly = isPorterOnly(me);
@@ -18,7 +18,7 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
           <NavLink href="/history">History</NavLink>
         </>
       )}
-      <NavLink href="/inventory">Inventory</NavLink>
+      <NavLink href="/inventory" badge={alertCount}>Inventory</NavLink>
       {me.is_admin && (
         <>
           <NavLink href="/admin">Store</NavLink>

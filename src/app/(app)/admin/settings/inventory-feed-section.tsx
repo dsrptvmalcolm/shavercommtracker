@@ -27,7 +27,7 @@ export async function InventoryFeedSection() {
       <div>
         <h2 className="display text-2xl text-white">Inventory feed</h2>
         <p className="mt-1 max-w-2xl text-sm text-on-surface-muted">
-          The VinCue inventory export. It updates automatically every morning around 6 am; use Refresh now to update it right away.
+          The VinCue inventory export. It updates automatically every morning around 5–6 am Central; use Refresh now to update it right away.
         </p>
       </div>
 
@@ -55,7 +55,7 @@ export async function InventoryFeedSection() {
         </div>
       </ActionForm>
 
-      <ActionForm action={refreshInventory} submitLabel="Refresh now" className="card flex flex-wrap items-center gap-4 p-6">
+      <ActionForm action={refreshInventory} submitLabel="Refresh now" pendingLabel="Refreshing…" className="card flex flex-wrap items-center gap-4 p-6">
         <label className="flex min-h-11 items-center gap-2 text-sm">
           <input type="checkbox" name="force" className="h-4 w-4 accent-primary" />
           Apply anyway (only if a refresh was stopped for removing too many cars)

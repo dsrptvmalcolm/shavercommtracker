@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { salespersonMonth, storeUnitsFor } from "@/lib/commission/engine";
 import type { CommissionSettings, DealInput, MonthSummary } from "@/lib/commission/types";
 import { APP_TIMEZONE, datesInMonth, isWorkingDay, monthRange, todayIso } from "@/lib/months";
+import type { InventoryAlert } from "@/lib/inventory/alerts";
 import type { Vehicle } from "@/lib/inventory/vehicle";
 import { createClient } from "@/lib/supabase/server";
 
@@ -518,6 +519,43 @@ export const getInventoryRuns = cache(async (limit = 10): Promise<InventoryRun[]
     message: r.message,
   }));
 });
+
+/**
+ * The viewer's own undismissed Marketplace alerts, newest first. Filtered to the viewer even for admins
+ * (RLS lets admins read everyone's). Empty for anyone who can't post, including an admin viewing as a salesperson.
+ */
+export const getMyAlerts = cache(async (): Promise<InventoryAlert[]> => {
+  const me = await getMe();
+  if (!me || !canPost(me)) return [];
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("inventory_alerts")
+    .select("id, kind, old_price, new_price, created_at, vehicles!inner(stock_number, year, make, model, trim)")
+    .eq("staff_id", me.id)
+    .is("dismissed_at", null)
+    .order("created_at", { ascending: false });
+  if (error) throw error;
+  return data.map((a) => {
+    const v = (Array.isArray(a.vehicles) ? a.vehicles[0] : a.vehicles) as Record<string, unknown>;
+    return {
+      id: a.id,
+      kind: a.kind,
+      oldPrice: numOrNull(a.old_price),
+      newPrice: numOrNull(a.new_price),
+      createdAt: a.created_at,
+      vehicle: {
+        stockNumber: v.stock_number as string,
+        year: (v.year as number | null) ?? null,
+        make: v.make as string,
+        model: v.model as string,
+        trim: v.trim as string,
+      },
+    };
+  });
+});
+
+/** Count for the Inventory nav badge. */
+export const getMyAlertCount = async (): Promise<number> => (await getMyAlerts()).length;
 
 /** When the inventory last updated successfully (any signed-in staff: max of vehicles.last_seen_at). */
 export const getInventoryUpdatedAt = cache(async (): Promise<string | null> => {

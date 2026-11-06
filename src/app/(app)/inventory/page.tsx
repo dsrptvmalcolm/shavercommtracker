@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { canPost, getInventory, getInventoryUpdatedAt, requireMe } from "@/lib/data";
+import { canPost, getInventory, getInventoryUpdatedAt, getMyAlerts, requireMe } from "@/lib/data";
 import { listVehicles, type InventoryTab } from "@/lib/inventory/vehicle";
 import { APP_TIMEZONE, todayIso } from "@/lib/months";
+import { AlertStrip } from "./alert-strip";
 import { VehicleCard } from "./vehicle-card";
 
 const TABS: { id: InventoryTab; label: string }[] = [
@@ -23,7 +24,7 @@ const updatedLabel = (iso: string | null) => {
 export default async function InventoryPage({ searchParams }: { searchParams: Promise<{ tab?: string; q?: string }> }) {
   const [me, sp] = await Promise.all([requireMe(), searchParams]);
   const poster = canPost(me);
-  const [vehicles, updatedAt] = await Promise.all([getInventory(), getInventoryUpdatedAt()]);
+  const [vehicles, updatedAt, alerts] = await Promise.all([getInventory(), getInventoryUpdatedAt(), getMyAlerts()]);
   const today = todayIso();
   const q = (sp.q ?? "").trim();
   const tab: InventoryTab = poster ? (isTab(sp.tab) ? sp.tab : "not-posted") : "all";
@@ -39,6 +40,8 @@ export default async function InventoryPage({ searchParams }: { searchParams: Pr
         </p>
         <h1 className="display text-4xl text-white lg:text-5xl">Inventory</h1>
       </div>
+
+      {poster && <AlertStrip alerts={alerts} />}
 
       <form action="/inventory" className="flex gap-2" role="search">
         {poster && <input type="hidden" name="tab" value={tab} />}

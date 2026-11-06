@@ -55,7 +55,7 @@ export default async function MarketplacePage({ params }: { params: Promise<{ st
                 <p className="text-xs font-bold uppercase tracking-wider text-on-surface-muted">{r.label}</p>
                 <p className="break-all font-bold text-white">{r.shown}</p>
               </div>
-              <CopyButton text={r.copy} label="Copy" className="shrink-0" />
+              <CopyButton text={r.copy} label="Copy" ariaLabel={`Copy ${r.label.toLowerCase()}`} className="shrink-0" />
             </li>
           ))}
         </ul>

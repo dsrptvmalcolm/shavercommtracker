@@ -8,7 +8,7 @@
 - `(app)/view-as-actions.ts` — start/stop impersonation (read only).
 - `login/`, `change-password/` — outside the app shell.
 - `print/deals` — printable month deal log for admins (outside the app shell so it prints on white); linked from Admin → Deals.
-- `(app)/inventory` — list (Not posted / Posted / All tabs for porters+admins), `[stock]` vehicle page with history, `[stock]/marketplace` Post on Marketplace kit (porters+admins). `inventory/actions.ts` — `setVehiclePosted`.
+- `(app)/inventory` — list (Not posted / Posted / All tabs for porters+admins), `[stock]` vehicle page with history, `[stock]/marketplace` Post on Marketplace kit (porters+admins). `inventory/actions.ts` — `setVehiclePosted`, `dismissInventoryAlert`. `inventory/alert-strip.tsx` — the poster's own alerts (Sold / Price changed) above the list; the layout passes `getMyAlertCount()` to the Inventory nav badge.
 - `api/cron/inventory` — daily feed refresh (Vercel Cron, `CRON_SECRET`, service role — decision 0003). Admin → Settings → Inventory feed has the URL, listing phone and Refresh now.
 - `../proxy.ts` — session refresh + redirect signed-out users to `/login` (`/api/cron/` is exempt; those routes check `CRON_SECRET`).
 

@@ -40,6 +40,11 @@ export const runIngest = async (client: SupabaseClient, { force }: { force: bool
     return record({ p_rows: null, p_error: `Feed download failed (${reason})` });
   }
 
+  // A login or error page instead of the CSV would otherwise show up as "Missing VIN" on every row
+  if (csv.trimStart().startsWith("<")) {
+    return record({ p_rows: null, p_error: "Feed returned a web page, not the VinCue export — check the feed URL" });
+  }
+
   const { vehicles, rejected } = parseFeed(csv);
   if (vehicles.length === 0) {
     const why = rejected[0]?.reason ? ` — ${rejected[0].reason.slice(0, 120)}` : "";
