@@ -59,3 +59,6 @@ export const marketplaceDetails = (v: Vehicle): { vin: string; title: string; pr
   title: vehicleTitle(v),
   price: v.price === null ? "" : String(Math.round(v.price)),
 });
+
+/** Mileage as plain digits for Facebook's mileage field. */
+export const marketplaceMiles = (v: Pick<Vehicle, "mileage">): string => (v.mileage === null ? "" : String(v.mileage));
