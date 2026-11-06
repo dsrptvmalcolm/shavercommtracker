@@ -25,6 +25,7 @@ export default async function AdminDealsPage({ searchParams }: { searchParams: P
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <MonthNav month={month} basePath="/admin/deals" params={missingOnly ? { filter: "missing" } : {}} />
+          <a href={`/print/deals?month=${month}`} target="_blank" rel="noopener" className="btn-secondary px-4 py-2">Print deals</a>
           <Link href="/deals/new" className="btn-primary px-4 py-2">+ Add deal</Link>
         </div>
       </div>

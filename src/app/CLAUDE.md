@@ -7,6 +7,7 @@
 - `(app)/admin/*` — Store, Deals (inline back gross), Review (Needs action flags + deals with no back gross since the last paid month), Spiffs, Staff, Settings (tiers, holidays, products). All admin mutations are in `admin/actions.ts`.
 - `(app)/view-as-actions.ts` — start/stop impersonation (read only).
 - `login/`, `change-password/` — outside the app shell.
+- `print/deals` — printable month deal log for admins (outside the app shell so it prints on white); linked from Admin → Deals.
 - `../proxy.ts` — session refresh + redirect signed-out users to `/login`.
 
 ## Local conventions
