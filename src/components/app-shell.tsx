@@ -18,17 +18,14 @@ export function AppShell({ viewer, alertCount = 0, children }: { viewer: Viewer;
           <NavLink href="/history">History</NavLink>
         </>
       )}
-      <NavLink href="/inventory" badge={alertCount}>Inventory</NavLink>
       {me.is_admin && (
         <>
           <NavLink href="/admin">Store</NavLink>
-          <NavLink href="/admin/deals">Deals</NavLink>
-          <NavLink href="/admin/review">Review</NavLink>
-          <NavLink href="/admin/spiffs">Spiffs</NavLink>
-          <NavLink href="/admin/staff">Staff</NavLink>
-          <NavLink href="/admin/settings">Settings</NavLink>
+          <NavLink href="/admin/deals" also={["/admin/review"]}>Deals</NavLink>
         </>
       )}
+      <NavLink href="/inventory" also={["/admin/sales-log"]} badge={alertCount}>Inventory</NavLink>
+      {me.is_admin && <NavLink href="/admin/settings" also={["/admin/staff", "/admin/spiffs"]}>Settings</NavLink>}
     </>
   );
   return (

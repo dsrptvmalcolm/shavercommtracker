@@ -5,6 +5,7 @@ import { money } from "@/lib/format";
 import { currentMonth, isMonth, monthLabel } from "@/lib/months";
 import { addAdjustment } from "../actions";
 import { RemoveButton } from "./remove-button";
+import { SubNav } from "@/components/sub-nav";
 
 export default async function SpiffsPage({ searchParams }: { searchParams: Promise<{ month?: string }> }) {
   await requireAdmin();
@@ -16,6 +17,7 @@ export default async function SpiffsPage({ searchParams }: { searchParams: Promi
 
   return (
     <>
+      <SubNav section="settings" />
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="eyebrow text-primary">One-off &amp; team spiffs</p>

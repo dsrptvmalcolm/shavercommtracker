@@ -5,6 +5,7 @@ import { currentMonth, monthLabel } from "@/lib/months";
 import { addHoliday, saveProduct, saveSettings } from "../actions";
 import { InventoryFeedSection } from "./inventory-feed-section";
 import { RemoveHolidayButton } from "./remove-holiday-button";
+import { SubNav } from "@/components/sub-nav";
 
 const EXTRA_TIER_ROWS = 2;
 
@@ -26,6 +27,7 @@ export default async function SettingsPage() {
 
   return (
     <>
+      <SubNav section="settings" />
       <div>
         <p className="eyebrow text-primary">Admin</p>
         <h1 className="display text-4xl text-white lg:text-5xl">Commission Settings</h1>

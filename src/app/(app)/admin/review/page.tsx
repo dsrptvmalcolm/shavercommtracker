@@ -5,6 +5,7 @@ import { shortDate } from "@/lib/format";
 import { currentMonth, monthLabel, shiftMonth } from "@/lib/months";
 import { BackGrossInput } from "../deals/back-gross-input";
 import { FlagNeedsAction, ResolveNeedsAction } from "./needs-action-controls";
+import { SubNav } from "@/components/sub-nav";
 
 const BACK_GROSS_TIP = "Input back end gross or input “0” to confirm no back end gross";
 
@@ -73,6 +74,7 @@ export default async function DealReviewPage() {
 
   return (
     <>
+      <SubNav section="deals" />
       <div>
         <p className="eyebrow text-primary">Admin</p>
         <h1 className="display text-4xl text-white lg:text-5xl">Deal Review</h1>

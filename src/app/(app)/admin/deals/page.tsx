@@ -5,6 +5,7 @@ import { shortDate } from "@/lib/format";
 import { currentMonth, isMonth, monthLabel } from "@/lib/months";
 import { BackGrossInput } from "./back-gross-input";
 import { ClickableRow } from "./clickable-row";
+import { SubNav } from "@/components/sub-nav";
 
 export default async function AdminDealsPage({ searchParams }: { searchParams: Promise<{ month?: string; filter?: string }> }) {
   await requireAdmin();
@@ -18,6 +19,7 @@ export default async function AdminDealsPage({ searchParams }: { searchParams: P
 
   return (
     <>
+      <SubNav section="deals" />
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="eyebrow text-primary">All deals · {deals.length}</p>

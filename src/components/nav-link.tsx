@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function NavLink({ href, badge = 0, children }: { href: string; badge?: number; children: React.ReactNode }) {
+/** `also`: other path prefixes that belong under this tab (e.g. Settings → Staff, Spiffs). */
+export function NavLink({ href, also = [], badge = 0, children }: { href: string; also?: string[]; badge?: number; children: React.ReactNode }) {
   const pathname = usePathname();
-  const active = href === "/admin" ? pathname === href : pathname.startsWith(href);
+  const active = (href === "/admin" ? pathname === href : pathname.startsWith(href)) || also.some((p) => pathname.startsWith(p));
   return (
     // The link is the 44px tap area; the inner pill stays slim so the tab row doesn't look heavy
     <Link

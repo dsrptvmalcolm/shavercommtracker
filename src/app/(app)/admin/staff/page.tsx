@@ -2,12 +2,14 @@ import { ActionForm } from "@/components/action-form";
 import { ViewAsButton } from "@/components/view-as-button";
 import { getAllStaff, requireAdmin, type Staff } from "@/lib/data";
 import { saveStaff } from "../actions";
+import { SubNav } from "@/components/sub-nav";
 
 export default async function StaffPage() {
   await requireAdmin();
   const staff = await getAllStaff();
   return (
     <>
+      <SubNav section="settings" />
       <div>
         <p className="eyebrow text-primary">Team</p>
         <h1 className="display text-4xl text-white lg:text-5xl">Staff &amp; Logins</h1>
