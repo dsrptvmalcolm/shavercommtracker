@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { canPost, getVehicleByStock, getVehicleEvents, requireMe, type VehicleEvent } from "@/lib/data";
+import { canPost, getVehicleById, getVehicleByStock, getVehicleEvents, requireMe, type VehicleEvent } from "@/lib/data";
 import { money0 } from "@/lib/format";
 import { daysOnLot, vehicleTitle } from "@/lib/inventory/vehicle";
 import { APP_TIMEZONE, todayIso } from "@/lib/months";
@@ -25,9 +25,18 @@ const eventLine = (e: VehicleEvent): string => {
   }
 };
 
-export default async function VehiclePage({ params }: { params: Promise<{ stock: string }> }) {
-  const [me, { stock }] = await Promise.all([requireMe(), params]);
-  const v = await getVehicleByStock(decodeURIComponent(stock));
+export default async function VehiclePage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ stock: string }>;
+  searchParams: Promise<{ id?: string }>;
+}) {
+  const [me, { stock }, sp] = await Promise.all([requireMe(), params, searchParams]);
+  const wanted = decodeURIComponent(stock);
+  // ?id= picks one car when a stock number was reused (deal and sales-log links); otherwise the newest car
+  const byId = sp.id && /^[0-9a-f-]{36}$/i.test(sp.id) ? await getVehicleById(sp.id) : null;
+  const v = byId && byId.stockNumber.toUpperCase() === wanted.toUpperCase() ? byId : await getVehicleByStock(wanted);
   if (!v) notFound();
   const poster = canPost(me);
   const events = await getVehicleEvents(v.id);

@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import { getAllStaff, getDeal, getProducts, getViewer, isPorterOnly } from "@/lib/data";
+import { getAllStaff, getDeal, getDealVehicleOptions, getProducts, getVehicleById, getViewer, isPorterOnly } from "@/lib/data";
 import { redirect } from "next/navigation";
 import { currentMonth, todayIso } from "@/lib/months";
 import { DealForm } from "../deal-form";
+import { LinkedVehicle } from "../linked-vehicle";
 
 export default async function EditDealPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -12,8 +13,9 @@ export default async function EditDealPage({ params }: { params: Promise<{ id: s
   // Viewing as someone is read only
   if (viewer.impersonating) redirect("/dashboard");
   const { me } = viewer;
-  const [deal, products, staff] = await Promise.all([getDeal(id), getProducts(), getAllStaff()]);
+  const [deal, products, staff, vehicles] = await Promise.all([getDeal(id), getProducts(), getAllStaff(), getDealVehicleOptions()]);
   if (!deal) notFound();
+  const vehicle = deal.vehicle_id ? await getVehicleById(deal.vehicle_id) : null;
   const locked = !me.is_admin && deal.sale_date < `${currentMonth()}-01`;
   return (
     <div className="mx-auto max-w-2xl space-y-6">
@@ -21,10 +23,11 @@ export default async function EditDealPage({ params }: { params: Promise<{ id: s
         <p className="eyebrow text-primary">Edit deal</p>
         <h1 className="display text-4xl text-white">{deal.customer_name}</h1>
       </div>
+      {vehicle && <LinkedVehicle vehicle={vehicle} />}
       {locked ? (
         <p className="card p-6 text-sm text-on-surface-muted">This month is closed. Ask an admin to make changes.</p>
       ) : (
-        <DealForm deal={deal} me={me} products={products} salespeople={staff.filter((s) => s.is_salesperson)} today={todayIso()} minDate={`${currentMonth()}-01`} />
+        <DealForm deal={deal} me={me} products={products} salespeople={staff.filter((s) => s.is_salesperson)} vehicles={vehicles} today={todayIso()} minDate={`${currentMonth()}-01`} />
       )}
     </div>
   );

@@ -75,6 +75,14 @@ export default async function InventoryPage({ searchParams }: { searchParams: Pr
               <span className="text-xs opacity-80">{counts[t.id]}</span>
             </Link>
           ))}
+          {me.is_admin && (
+            <Link
+              href="/admin/sales-log"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full bg-surface-subtle px-4 text-sm font-bold text-on-surface-muted hover:text-on-surface"
+            >
+              Sold <span aria-hidden>→</span>
+            </Link>
+          )}
         </nav>
       )}
 

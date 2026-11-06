@@ -11,6 +11,10 @@ export type Vehicle = FeedVehicle & {
   postedBy: string | null;
 };
 
+/** Vehicle page link; pass the id to pin one car when a stock number was reused. */
+export const vehicleHref = (stockNumber: string, id?: string): string =>
+  `/inventory/${encodeURIComponent(stockNumber)}${id ? `?id=${id}` : ""}`;
+
 export type InventoryTab = "not-posted" | "posted" | "all";
 
 /** "Year Make Model Trim". VinCue fills a missing trim with "Other", which isn't a trim. */

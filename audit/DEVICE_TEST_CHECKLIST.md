@@ -36,6 +36,7 @@
 - [ ] Tap each field in turn (Sale date, Customer name, Stock #, Deal #, Deal notes, Back gross). The page does **not** zoom in on any of them.
 - [ ] **Customer name:** the keyboard's return key says **Next**.
 - [ ] **Stock #:** the keyboard starts in **capital letters**.
+- [ ] **Stock # suggestions:** type `jeep`. A list of cars with photos appears under the box. Drag the list to scroll it: it scrolls and does **not** pick a car. Then tap one car: the box fills with its stock number and the list closes. The suggestions aren't hidden behind the keyboard.
 - [ ] **Back gross:** a number keypad appears.
 - [ ] While the keyboard is open, the field you're typing in stays visible (not hidden behind the keyboard).
 - [ ] Tap the product boxes, **90 days** and **Multi-lingual**. Each ticks on the first tap, even if you tap the text next to the box.

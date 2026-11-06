@@ -3,19 +3,23 @@
 import Link from "next/link";
 import { useActionState, useState, useTransition } from "react";
 import type { DealRow, Product, Staff } from "@/lib/data";
+import type { VehicleOption } from "@/lib/inventory/vehicle-options";
 import { type DealFormState, deleteDeal, saveDeal } from "./actions";
+import { StockField } from "./stock-field";
 
 type Props = {
   deal?: DealRow;
   me: Staff;
   products: Product[];
   salespeople: Staff[];
+  /** Stock # suggestions: in stock + left in the last 30 days */
+  vehicles: VehicleOption[];
   today: string;
   /** Earliest date a non-admin may use (first of the open month) */
   minDate: string;
 };
 
-export function DealForm({ deal, me, products, salespeople, today, minDate }: Props) {
+export function DealForm({ deal, me, products, salespeople, vehicles, today, minDate }: Props) {
   const [state, action, pending] = useActionState<DealFormState, FormData>(saveDeal, {});
   const [deleting, startDelete] = useTransition();
   const [deleteError, setDeleteError] = useState<string>();
@@ -74,10 +78,7 @@ export function DealForm({ deal, me, products, salespeople, today, minDate }: Pr
           <label htmlFor="customer_name" className="field-label">Customer name</label>
           <input id="customer_name" name="customer_name" required defaultValue={deal?.customer_name} autoComplete="off" enterKeyHint="next" className="input" />
         </div>
-        <div>
-          <label htmlFor="stock_number" className="field-label">Stock #</label>
-          <input id="stock_number" name="stock_number" required defaultValue={deal?.stock_number} autoComplete="off" autoCapitalize="characters" enterKeyHint="next" className="input uppercase" />
-        </div>
+        <StockField defaultValue={deal?.stock_number} vehicles={vehicles} />
         <div>
           <label htmlFor="deal_number" className="field-label">Deal #</label>
           <input id="deal_number" name="deal_number" defaultValue={deal?.deal_number ?? ""} autoComplete="off" enterKeyHint="next" className="input" />

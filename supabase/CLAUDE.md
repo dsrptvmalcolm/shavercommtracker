@@ -10,6 +10,7 @@ There is one database and it is production. `npm run db:migrate` applies pending
 - `0008` — inventory: `staff.is_porter`, `is_porter_or_admin()`, `inventory_feed` (admin-only; URL holds the dealer key), `vehicles` (never deleted; `in_stock`/`gone`), `vehicle_events`, `vehicle_posts` (porter/admin only), `inventory_runs`; `ingest_inventory()` (admin or service role; 30% safety stop), `set_vehicle_posted()`, `get_listing_phone()`; `save_deal` now refuses non-salesperson non-admins.
 - `0009` — `inventory_alerts` (owner or admin can read), alerts created inside `ingest_inventory` for the poster (price changes collapse into one open alert; a departure dismisses price alerts and adds a sold alert), `dismiss_inventory_alert()` (sold → clears the post + `unposted` while the car is still gone); ingest now takes an advisory lock and treats a blank feed price as unchanged; `delete_deal` gets the same role guard as `save_deal`.
 - `0010` — one open alert per car/person/kind (unique index); unposting a car dismisses its open price alerts; a car leaving twice keeps one open sold alert.
+- `0011` — `deals.vehicle_id`; private `vehicle_for_deal(stock, sale_date)` (exact stock match, sale date on/after the car's lot date, most recent car wins; not callable by app users); `save_deal` re-sets the link on every save (0008 guards kept); one-time backfill.
 
 ## Local conventions
 <!-- added 2026-10-02: initial setup -->

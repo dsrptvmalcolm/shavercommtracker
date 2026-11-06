@@ -3,8 +3,8 @@
 ## Key files
 - `(app)/layout.tsx` — auth gate: resolves the viewer, forces `/change-password` when `must_change_password`, renders `AppShell`.
 - `(app)/dashboard` — salesperson month view (admins can pass `?staff=`). `(app)/history` — month table.
-- `(app)/deals/{new,[id]}` + `deals/deal-form.tsx` + `deals/actions.ts` — the one deal form for salespeople and admins.
-- `(app)/admin/*` — Store, Deals (inline back gross), Review (Needs action flags + deals with no back gross since the last paid month), Spiffs, Staff, Settings (tiers, holidays, products). All admin mutations are in `admin/actions.ts`.
+- `(app)/deals/{new,[id]}` + `deals/deal-form.tsx` + `deals/actions.ts` — the one deal form for salespeople and admins. `deals/stock-field.tsx` suggests cars (in stock + left in the last 30 days) but only fills the text; `save_deal` decides the vehicle link. `deals/linked-vehicle.tsx` shows the linked car on the deal page.
+- `(app)/admin/*` — Store, Deals (inline back gross), Review (Needs action flags + deals with no back gross since the last paid month), Spiffs, Staff, Settings (tiers, holidays, products). `admin/sales-log` — every car that left inventory, by month (reached from the admin-only **Sold** chip on Inventory, not the nav). All admin mutations are in `admin/actions.ts`.
 - `(app)/view-as-actions.ts` — start/stop impersonation (read only).
 - `login/`, `change-password/` — outside the app shell.
 - `print/deals` — printable month deal log for admins (outside the app shell so it prints on white); linked from Admin → Deals.

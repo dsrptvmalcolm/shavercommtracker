@@ -6,7 +6,9 @@ import { salespersonMonth, storeUnitsFor } from "@/lib/commission/engine";
 import type { CommissionSettings, DealInput, MonthSummary } from "@/lib/commission/types";
 import { APP_TIMEZONE, datesInMonth, isWorkingDay, monthRange, todayIso } from "@/lib/months";
 import type { InventoryAlert } from "@/lib/inventory/alerts";
-import type { Vehicle } from "@/lib/inventory/vehicle";
+import type { Departure, LinkedDeal, SalesLogVehicle } from "@/lib/inventory/sales-log";
+import type { VehicleOption } from "@/lib/inventory/vehicle-options";
+import { vehicleTitle, type Vehicle } from "@/lib/inventory/vehicle";
 import { createClient } from "@/lib/supabase/server";
 
 export type Staff = {
@@ -40,6 +42,8 @@ export type DealRow = {
   multilingual: boolean;
   ninety_day: boolean;
   needs_action: boolean;
+  /** Linked car, set by save_deal from the stock number */
+  vehicle_id: string | null;
   deal_products: { product_id: string; spiff_amount: number }[];
 };
 
@@ -80,7 +84,7 @@ export type SettingsRow = {
 };
 
 const DEAL_SELECT =
-  "id, sale_date, customer_name, stock_number, deal_number, deal_notes, salesperson_id, split_salesperson_id, is_house, front_gross, back_gross, multilingual, ninety_day, needs_action, deal_products(product_id, spiff_amount)";
+  "id, sale_date, customer_name, stock_number, deal_number, deal_notes, salesperson_id, split_salesperson_id, is_house, front_gross, back_gross, multilingual, ninety_day, needs_action, vehicle_id, deal_products(product_id, spiff_amount)";
 
 // Postgres numerics arrive as strings
 const num = (v: unknown): number => (v == null ? 0 : Number(v));
@@ -437,6 +441,87 @@ export const getVehicleByStock = cache(async (stock: string): Promise<Vehicle | 
   if (error) throw error;
   return data ? toVehicle(data, posts.get(data.id)) : null;
 });
+
+/** A vehicle by id (deal page link), in stock or gone. */
+export const getVehicleById = cache(async (id: string): Promise<Vehicle | null> => {
+  const supabase = await createClient();
+  const [{ data, error }, posts] = await Promise.all([
+    supabase.from("vehicles").select("*").eq("id", id).maybeSingle(),
+    getPosts(),
+  ]);
+  if (error) throw error;
+  return data ? toVehicle(data, posts.get(data.id)) : null;
+});
+
+const OPTION_DAYS = 30;
+
+const shiftDay = (iso: string, days: number): string => {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d + days)).toISOString().slice(0, 10);
+};
+
+/** Deal form suggestions: cars in stock plus cars that left in the last 30 days. */
+export const getDealVehicleOptions = cache(async (): Promise<VehicleOption[]> => {
+  const supabase = await createClient();
+  const since = new Date(Date.now() - OPTION_DAYS * 86_400_000).toISOString();
+  const { data, error } = await supabase
+    .from("vehicles")
+    .select("id, stock_number, year, make, model, trim, images, status")
+    .or(`status.eq.in_stock,removed_at.gte.${since}`);
+  if (error) throw error;
+  return data.map((r) => ({
+    id: r.id,
+    stockNumber: r.stock_number,
+    title: vehicleTitle(r),
+    image: (r.images as string[] | null)?.[0] ?? null,
+    gone: r.status === "gone",
+  }));
+});
+
+/**
+ * What the sales log needs for one month left (YYYY-MM): departures with their cars (a day of slack each side
+ * of the month; buildSalesLog cuts to the Chicago month) and deals linked to those cars. Admins see all deals.
+ */
+export const getSalesLogData = cache(
+  async (month: string): Promise<{ departures: Departure[]; vehicles: SalesLogVehicle[]; deals: LinkedDeal[] }> => {
+    const supabase = await createClient();
+    const { start, end } = monthRange(month);
+    const eRes = await supabase
+      .from("vehicle_events")
+      .select("id, vehicle_id, at, days_on_lot, old_price, vehicles!inner(id, stock_number, year, make, model, trim, body_style, first_price)")
+      .eq("kind", "removed")
+      .gte("at", `${shiftDay(start, -1)}T00:00:00Z`)
+      .lt("at", `${shiftDay(end, 1)}T00:00:00Z`);
+    if (eRes.error) throw eRes.error;
+    const ids = [...new Set(eRes.data.map((e) => e.vehicle_id as string))];
+    if (ids.length === 0) return { departures: [], vehicles: [], deals: [] };
+    // Every departure of these cars (not just this month's), so a deal attaches to the right one
+    const [allRes, dRes] = await Promise.all([
+      supabase.from("vehicle_events").select("id, vehicle_id, at, days_on_lot, old_price").eq("kind", "removed").in("vehicle_id", ids),
+      supabase.from("deals").select("id, vehicle_id, sale_date").in("vehicle_id", ids),
+    ]);
+    if (allRes.error) throw allRes.error;
+    if (dRes.error) throw dRes.error;
+    type Car = { id: string; stock_number: string; year: number | null; make: string; model: string; trim: string; body_style: string; first_price: unknown };
+    const cars = new Map<string, SalesLogVehicle>();
+    for (const e of eRes.data) {
+      const v = e.vehicles as unknown as Car;
+      cars.set(v.id, { id: v.id, stockNumber: v.stock_number, title: vehicleTitle(v), bodyStyle: v.body_style, firstPrice: numOrNull(v.first_price) });
+    }
+    const departures = allRes.data.map((e) => ({
+      eventId: e.id,
+      vehicleId: e.vehicle_id,
+      leftAt: e.at,
+      daysOnLot: e.days_on_lot ?? null,
+      lastPrice: numOrNull(e.old_price),
+    }));
+    return {
+      departures,
+      vehicles: [...cars.values()],
+      deals: dRes.data.map((d) => ({ id: d.id, vehicleId: d.vehicle_id as string, saleDate: d.sale_date })),
+    };
+  },
+);
 
 export type VehicleEvent = {
   id: string;
