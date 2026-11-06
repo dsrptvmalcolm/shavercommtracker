@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { DealList } from "@/components/deal-list";
-import { getAllStaff, getDealsNeedingAction, getProducts, getViewer } from "@/lib/data";
+import { getAllStaff, getDealsNeedingAction, getProducts, getViewer, isPorterOnly } from "@/lib/data";
 import { currentMonth } from "@/lib/months";
 
 /** A salesperson's deals that an admin flagged "Needs action" — what to do is in the deal notes. */
 export default async function NeedsActionPage({ searchParams }: { searchParams: Promise<{ staff?: string }> }) {
   const [viewer, sp] = await Promise.all([getViewer(), searchParams]);
   if (!viewer) redirect("/login");
+  if (isPorterOnly(viewer.me)) redirect("/inventory");
   const { me, impersonating } = viewer;
 
   // Same rule as the dashboard: admins can look at any salesperson

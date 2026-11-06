@@ -12,7 +12,7 @@ export default async function StaffPage() {
         <p className="eyebrow text-primary">Team</p>
         <h1 className="display text-4xl text-white lg:text-5xl">Staff &amp; Logins</h1>
         <p className="mt-2 max-w-2xl text-sm text-on-surface-muted">
-          Add an email and set a password to give someone a login. Salespeople see only their own deals; admins see everything.
+          Add an email and set a password to give someone a login. Salespeople see only their own deals; admins see everything. Porters see only Inventory and post cars to Marketplace.
         </p>
       </div>
       <div className="space-y-4">
@@ -23,6 +23,7 @@ export default async function StaffPage() {
                 <span className="font-bold text-white">{s.name}</span>
                 {s.is_salesperson && <span className="chip bg-primary-soft text-primary">Sales</span>}
                 {s.is_admin && <span className="chip bg-surface-subtle text-on-surface">Admin</span>}
+                {s.is_porter && <span className="chip bg-surface-subtle text-on-surface">Porter</span>}
                 {s.multilingual_eligible && <span className="chip bg-success/10 text-success">Multi-lingual</span>}
                 {!s.active && <span className="chip bg-danger/10 text-danger">Inactive</span>}
               </span>
@@ -73,6 +74,7 @@ function StaffForm({ staff }: { staff?: Staff }) {
           [
             ["is_salesperson", "Salesperson", staff?.is_salesperson ?? true],
             ["is_admin", "Admin", staff?.is_admin ?? false],
+            ["is_porter", "Porter", staff?.is_porter ?? false],
             ["multilingual_eligible", "Multi-lingual eligible", staff?.multilingual_eligible ?? false],
             ["active", "Active", staff?.active ?? true],
           ] as const

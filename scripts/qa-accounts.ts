@@ -1,7 +1,7 @@
 // Temporary QA logins for browser testing and `npm run audit:mobile`. Writes to the PRODUCTION database —
 // ask Malcolm first, and always run `delete` when done (QA staff appear on the live Store leaderboard).
 //
-//   npm run qa:accounts -- create <env-file-path>   creates qa-sales@ / qa-admin@shaver.test with a random password
+//   npm run qa:accounts -- create <env-file-path>   creates qa-sales@ / qa-admin@ / qa-porter@shaver.test with a random password
 //                                                   and writes AUDIT_* variables for scripts/mobile-audit.ts
 //   npm run qa:accounts -- delete                   removes every @shaver.test login and staff row
 //
@@ -12,8 +12,9 @@ import { createClient } from "@supabase/supabase-js";
 
 const QA_DOMAIN = "@shaver.test";
 const QA_USERS = [
-  { email: `qa-sales${QA_DOMAIN}`, name: "QA Salesperson", is_salesperson: true, is_admin: false },
-  { email: `qa-admin${QA_DOMAIN}`, name: "QA Admin", is_salesperson: false, is_admin: true },
+  { email: `qa-sales${QA_DOMAIN}`, name: "QA Salesperson", is_salesperson: true, is_admin: false, is_porter: false },
+  { email: `qa-admin${QA_DOMAIN}`, name: "QA Admin", is_salesperson: false, is_admin: true, is_porter: false },
+  { email: `qa-porter${QA_DOMAIN}`, name: "QA Porter", is_salesperson: false, is_admin: false, is_porter: true },
 ];
 // A salesperson with real history, viewed read-only through "View as" so audits see populated screens
 const VIEW_AS_NAME = "Khristian Ayala";
@@ -23,7 +24,21 @@ const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPAB
 });
 
 const remove = async () => {
-  const { count } = await sb.from("staff").delete({ count: "exact" }).like("email", `%${QA_DOMAIN}`);
+  // Inventory rows that point at QA staff: drop their test posts/posted events, keep refresh runs but forget who ran them
+  const { data: qaStaff } = await sb.from("staff").select("id").like("email", `%${QA_DOMAIN}`);
+  const ids = (qaStaff ?? []).map((s) => s.id as string);
+  if (ids.length) {
+    for (const res of [
+      await sb.from("vehicle_posts").delete().in("posted_by", ids),
+      await sb.from("vehicle_events").delete().in("by_staff", ids),
+      await sb.from("inventory_runs").update({ triggered_by: null }).in("triggered_by", ids),
+      await sb.from("inventory_feed").update({ updated_by: null }).in("updated_by", ids),
+    ]) {
+      if (res.error) throw res.error;
+    }
+  }
+  const { count, error } = await sb.from("staff").delete({ count: "exact" }).like("email", `%${QA_DOMAIN}`);
+  if (error) throw error;
   const { data } = await sb.auth.admin.listUsers({ perPage: 1000 });
   const users = data.users.filter((u) => u.email?.endsWith(QA_DOMAIN));
   for (const u of users) await sb.auth.admin.deleteUser(u.id);
@@ -46,6 +61,8 @@ const create = async (envPath: string) => {
     `AUDIT_SALES_PASSWORD=${password}`,
     `AUDIT_ADMIN_EMAIL=${QA_USERS[1].email}`,
     `AUDIT_ADMIN_PASSWORD=${password}`,
+    `AUDIT_PORTER_EMAIL=${QA_USERS[2].email}`,
+    `AUDIT_PORTER_PASSWORD=${password}`,
     `AUDIT_VIEW_AS=${viewAs!.id}`,
     `AUDIT_DEAL_ID=${deal!.id}`,
   ].join("\n");

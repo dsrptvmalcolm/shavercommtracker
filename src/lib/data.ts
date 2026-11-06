@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { salespersonMonth, storeUnitsFor } from "@/lib/commission/engine";
 import type { CommissionSettings, DealInput, MonthSummary } from "@/lib/commission/types";
 import { APP_TIMEZONE, datesInMonth, isWorkingDay, monthRange, todayIso } from "@/lib/months";
+import type { Vehicle } from "@/lib/inventory/vehicle";
 import { createClient } from "@/lib/supabase/server";
 
 export type Staff = {
@@ -13,6 +14,7 @@ export type Staff = {
   email: string | null;
   is_salesperson: boolean;
   is_admin: boolean;
+  is_porter: boolean;
   multilingual_eligible: boolean;
   active: boolean;
   personal_best_units: number;
@@ -178,6 +180,21 @@ export const assertNotImpersonating = async (): Promise<string | undefined> =>
 export const requireAdmin = async (): Promise<Staff> => {
   const me = await requireMe();
   if (!me.is_admin) redirect("/");
+  return me;
+};
+
+/** Porters and admins can mark cars posted and use the Marketplace kit. */
+export const canPost = (me: Staff): boolean => me.is_porter || me.is_admin;
+
+/** Porter with no other role: sees only Inventory. */
+export const isPorterOnly = (me: Staff): boolean => me.is_porter && !me.is_salesperson && !me.is_admin;
+
+export const homePath = (me: Staff): string =>
+  isPorterOnly(me) ? "/inventory" : me.is_salesperson ? "/dashboard" : "/admin";
+
+export const requirePoster = async (): Promise<Staff> => {
+  const me = await requireMe();
+  if (!canPost(me)) redirect("/inventory");
   return me;
 };
 
@@ -358,6 +375,157 @@ const startMonth = (staff: Staff): string =>
  */
 export const onTeamFor = (staff: Staff, month: string, hasRecord: boolean): boolean =>
   hasRecord || (staff.is_salesperson && staff.active && month >= startMonth(staff));
+
+// Inventory -----------------------------------------------------------------
+
+const toVehicle = (r: Record<string, unknown>, post?: { posted_at: string; posted_by: string }): Vehicle => ({
+  id: r.id as string,
+  vin: r.vin as string,
+  stockNumber: r.stock_number as string,
+  year: (r.year as number | null) ?? null,
+  make: r.make as string,
+  model: r.model as string,
+  trim: r.trim as string,
+  bodyStyle: r.body_style as string,
+  drivetrain: r.drivetrain as string,
+  transmission: r.transmission as string,
+  fuelType: r.fuel_type as string,
+  mileage: (r.mileage as number | null) ?? null,
+  price: numOrNull(r.price),
+  firstPrice: numOrNull(r.first_price),
+  exteriorColor: r.exterior_color as string,
+  interiorColor: r.interior_color as string,
+  url: r.url as string,
+  images: (r.images as string[] | null) ?? [],
+  descriptionHtml: r.description_html as string,
+  dealerName: r.dealer_name as string,
+  dealerAddress: r.dealer_address as string,
+  dateFirstOnLot: (r.date_first_on_lot as string | null) ?? null,
+  status: r.status as Vehicle["status"],
+  removedAt: (r.removed_at as string | null) ?? null,
+  postedAt: post?.posted_at ?? null,
+  postedBy: post?.posted_by ?? null,
+});
+
+/** Posted status by vehicle id. RLS returns rows only to porters and admins. */
+const getPosts = cache(async (): Promise<Map<string, { posted_at: string; posted_by: string }>> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("vehicle_posts").select("vehicle_id, posted_at, posted_by");
+  if (error) throw error;
+  return new Map(data.map((p) => [p.vehicle_id as string, p]));
+});
+
+/** Cars currently in the feed (posted status merged in for porters/admins). */
+export const getInventory = cache(async (): Promise<Vehicle[]> => {
+  const supabase = await createClient();
+  const [{ data, error }, posts] = await Promise.all([
+    supabase.from("vehicles").select("*").eq("status", "in_stock"),
+    getPosts(),
+  ]);
+  if (error) throw error;
+  return data.map((r) => toVehicle(r, posts.get(r.id)));
+});
+
+/** Latest vehicle with this stock number, in stock or gone. */
+export const getVehicleByStock = cache(async (stock: string): Promise<Vehicle | null> => {
+  const supabase = await createClient();
+  const [{ data, error }, posts] = await Promise.all([
+    supabase.from("vehicles").select("*").eq("stock_number", stock.toUpperCase()).order("first_seen_at", { ascending: false }).limit(1).maybeSingle(),
+    getPosts(),
+  ]);
+  if (error) throw error;
+  return data ? toVehicle(data, posts.get(data.id)) : null;
+});
+
+export type VehicleEvent = {
+  id: string;
+  kind: "added" | "price_change" | "removed" | "returned" | "posted" | "unposted";
+  oldPrice: number | null;
+  newPrice: number | null;
+  daysOnLot: number | null;
+  at: string;
+  byName: string | null;
+};
+
+/** Newest first. Posted/unposted events are only returned to porters and admins (RLS). */
+export const getVehicleEvents = cache(async (vehicleId: string): Promise<VehicleEvent[]> => {
+  const supabase = await createClient();
+  const [{ data, error }, staff] = await Promise.all([
+    supabase.from("vehicle_events").select("*").eq("vehicle_id", vehicleId).order("at", { ascending: false }),
+    getAllStaff(),
+  ]);
+  if (error) throw error;
+  const names = new Map(staff.map((s) => [s.id, s.name]));
+  return data.map((e) => ({
+    id: e.id,
+    kind: e.kind,
+    oldPrice: numOrNull(e.old_price),
+    newPrice: numOrNull(e.new_price),
+    daysOnLot: e.days_on_lot ?? null,
+    at: e.at,
+    byName: e.by_staff ? (names.get(e.by_staff) ?? null) : null,
+  }));
+});
+
+export type FeedSettings = { url: string | null; listingPhone: string; updatedAt: string | null };
+
+/** Admin only (RLS) — the URL holds the dealer key. Call after requireAdmin(). */
+export const getFeedSettings = cache(async (): Promise<FeedSettings> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("inventory_feed").select("url, listing_phone, updated_at").eq("id", 1).maybeSingle();
+  if (error) throw error;
+  return { url: data?.url ?? null, listingPhone: data?.listing_phone ?? "", updatedAt: data?.updated_at ?? null };
+});
+
+/** Phone number used in Marketplace descriptions (porters and admins). */
+export const getListingPhone = cache(async (): Promise<string> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("get_listing_phone");
+  if (error) throw error;
+  return (data as string | null) ?? "";
+});
+
+export type InventoryRun = {
+  id: string;
+  startedAt: string;
+  status: "ok" | "failed" | "stopped";
+  trigger: "manual" | "schedule";
+  added: number;
+  updated: number;
+  priceChanges: number;
+  removed: number;
+  returned: number;
+  rejected: number;
+  message: string | null;
+};
+
+/** Admin only (RLS). Newest first. */
+export const getInventoryRuns = cache(async (limit = 10): Promise<InventoryRun[]> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("inventory_runs").select("*").order("started_at", { ascending: false }).limit(limit);
+  if (error) throw error;
+  return data.map((r) => ({
+    id: r.id,
+    startedAt: r.started_at,
+    status: r.status,
+    trigger: r.trigger,
+    added: r.added,
+    updated: r.updated,
+    priceChanges: r.price_changes,
+    removed: r.removed,
+    returned: r.returned,
+    rejected: r.rejected,
+    message: r.message,
+  }));
+});
+
+/** When the inventory last updated successfully (any signed-in staff: max of vehicles.last_seen_at). */
+export const getInventoryUpdatedAt = cache(async (): Promise<string | null> => {
+  const supabase = await createClient();
+  const { data, error } = await supabase.from("vehicles").select("last_seen_at").order("last_seen_at", { ascending: false }).limit(1).maybeSingle();
+  if (error) throw error;
+  return data?.last_seen_at ?? null;
+});
 
 // Month views ---------------------------------------------------------------
 

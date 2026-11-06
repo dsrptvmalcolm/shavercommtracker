@@ -7,6 +7,7 @@ Styling follows the Stitch "High-Octane Automotive" design (`stitch_auto_commiss
 - `stat-tile.tsx`, `breakdown.tsx`, `units-gauge.tsx`, `tier-ladder.tsx` (generic: mini tiers and store volume) — dashboard pieces.
 - `charts/bar-chart.tsx` (server, CSS hover tooltips, reference lines in a legend) and `charts/pace-chart.tsx` (client, selling-day projection).
 - `deal-list.tsx`, `month-nav.tsx`, `action-form.tsx`, `nav-link.tsx`, `view-as-button.tsx`.
+- `copy-button.tsx` — client copy-to-clipboard button with "Copied ✓" feedback (Marketplace kit).
 
 ## Local conventions
 <!-- added 2026-10-02: initial setup -->

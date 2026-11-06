@@ -61,6 +61,16 @@
 - [ ] **Staff:** tap the Salesperson / Admin / Active checkboxes. Each ticks on the first tap. *(Don't save.)*
 - [ ] **Deals:** tap **Edit** on a row. It opens on the first tap.
 
+## 5b. Inventory and Post on Marketplace (Porter or admin login)
+
+- [ ] **Inventory** tab opens on the first tap. A Porter login lands straight on Inventory and sees no other tabs and no Log Deal button.
+- [ ] Tap **Mark posted** on a car. It turns yellow (**Posted ✓**) and the car moves to the **Posted** tab. Tap again and it moves back.
+- [ ] Open a car and swipe the photo strip sideways. The page itself doesn't move sideways.
+- [ ] Tap **Post on Marketplace**. Untick two photos (tap the photo or its box) — the count drops to 18. Tap **Get 18 photos** (it counts up to 18/18), then **Save 18 photos**. *iPhone:* the share sheet opens; tap **Save 18 Images** and they appear in Photos. *Android:* share to Photos/Gallery or Files and they appear there. If it says "Tap Save again", tapping Save again should open sharing without re-downloading.
+- [ ] Tap **Copy description**, open Facebook Marketplace → Create listing → Vehicle, and paste into Description. Line breaks and bullets come through.
+- [ ] Copy **VIN**, **Title** and **Price** one at a time and paste each into Facebook's matching field. Price pastes as a plain number (e.g. `21729`).
+- [ ] Search box: the keyboard's return key says **Search** and the page doesn't zoom in.
+
 ## 6. Phone settings checks (iPhone)
 
 - [ ] **Bigger text:** Settings → Display & Brightness → Text Size, slide it up two notches. Reopen the app: nothing overlaps or gets cut off on Dashboard, Log Deal and History. *(Set it back after.)*

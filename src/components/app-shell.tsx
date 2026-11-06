@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { signOut } from "@/app/login/actions";
 import { stopViewAs } from "@/app/(app)/view-as-actions";
-import type { Viewer } from "@/lib/data";
+import { homePath, isPorterOnly, type Viewer } from "@/lib/data";
 import { DealFab } from "./deal-fab";
 import { NavLink } from "./nav-link";
 
 export function AppShell({ viewer, children }: { viewer: Viewer; children: React.ReactNode }) {
   const { me, real, impersonating } = viewer;
-  const home = me.is_salesperson ? "/dashboard" : "/admin";
+  const home = homePath(me);
+  const porterOnly = isPorterOnly(me);
   const links = (
     <>
       {me.is_salesperson && (
@@ -17,6 +18,7 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
           <NavLink href="/history">History</NavLink>
         </>
       )}
+      <NavLink href="/inventory">Inventory</NavLink>
       {me.is_admin && (
         <>
           <NavLink href="/admin">Store</NavLink>
@@ -57,7 +59,7 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
             </nav>
           </div>
           <div className="flex shrink-0 items-center gap-4">
-            {!impersonating && (
+            {!impersonating && !porterOnly && (
               <Link href="/deals/new" className="btn-primary hidden px-5 py-2.5 sm:inline-flex">
                 <span aria-hidden className="text-lg leading-none">+</span> {me.is_salesperson ? "Log Deal" : "Add Deal"}
               </Link>
@@ -65,7 +67,7 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
             <div className={`flex items-center gap-3 ${impersonating ? "" : "sm:border-l sm:border-surface-border sm:pl-4"}`}>
               <div className="hidden text-right xl:block">
                 <p className="text-sm font-bold leading-tight">{me.name}</p>
-                <p className="text-xs font-medium text-primary">{me.is_admin ? "Admin" : "Sales"}</p>
+                <p className="text-xs font-medium text-primary">{me.is_admin ? "Admin" : me.is_salesperson ? "Sales" : "Porter"}</p>
               </div>
               {!impersonating && (
                 <form action={signOut}>
@@ -86,7 +88,7 @@ export function AppShell({ viewer, children }: { viewer: Viewer; children: React
         </nav>
       </header>
       <main className="mx-auto max-w-7xl space-y-8 px-4 pt-6 pb-28 lg:px-10 lg:pt-10">{children}</main>
-      {!impersonating && <DealFab label={me.is_salesperson ? "Log Deal" : "Add Deal"} />}
+      {!impersonating && !porterOnly && <DealFab label={me.is_salesperson ? "Log Deal" : "Add Deal"} />}
     </>
   );
 }

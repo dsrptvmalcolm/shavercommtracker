@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAllStaff, getDeal, getProducts, getViewer } from "@/lib/data";
+import { getAllStaff, getDeal, getProducts, getViewer, isPorterOnly } from "@/lib/data";
 import { redirect } from "next/navigation";
 import { currentMonth, todayIso } from "@/lib/months";
 import { DealForm } from "../deal-form";
@@ -8,6 +8,7 @@ export default async function EditDealPage({ params }: { params: Promise<{ id: s
   const { id } = await params;
   const viewer = await getViewer();
   if (!viewer) redirect("/login");
+  if (isPorterOnly(viewer.me)) redirect("/inventory");
   // Viewing as someone is read only
   if (viewer.impersonating) redirect("/dashboard");
   const { me } = viewer;

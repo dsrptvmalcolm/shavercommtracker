@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getAllStaff, getPaidMonths, getSalespersonMonth, getUnitsByMonth, requireMe } from "@/lib/data";
+import { notFound, redirect } from "next/navigation";
+import { getAllStaff, getPaidMonths, getSalespersonMonth, getUnitsByMonth, requireMe, isPorterOnly } from "@/lib/data";
 import { money, units as fmtUnits } from "@/lib/format";
 import { currentMonth, monthLabel, shiftMonth } from "@/lib/months";
 
 export default async function HistoryPage({ searchParams }: { searchParams: Promise<{ staff?: string }> }) {
   const me = await requireMe();
+  if (isPorterOnly(me)) redirect("/inventory");
   const sp = await searchParams;
   const staff = sp.staff && me.is_admin ? (await getAllStaff()).find((s) => s.id === sp.staff) : me;
   if (!staff) notFound();

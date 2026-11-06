@@ -5,7 +5,8 @@
 - `months.ts` — month math in America/Chicago (`currentMonth`, `shiftMonth`, `monthRange`, `isClosed`) and selling days (`isWorkingDay`, `workingDaysIn`, `workingDaysElapsed`). `months.test.ts` covers working days.
 - `format.ts` — `money`, `money0`, `units`, `shortDate`.
 - `supabase/server.ts` — per-request client with the user's session (RLS applies). Use this by default.
-- `supabase/admin.ts` — service-role client (bypasses RLS). Only for login management after `requireAdmin`.
+- `supabase/admin.ts` — service-role client (bypasses RLS). Only for login management after `requireAdmin`, and the inventory cron route (decision 0003).
+- `inventory/` — VinCue feed parser (`parse-feed.ts`), `runIngest` (`ingest.ts`), `Vehicle` + list/search/days-on-lot helpers (`vehicle.ts`), Marketplace description template (`marketplace.ts`). Pure modules have colocated tests; `fixtures/vincue-sample.csv` is 3 real feed rows (no customer data).
 - `commission/` — the engine (own CLAUDE.md).
 
 ## Local conventions

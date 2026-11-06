@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { assertNotImpersonating, getAllStaff, requireAdmin } from "@/lib/data";
+import { runIngest } from "@/lib/inventory/ingest";
 import { currentMonth } from "@/lib/months";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
@@ -110,6 +111,7 @@ const staffSchema = z.object({
   email: z.union([z.literal(""), z.email("Enter a valid email")]),
   is_salesperson: checkbox,
   is_admin: checkbox,
+  is_porter: checkbox,
   multilingual_eligible: checkbox,
   active: checkbox,
   personal_best_units: moneyStr,
@@ -246,4 +248,44 @@ export async function deleteHoliday(date: string): Promise<ActionState> {
   const { error } = await supabase.from("holidays").delete().eq("date", date);
   if (error) return { error: error.message };
   return done("Removed");
+}
+
+// Inventory feed --------------------------------------------------------------
+
+const feedSchema = z.object({
+  url: z.union([z.literal(""), z.url({ protocol: /^https$/, error: "Use an https:// feed URL" })]),
+  listing_phone: z.string().trim().min(1, "Add the phone number for listings").max(20, "That phone number is too long"),
+});
+
+export async function saveFeedSettings(_: ActionState, formData: FormData): Promise<ActionState> {
+  const me = await requireAdmin();
+  const blocked = await assertNotImpersonating();
+  if (blocked) return { error: blocked };
+  const parsed = feedSchema.safeParse({ url: String(formData.get("url") ?? "").trim(), listing_phone: formData.get("listing_phone") ?? "" });
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message };
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("inventory_feed")
+    .update({ url: parsed.data.url || null, listing_phone: parsed.data.listing_phone, updated_at: new Date().toISOString(), updated_by: me.id })
+    .eq("id", 1);
+  if (error) return { error: error.message };
+  return done("Feed settings saved");
+}
+
+export async function refreshInventory(_: ActionState, formData: FormData): Promise<ActionState> {
+  await requireAdmin();
+  const blocked = await assertNotImpersonating();
+  if (blocked) return { error: blocked };
+  const force = formData.get("force") === "on";
+  try {
+    const r = await runIngest(await createClient(), { force });
+    revalidatePath("/", "layout");
+    if (r.status === "stopped") return { error: `${r.message} Tick "Apply anyway" to force it.` };
+    if (r.status === "failed") return { error: r.message ?? "The update failed" };
+    const parts = [`${r.added} added`, `${r.removed} removed`, `${r.price_changes} price change${r.price_changes === 1 ? "" : "s"}`];
+    if (r.returned) parts.push(`${r.returned} back in stock`);
+    return { ok: `Updated — ${parts.join(", ")}` };
+  } catch (err) {
+    return { error: (err as Error).message };
+  }
 }

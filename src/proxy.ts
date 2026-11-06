@@ -1,7 +1,8 @@
 import { createServerClient } from "@supabase/ssr";
 import { type NextRequest, NextResponse } from "next/server";
 
-const PUBLIC_PATHS = ["/login"];
+// /api/cron/ routes check CRON_SECRET themselves (Vercel Cron has no session)
+const PUBLIC_PATHS = ["/login", "/api/cron/"];
 
 // Refreshes the Supabase session cookie and sends signed-out visitors to /login.
 // Authorization itself happens in RLS and in each server action.

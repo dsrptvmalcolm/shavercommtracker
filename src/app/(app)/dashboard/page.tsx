@@ -9,7 +9,7 @@ import { StatTile } from "@/components/stat-tile";
 import { TierLadder } from "@/components/tier-ladder";
 import { UnitsGauge } from "@/components/units-gauge";
 import { currentMiniTierIndex, paceFor, storeVolumeSpiffFor } from "@/lib/commission/engine";
-import { getAllStaff, getDealsNeedingAction, getMonthCalendar, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer } from "@/lib/data";
+import { getAllStaff, getDealsNeedingAction, getMonthCalendar, getProducts, getSalespersonMonth, getUnitsByMonth, getViewer, isPorterOnly } from "@/lib/data";
 import { money, money0, units as fmtUnits } from "@/lib/format";
 import { currentMonth, daysInMonth, isClosed, isMonth, monthLabel, shiftMonth } from "@/lib/months";
 
@@ -19,6 +19,7 @@ const shortMonth = (m: string) => monthLabel(m).slice(0, 3);
 export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ month?: string; staff?: string }> }) {
   const [viewer, sp] = await Promise.all([getViewer(), searchParams]);
   if (!viewer) redirect("/login");
+  if (isPorterOnly(viewer.me)) redirect("/inventory");
   const { me, impersonating } = viewer;
   const month = isMonth(sp.month) ? sp.month : currentMonth();
 

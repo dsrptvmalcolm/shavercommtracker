@@ -99,6 +99,7 @@ When compacting, always preserve the full list of modified files, the current ta
 | Need | Look in |
 |---|---|
 | Commission math, types, parity fixtures | `src/lib/commission/` → its CLAUDE.md |
+| Inventory feed parser, Marketplace template, vehicle helpers | `src/lib/inventory/` (see `src/lib/CLAUDE.md`) |
 | Data loading, viewer/auth, months & working days, formatting | `src/lib/` → its CLAUDE.md |
 | Pages, server actions, impersonation | `src/app/` → its CLAUDE.md |
 | UI building blocks, charts | `src/components/` → its CLAUDE.md |

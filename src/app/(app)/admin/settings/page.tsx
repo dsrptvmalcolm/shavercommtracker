@@ -3,6 +3,7 @@ import { getHolidays, getProducts, getSettingsFor, requireAdmin, type Product } 
 import { shortDate } from "@/lib/format";
 import { currentMonth, monthLabel } from "@/lib/months";
 import { addHoliday, saveProduct, saveSettings } from "../actions";
+import { InventoryFeedSection } from "./inventory-feed-section";
 import { RemoveHolidayButton } from "./remove-holiday-button";
 
 const EXTRA_TIER_ROWS = 2;
@@ -37,6 +38,7 @@ export default async function SettingsPage() {
             ["#rates", "Tiers & spiffs"],
             ["#holidays", "Holidays & pacing"],
             ["#products", "Products"],
+            ["#inventory", "Inventory feed"],
           ].map(([href, label]) => (
             <a key={href} href={href} className="chip bg-surface-subtle px-3 py-1.5 text-on-surface hover:bg-primary-soft hover:text-primary">
               {label}
@@ -152,6 +154,8 @@ export default async function SettingsPage() {
           </div>
         </div>
       </section>
+
+      <InventoryFeedSection />
     </>
   );
 }

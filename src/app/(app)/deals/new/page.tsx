@@ -1,4 +1,4 @@
-import { getAllStaff, getProducts, getViewer } from "@/lib/data";
+import { getAllStaff, getProducts, getViewer, isPorterOnly } from "@/lib/data";
 import { redirect } from "next/navigation";
 import { currentMonth, todayIso } from "@/lib/months";
 import { DealForm } from "../deal-form";
@@ -6,6 +6,7 @@ import { DealForm } from "../deal-form";
 export default async function NewDealPage() {
   const viewer = await getViewer();
   if (!viewer) redirect("/login");
+  if (isPorterOnly(viewer.me)) redirect("/inventory");
   // Viewing as someone is read only
   if (viewer.impersonating) redirect("/dashboard");
   const { me } = viewer;
